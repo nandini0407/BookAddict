@@ -49,5 +49,7 @@
   - if query params are specified for a given status, then a list of books for that status will be returned for the current user
 - `POST /api/read_status`
   - accepts book_id and status as query params and adds book to the status of the current user
+- `PATCH /api/read_status`
+  - accepts book_id and status as query params and updates book to the status of the current user
 - `DELETE /api/read_status`
   - accepts book_id as book_id as query param and deletes book from its existing status of the current user
