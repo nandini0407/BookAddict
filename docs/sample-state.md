@@ -3,7 +3,7 @@
   session: {
     currentUser: {
       id: 1,
-      email: 'user@appacademy.io'
+      username: 'appacademy'
     },
     errors: []
   },
