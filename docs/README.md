@@ -1,10 +1,10 @@
 # BookAddict
 
-[Heroku link TBD][heroku]
+[Heroku link][heroku]
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: https://bookaddict.herokuapp.com/
 
 [trello]: https://trello.com/b/i5NtMliG/bookbug
 
