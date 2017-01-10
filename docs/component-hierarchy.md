@@ -10,6 +10,7 @@
 **App**
   - Nav
     + Logo
+    + GreetingContainer
   - Sidebar
     + MyBooks
       - MyReadStatusContainer
