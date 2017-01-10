@@ -13,3 +13,94 @@
  *= require_tree .
  *= require_self
  */
+
+html, body, section, h1, div, p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: white;
+}
+
+body {
+  padding: 20px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  background: transparent;
+}
+
+.splash-container {
+  position: relative;
+  width: 100%;
+}
+
+.splash-image {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.logo-image {
+  position: absolute;
+}
+
+.splash-text {
+  position: absolute;
+  top: 350px;
+  left: 500px;
+  font-size: 40px;
+  color: white;
+  background: transparent;
+}
+
+.button {
+  background-color: darkturquoise;
+  position: absolute;
+  padding: 13px;
+  border-radius: 7px;
+  font-size: 15px;
+  color: white;
+}
+
+.signup-button {
+  left: 520px;
+  top: 420px;
+}
+
+.login-button {
+  left: 720px;
+  top: 420px;
+}
+
+.guest-button {
+  left: 630px;
+  top: 480px;
+}
+
+.username {
+  position: absolute;
+  left: 538px;
+  top: 420px;
+  padding: 10px;
+  width: 200px;
+  border-radius: 6px;
+}
+
+.password {
+  position: absolute;
+  left: 538px;
+  top: 480px;
+  padding: 10px;
+  width: 200px;
+  border-radius: 6px;
+}
+
+.submit-button {
+  position: absolute;
+  left: 600px;
+  top: 530px;
+}

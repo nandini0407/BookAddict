@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, hashHistory, Route, IndexRoute } from 'react-router';
+import { Router, hashHistory, Route, IndexRoute, IndexRedirect } from 'react-router';
 import { Provider } from 'react-redux';
 import App from './app';
 import Splash from './splash';
@@ -19,14 +19,22 @@ const Root = ({ store }) => {
     }
   };
 
+  const _redirect = (nextState, replace) => {
+    replace("/welcome");
+  };
+
   return (
     <Provider store={ store }>
       <Router history={ hashHistory }>
-        <Route path="/" component={ Splash } onEnter={ _ensureLoggedIn } >
+        <Route path="/" component={ Splash } >
+          <IndexRedirect to="/welcome" />
           <Route path="/welcome" component={ AuthContainer } />
           <Route path="/signup" component={ AuthFormContainer } />
+          <Route path="/login" component={ AuthFormContainer } />
         </Route>
-        <Route path="/user" component={ App } />
+        <Route path="/user" component={ App }>
+          // <IndexRedirect to="/user/books" />
+        </Route>
       </Router>
     </Provider>
   );

@@ -27,6 +27,7 @@ export const logout = () => (dispatch) => {
 // sync actions
 
 export const receiveCurrentUser = (user) => {
+  debugger;
   return {
     type: RECEIVE_CURRENT_USER,
     user

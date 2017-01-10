@@ -20,6 +20,8 @@
 ### Books
 
 - `GET /api/books`
+  - gets all books if no query params
+  - filters and gets books based on query params if present (query params = bookshelf_id or read_status)
 - `GET /api/books/:book_id`
 
 ### Bookshelves
@@ -27,8 +29,7 @@
 - `GET /api/bookshelves`
   - gets all bookshelves for current user
 - `POST /api/bookshelves`
-- `GET /api/bookshelves/:bookshelf_id`
-  - gets all books in a particular bookshelf
+  - creates bookshelf
 
 ### BookshelfBooks
 
@@ -45,8 +46,7 @@
 ### ReadStatus
 
 - `GET /api/read_status`
-  - if no query param is specified, it returns a list of statuses (have read, reading, will read)
-  - if query params are specified for a given status, then a list of books for that status will be returned for the current user
+  - gets a list of statuses (have read, reading, will read)
 - `POST /api/read_status`
   - accepts book_id and status as query params and adds book to the status of the current user
 - `PATCH /api/read_status`
