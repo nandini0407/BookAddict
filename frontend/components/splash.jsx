@@ -7,8 +7,10 @@ const Splash = ({ children }) => {
       <div className="splash-container">
         <Logo />
         <img className="splash-image" src="images/splash_image.jpg" alt="https://unsplash.com/photos/UoqAR2pOxMo"/>
-        <h1 className="splash-text">Splash Text Here</h1>
-        { children }
+        <div className="splash-items">
+          <h1 className="splash-text">Splash Text Here</h1>
+          { children }
+        </div>
       </div>
     </div>
   );

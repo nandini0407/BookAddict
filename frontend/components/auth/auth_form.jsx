@@ -47,7 +47,6 @@ class AuthForm extends React.Component {
     let submitText = (this.props.formType === "signup") ? "Sign Up" : "Login";
     return (
       <div>
-        <div>{this.renderErrors()}</div>
         <form onSubmit={this.handleSubmit}>
           <div className="authform">
             <input
@@ -68,6 +67,7 @@ class AuthForm extends React.Component {
               value={submitText} />
           </div>
         </form>
+        <div className="errors">{this.renderErrors()}</div>
       </div>
     );
   }
