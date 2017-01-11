@@ -1,9 +1,10 @@
 import React from 'react';
+import MyBooks from './my_books/my_books';
 
 const Sidebar = () => {
   return (
-    <div>
-      Sidebar
+    <div className="sidebar">
+      <MyBooks />
     </div>
   );
 };

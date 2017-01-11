@@ -5,6 +5,8 @@ import App from './app';
 import Splash from './splash';
 import AuthContainer from './auth/auth_container';
 import AuthFormContainer from './auth/auth_form_container';
+import BookListContainer from './book_list/book_list_container';
+import BookShow from './book_show';
 
 const Root = ({ store }) => {
 
@@ -33,6 +35,11 @@ const Root = ({ store }) => {
           <Route path="/login" component={ AuthFormContainer } />
         </Route>
         <Route path="/user" component={ App }>
+          <IndexRedirect to="/user/books" />
+          <Route path="/user/books" component={ BookListContainer } />
+          <Route path="/user/books/:bookId" component={ BookShow } />
+          <Route path="/user/bookshelves/:bookshelfId" component={ BookListContainer } />
+          <Route path="/user/read-status" component={ BookListContainer } />
         </Route>
       </Router>
     </Provider>

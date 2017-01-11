@@ -1,0 +1,19 @@
+.bookshelves {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bs-text {
+  text-align: center;
+  font-weight: bold;
+}
+
+.bs-list {
+  text-align: center;
+}
+
+.bs-list li {
+  margin: 3px;
+  padding: 4px;
+}
