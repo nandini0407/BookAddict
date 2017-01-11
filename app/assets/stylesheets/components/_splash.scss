@@ -1,35 +1,28 @@
 .splash-container {
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  height: 740px;
+  background: url("../../images/splash_image.jpg");
+  background-size: 100%;
+  height: 740px;
 }
 
-.splash-image {
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-  display: flex;
+.logo-image {
+  height: 70px;
 }
-
-/*.logo-image {
-  position: absolute;
-}*/
 
 .splash-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 38%;
+  height: 300px;
 }
 
 .splash-text {
-  position: absolute;
-  // top: 350px;
-  // left: 500px;
   font-size: 40px;
   color: white;
   background: transparent;
-  display: flex;
+  text-align: center;
 }
 
 .button {
@@ -54,6 +47,7 @@
   flex-direction: column;
   width: 260px;
   align-items: center;
+  margin: 40px;
 }
 
 .top-auth-buttons {
@@ -67,12 +61,11 @@
   display: -webkit-flex;
   -webkit-flex-direction: column;
   flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
 }
 
 .username {
-  position: absolute;
-  left: 538px;
-  top: 420px;
   padding: 10px;
   width: 200px;
   border-radius: 6px;
@@ -80,9 +73,6 @@
 }
 
 .password {
-  position: absolute;
-  left: 538px;
-  top: 480px;
   padding: 10px;
   width: 200px;
   border-radius: 6px;
@@ -90,9 +80,6 @@
 }
 
 .submit-button {
-  position: absolute;
-  left: 600px;
-  top: 530px;
   margin: 10px;
 }
 
