@@ -20,12 +20,11 @@
   - BookListContainer
     + BookList
       - BookListItem
-  - BookShowContainer
-    + BookShow
-      - BookDetailContainer
-        + BookDetail
-      - ReviewsContainer
-        + Reviews
+  - BookShow
+    + BookDetailContainer
+      - BookDetail
+    + ReviewsContainer
+      - Reviews
 
 ## Routes
 
@@ -37,6 +36,6 @@
 | "/login" | "AuthFormContainer" |
 | "/user" | "App" |
 | "/user/books" | "BookListContainer" |
-| "/user/books/:bookId" | "BookShowContainer" |
+| "/user/books/:bookId" | "BookShow" |
 | "/user/bookshelves/:bookshelfId" | "BookListContainer" |
 | "/user/read-status" | "BookListContainer" |

@@ -7,7 +7,7 @@ const Splash = ({ children }) => {
       <div className="splash-container">
         <Logo />
         <div className="splash-items">
-          <h1 className="splash-text">Splash Text Here</h1>
+          <h1 className="splash-text">Find the best stories</h1>
           { children }
         </div>
       </div>
@@ -16,5 +16,3 @@ const Splash = ({ children }) => {
 };
 
 export default Splash;
-
-// <img className="splash-image" src="images/splash_image.jpg" alt="https://unsplash.com/photos/UoqAR2pOxMo"/>
