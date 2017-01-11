@@ -49,22 +49,24 @@ class AuthForm extends React.Component {
       <div>
         <div>{this.renderErrors()}</div>
         <form onSubmit={this.handleSubmit}>
-          <input
-            className="username"
-            type="text"
-            placeholder="Username"
-            value={this.state.username}
-            onChange={this.update('username')}/>
-          <input
-            className="password"
-            type="password"
-            placeholder="Password"
-            value={this.state.password}
-            onChange={this.update('password')}/>
-          <input
-            className="button submit-button"
-            type="submit"
-            value={submitText} />
+          <div className="authform">
+            <input
+              className="username"
+              type="text"
+              placeholder="Username"
+              value={this.state.username}
+              onChange={this.update('username')}/>
+            <input
+              className="password"
+              type="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.update('password')}/>
+            <input
+              className="button submit-button"
+              type="submit"
+              value={submitText} />
+          </div>
         </form>
       </div>
     );

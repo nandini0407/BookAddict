@@ -1,0 +1,91 @@
+.splash-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.splash-image {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  display: flex;
+}
+
+/*.logo-image {
+  position: absolute;
+}*/
+
+.splash-text {
+  position: absolute;
+  // top: 350px;
+  // left: 500px;
+  font-size: 40px;
+  color: white;
+  background: transparent;
+  display: flex;
+}
+
+.button {
+  background-color: darkturquoise;
+  padding: 13px;
+  border-radius: 7px;
+  font-size: 15px;
+  color: white;
+  width: 70px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.button:hover {
+  background-color: turquoise;
+  cursor: pointer;
+}
+
+.auth-buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  align-items: center;
+}
+
+.top-auth-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.authform {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.username {
+  position: absolute;
+  // left: 538px;
+  // top: 420px;
+  padding: 10px;
+  width: 200px;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+.password {
+  position: absolute;
+  // left: 538px;
+  // top: 480px;
+  padding: 10px;
+  width: 200px;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+.submit-button {
+  position: absolute;
+  // left: 600px;
+  // top: 530px;
+  margin: 10px;
+}
