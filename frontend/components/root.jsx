@@ -33,7 +33,6 @@ const Root = ({ store }) => {
           <Route path="/login" component={ AuthFormContainer } />
         </Route>
         <Route path="/user" component={ App }>
-          // <IndexRedirect to="/user/books" />
         </Route>
       </Router>
     </Provider>

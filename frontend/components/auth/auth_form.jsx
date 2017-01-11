@@ -23,7 +23,8 @@ class AuthForm extends React.Component {
           username: "",
           password: ""
         });
-      });
+        this.redirect();
+    } );
   }
 
   update(field) {
@@ -41,6 +42,10 @@ class AuthForm extends React.Component {
         {errors}
       </ul>
     );
+  }
+
+  redirect() {
+    this.props.router.push('/user');
   }
 
   render() {
