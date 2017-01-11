@@ -4,7 +4,8 @@ import { hashHistory, withRouter } from 'react-router';
 class Auth extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
+
+    this.loginGuest = this.loginGuest.bind(this);
   }
 
   renderSignUp() {
@@ -25,10 +26,19 @@ class Auth extends React.Component {
     return (
       <div className="auth-buttons">
         <div className="top-auth-buttons">
-          <button className="button signup-button" onClick={this.renderSignUp}>Sign Up</button>
-          <button className="button login-button" onClick={this.renderLogin}>Login</button>
+          <button
+            className="button signup-button"
+            onClick={this.renderSignUp}
+            >Sign Up</button>
+          <button
+            className="button login-button"
+            onClick={this.renderLogin}
+            >Login</button>
         </div>
-        <button className="button guest-button" onClick={this.loginGuest}>Guest</button>
+        <button
+          className="button guest-button"
+          onClick={this.loginGuest}
+          >Guest</button>
       </div>
     );
   }

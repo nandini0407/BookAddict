@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-div {
+
+}
+
+.greeting {
+  display: flex;
+  justify-content: space-around;
+}
+
+.greet-user {
+  font-size: 18px;
+  margin: 5px;
+  color: grey;
+}
+
+.logout-button {
+  background: rgba(117, 201, 245, 0.6);
+  margin: 5px;
+  padding: 5px;
+  height: 20px;
+  color: grey;
+  border: 1px solid rgba(158, 210, 249, 0.99);
+  border-radius: 6px;
+}

@@ -26,7 +26,8 @@
 }
 
 .button {
-  background-color: darkturquoise;
+  background-color: rgba(26, 75, 99, 0.29);
+  border: 2px solid #84a9c5;
   padding: 13px;
   border-radius: 7px;
   font-size: 15px;
@@ -37,7 +38,7 @@
 }
 
 .button:hover {
-  background-color: turquoise;
+  background-color: rgba(58, 112, 138, 0.29);
   cursor: pointer;
 }
 
