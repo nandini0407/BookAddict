@@ -12,8 +12,8 @@ session_token   | string    | not null, indexed
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
-title           | string    | not null, indexed, unique
-author          | string    | not null, indexed, unique
+title           | string    | not null, indexed
+author          | string    | not null, indexed
 image_url       | string    | not null
 publisher       | string    | not null
 date            | date      | not null
