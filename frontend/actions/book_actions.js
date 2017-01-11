@@ -7,7 +7,10 @@ export const RECEIVE_BOOK_DETAIL = "RECEIVE_BOOK_DETAIL";
 
 export const fetchBooksSummary = () => (dispatch) => {
   return BookAPIUtil.fetchBooksSummary()
-    .then((booksSummary) => dispatch(receiveBooksSummary(booksSummary)));
+    .then((booksSummary) => {
+      dispatch(receiveBooksSummary(booksSummary));
+      return booksSummary;
+    });
 };
 
 export const fetchBookDetail = (id) => (dispatch) => {

@@ -22,7 +22,6 @@ class BookList extends React.Component {
     return (
       <div>
         <h1>{this.props.booksSummary.heading}</h1>
-        { booksSummary }
       </div>
     );
   }
