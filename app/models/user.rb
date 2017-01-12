@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   attr_reader :password
   after_initialize :ensure_session_token
 
+  has_many :bookshelves
+  has_many :books, through: :bookshelves
+
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
     return nil if user.nil?

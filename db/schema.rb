@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170111070225) do
+ActiveRecord::Schema.define(version: 20170112181855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,26 @@ ActiveRecord::Schema.define(version: 20170111070225) do
 
   add_index "books", ["author"], name: "index_books_on_author", using: :btree
   add_index "books", ["title"], name: "index_books_on_title", using: :btree
+
+  create_table "bookshelf_books", force: :cascade do |t|
+    t.integer  "book_id",      null: false
+    t.integer  "bookshelf_id", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "bookshelf_books", ["book_id"], name: "index_bookshelf_books_on_book_id", using: :btree
+  add_index "bookshelf_books", ["bookshelf_id"], name: "index_bookshelf_books_on_bookshelf_id", using: :btree
+
+  create_table "bookshelves", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.integer  "user_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "bookshelves", ["name"], name: "index_bookshelves_on_name", using: :btree
+  add_index "bookshelves", ["user_id"], name: "index_bookshelves_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false
