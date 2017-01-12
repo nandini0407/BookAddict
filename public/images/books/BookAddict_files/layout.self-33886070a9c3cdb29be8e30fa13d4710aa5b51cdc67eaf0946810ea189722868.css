@@ -1,0 +1,13 @@
+/* Define application-wide selectors here!*/
+/* line 4, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/base/layout.scss */
+button {
+  background-color: darkturquoise;
+}
+
+/*
+	Header Rules
+*/
+/* line 48, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/base/layout.scss */
+.hidden {
+  visibility: hidden;
+}

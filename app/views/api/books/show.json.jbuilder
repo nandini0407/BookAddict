@@ -8,3 +8,4 @@ json. description @book.description
 json.amazon_link @book.amazon_link
 json.kobo_link @book.kobo_link
 json.play_link @book.play_link
+json.bookshelves @bookshelves, :id, :name

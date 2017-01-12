@@ -1,0 +1,53 @@
+/* line 1, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_book_list.scss */
+.main {
+  width: 97%;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 1.5s ease;
+  background-color: rgba(235, 241, 236, 0.34);
+}
+
+/* line 9, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_book_list.scss */
+.main:hover {
+  background-color: #b8f3ba;
+}
+
+/* line 13, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_book_list.scss */
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
+}
+
+/* line 20, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_book_list.scss */
+.book-list-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 25, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_book_list.scss */
+.book-tile {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+/* line 33, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_book_list.scss */
+.book-image {
+  height: 450px;
+  width: 298px;
+}
+
+/* line 38, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_book_list.scss */
+.book-title {
+  text-align: center;
+  overflow-wrap: normal;
+}
+
+/* line 43, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_book_list.scss */
+.book-author {
+  text-align: center;
+}

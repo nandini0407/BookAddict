@@ -9,13 +9,20 @@ export const fetchBooksSummary = () => (dispatch) => {
   return BookAPIUtil.fetchBooksSummary()
     .then((booksSummary) => {
       dispatch(receiveBooksSummary(booksSummary));
-      return booksSummary;
     });
 };
 
 export const fetchBookDetail = (id) => (dispatch) => {
   return BookAPIUtil.fetchBookDetail(id)
     .then((bookDetail) => dispatch(receiveBookDetail(bookDetail)));
+};
+
+export const addBookToBookshelf = (bookId, bookshelfId) => (dispatch) => {
+
+};
+
+export const removeBookFromBookshelf = (bookId, bookshelfId) => (dispatch) => {
+
 };
 
 // sync actions
@@ -32,4 +39,12 @@ export const receiveBookDetail = (bookDetail) => {
     type: RECEIVE_BOOK_DETAIL,
     bookDetail
   };
+};
+
+export const pushBookshelf = (bookshelf) => {
+
+};
+
+export const popBookshelf = (bookshelf) => {
+
 };

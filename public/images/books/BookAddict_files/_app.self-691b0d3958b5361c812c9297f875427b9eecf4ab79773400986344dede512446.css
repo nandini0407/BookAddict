@@ -1,0 +1,21 @@
+/* line 1, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_app.scss */
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 6, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_app.scss */
+.app-nav {
+  display: block;
+}
+
+/* line 10, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_app.scss */
+.app-main {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* line 15, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_app.scss */
+.app-children {
+  width: 75%;
+}

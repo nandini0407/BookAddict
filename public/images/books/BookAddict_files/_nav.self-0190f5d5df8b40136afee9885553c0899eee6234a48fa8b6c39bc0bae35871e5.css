@@ -1,0 +1,48 @@
+/* line 1, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_nav.scss */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(rgba(0, 196, 255, 0.45), #b8f3ba);
+  align-items: center;
+}
+
+/* line 12, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_nav.scss */
+.nav-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 18, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_nav.scss */
+.nav-all-books {
+  font-size: 18px;
+  margin: 8px;
+  color: grey;
+  text-decoration: underline;
+  margin: 0 40px;
+}
+
+/* line 26, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_nav.scss */
+.greeting {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* line 32, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_nav.scss */
+.greet-user {
+  font-size: 18px;
+  margin: 8px;
+  color: grey;
+}
+
+/* line 38, /Users/nandini/app_academy/course_work/full_stack_project/BookAddict/app/assets/stylesheets/components/_nav.scss */
+.logout-button {
+  background: rgba(121, 85, 72, 0.57);
+  margin: 8px;
+  padding: 5px;
+  height: 20px;
+  color: darkslategrey;
+  border: 1px solid rgba(148, 116, 103, 0.31);
+  border-radius: 6px;
+}
