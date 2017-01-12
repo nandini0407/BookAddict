@@ -8,7 +8,7 @@ class BookShow extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="book-detail-container">
         <BookDetailContainer
           bookId={this.props.params.bookId}
           />
