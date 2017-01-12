@@ -51,9 +51,9 @@ class AuthForm extends React.Component {
 
   redirectToAlternate() {
     if (this.props.formType === "signup") {
-      return <Link to='/login' className="alternate-auth-text">Login</Link>;
+      return <Link to='/login' className="alternate-auth-text" onClick={this.props.receiveClearErrors}>Login</Link>;
     } else {
-      return <Link to='/signup' className="alternate-auth-text">Sign Up</Link>;
+      return <Link to='/signup' className="alternate-auth-text" onClick={this.props.receiveClearErrors}>Sign Up</Link>;
     }
   }
 

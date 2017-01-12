@@ -1,12 +1,20 @@
 import React from 'react';
 import BookDetailContainer from './book_detail/book_detail_container';
 
-const BookShow = () => {
-  return (
-    <div>
-      <BookDetailContainer />
-    </div>
-  );
-};
+class BookShow extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <BookDetailContainer
+          bookId={this.props.params.bookId}
+          />
+      </div>
+    );
+  }
+}
 
 export default BookShow;

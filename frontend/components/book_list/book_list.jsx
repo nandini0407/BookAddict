@@ -12,16 +12,19 @@ class BookList extends React.Component {
 
   render() {
     let booksSummaryIds = Object.keys(this.props.booksSummary.books);
-    let booksSummary = booksSummaryIds.map((book, idx) => {
+    let booksSummary = booksSummaryIds.map((id, idx) => {
       return <BookListItem
         key={idx}
-        book={book}
+        book={this.props.booksSummary.books[id]}
         />;
     });
 
     return (
-      <div>
-        <h1>{this.props.booksSummary.heading}</h1>
+      <div className="main">
+        <h1 className="heading">{this.props.booksSummary.heading}</h1>
+        <div className="book-list-item">
+          { booksSummary }
+        </div>
       </div>
     );
   }

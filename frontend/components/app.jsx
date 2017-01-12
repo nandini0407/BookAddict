@@ -4,10 +4,16 @@ import Sidebar from './sidebar';
 
 const App = ({ children }) => {
   return (
-    <div>
-      <Nav />
-      <Sidebar />
-      { children }
+    <div className="app">
+      <div className="app-nav">
+        <Nav />
+      </div>
+      <div className="app-main">
+        <Sidebar />
+        <div className="app-children">
+          { children }
+        </div>
+      </div>
     </div>
   );
 };

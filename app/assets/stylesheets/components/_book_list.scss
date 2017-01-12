@@ -1,0 +1,45 @@
+.main {
+  width: 97%;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 1.5s ease;
+  background-color: rgba(235, 241, 236, 0.34);
+}
+
+.main:hover {
+  background-color: rgb(184, 243, 186);
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
+}
+
+.book-list-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-tile {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+.book-image {
+  height: 450px;
+  width: 298px;
+}
+
+.book-title {
+  text-align: center;
+  overflow-wrap: normal;
+}
+
+.book-author {
+  text-align: center;
+}

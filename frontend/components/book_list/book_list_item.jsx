@@ -3,8 +3,16 @@ import { Link } from 'react-router';
 
 const BookListItem = ({ book }) => {
   return (
-    <div>
-      <Link to={`/user/books/${book.id}`}>{book.image_url}</Link>
+    <div className="book-tile">
+      <Link to={`/user/books/${book.id}`}>
+        <img className="book-image" src={ book.image_url } />
+        <div className="book-title">
+          { book.title }
+        </div>
+        <div className="book-author">
+          { book.author }
+        </div>
+      </Link>
     </div>
   );
 };

@@ -13,7 +13,7 @@ class BookDetail extends React.Component {
     let book = this.props.bookDetail;
     return (
       <div>
-        {book.image_url}
+        <img src={ book.image_url } />
         {book.title}
         {book.author}
         {book.publisher}

@@ -6,7 +6,7 @@ import { fetchBookDetail } from '../../actions/book_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
     bookDetail: state.bookDetail,
-    bookId: ownProps.params.bookId
+    bookId: ownProps.bookId
   };
 };
 

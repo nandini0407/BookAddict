@@ -1,5 +1,12 @@
 .sidebar {
   display: flex;
   padding: 20px;
-  margin: 10px;
+  width: 25%;
+  margin-left: 31px;
+  transition: background-color 1.5s ease;
+  background-color: rgba(235, 241, 236, 0.34);
+}
+
+.sidebar:hover {
+  background-color: rgb(184, 243, 186);
 }

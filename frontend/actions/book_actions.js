@@ -15,7 +15,7 @@ export const fetchBooksSummary = () => (dispatch) => {
 
 export const fetchBookDetail = (id) => (dispatch) => {
   return BookAPIUtil.fetchBookDetail(id)
-  .then((bookDetail) => dispatch(receiveBookDetail(bookDetail)));
+    .then((bookDetail) => dispatch(receiveBookDetail(bookDetail)));
 };
 
 // sync actions

@@ -1,0 +1,17 @@
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-nav {
+  display: block;
+}
+
+.app-main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.app-children {
+  width: 75%;
+}
