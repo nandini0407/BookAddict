@@ -4,7 +4,12 @@ class Api::BooksController < ApplicationController
 
   def index
     puts "params", params
-    @books = Book.all
+    if params.bookshelfId
+      bookshelf = Bookshelf.find(params[:bookshelfId])
+      @books = bookshelf.books
+    else
+      @books = Book.all
+    end
   end
 
   def show

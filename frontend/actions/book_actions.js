@@ -5,8 +5,8 @@ export const RECEIVE_BOOK_DETAIL = "RECEIVE_BOOK_DETAIL";
 
 // async actions
 
-export const fetchBooksSummary = () => (dispatch) => {
-  return BookAPIUtil.fetchBooksSummary()
+export const fetchBooksSummary = (bookshelfId = null) => (dispatch) => {
+  return BookAPIUtil.fetchBooksSummary(bookshelfId = null)
     .then((booksSummary) => {
       dispatch(receiveBooksSummary(booksSummary));
     });
@@ -18,11 +18,13 @@ export const fetchBookDetail = (id) => (dispatch) => {
 };
 
 export const addBookToBookshelf = (bookId, bookshelfId) => (dispatch) => {
-
+  return BookAPIUtil.addBookToBookshelf(bookId, bookshelfId)
+    .then((bookshelf) => dispatch(pushBookshelf(bookshelf)));
 };
 
-export const removeBookFromBookshelf = (bookId, bookshelfId) => (dispatch) => {
-
+export const removeBookFromBookshelf = (id, bookId, bookshelfId) => (dispatch) => {
+  return BookAPIUtil.removeBookFromBookshelf(id, bookId, bookshelfId)
+    .then((bookshelf) => dispatch(popBookshelf(bookshelf)));
 };
 
 // sync actions
