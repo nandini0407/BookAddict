@@ -11,7 +11,10 @@ import BookShow from './book_show';
 const Root = ({ store }) => {
 
   const _redirectIfLoggedIn = (nextState, replace) => {
-
+    let currentUser = store.getState().session.currentUser;
+    if (currentUser) {
+      replace("/user");
+    }
   };
 
   const _ensureLoggedIn = (nextState, replace) => {
@@ -21,20 +24,16 @@ const Root = ({ store }) => {
     }
   };
 
-  const _redirect = (nextState, replace) => {
-    replace("/welcome");
-  };
-
   return (
     <Provider store={ store }>
       <Router history={ hashHistory }>
-        <Route path="/" component={ Splash } >
+        <Route path="/" component={ Splash } onEnter={ _redirectIfLoggedIn }>
           <IndexRedirect to="/welcome" />
           <Route path="/welcome" component={ AuthContainer } />
           <Route path="/signup" component={ AuthFormContainer } />
           <Route path="/login" component={ AuthFormContainer } />
         </Route>
-        <Route path="/user" component={ App }>
+        <Route path="/user" component={ App } onEnter={ _ensureLoggedIn }>
           <IndexRedirect to="/user/books" />
           <Route path="/user/books" component={ BookListContainer } />
           <Route path="/user/books/:bookId" component={ BookShow } />

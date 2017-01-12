@@ -23,8 +23,7 @@
       },
       ...
     },
-    type: 'bookshelf',
-    title: 'Bookshelf name'
+    heading: 'Bookshelf name'
   },
   bookDetail: {
     id: 1,

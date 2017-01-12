@@ -64,7 +64,6 @@ class AuthForm extends React.Component {
       <div>
         <p className="auth-text">Please {submitText} or {this.redirectToAlternate()}</p>
         <div className="form">
-          <div className="errors">{this.renderErrors()}</div>
           <form className="authform" onSubmit={this.handleSubmit}>
             <input
               className="username"
@@ -83,6 +82,7 @@ class AuthForm extends React.Component {
               type="submit"
               value={submitText} />
           </form>
+          <div className="errors">{this.renderErrors()}</div>
         </div>
       </div>
     );

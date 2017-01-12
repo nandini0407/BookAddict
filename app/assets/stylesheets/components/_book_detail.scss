@@ -1,39 +1,81 @@
 .book-detail-container {
-
+  display: flex;
 }
 
 .book-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.book-detail-top {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cover-shopping {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .book-cover {
-
-}
-
-.book-detail-title {
-
-}
-
-.book-detail-author {
-
-}
-
-.book-publisher {
-
-}
-
-.book-date {
-
-}
-
-.book-description {
-
+  margin: 40px;
 }
 
 .book-shopping {
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.shopping-button {
-  
+.shopping-link {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+  color: grey;
+}
+
+.shopping-link:hover {
+  text-decoration: underline;
+}
+
+.kobo {
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+.book-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-detail-title {
+  font-size: 33px;
+  margin: 40px 30px 30px 30px;
+  text-align: center;
+}
+
+.book-detail-author {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.book-publisher {
+  padding: 5px;
+}
+
+.book-date {
+  padding: 5px;
+}
+
+.book-detail-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.book-description {
+  width: 50%;
+  margin: 45px 65px;
 }
