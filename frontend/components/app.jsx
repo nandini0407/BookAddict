@@ -1,12 +1,12 @@
 import React from 'react';
-import Nav from './nav';
+import NavContainer from './nav_container';
 import Sidebar from './sidebar';
 
 const App = ({ children }) => {
   return (
     <div className="app">
       <div className="app-nav">
-        <Nav />
+        <NavContainer />
       </div>
       <div className="app-main">
         <Sidebar />

@@ -33,13 +33,11 @@
 .book-image {
   height: 450px;
   width: 298px;
+  margin-bottom: 25px;
+  box-shadow: 8px 8px 5px #888888;
+  -webkit-filter: brightness(100%);
 }
 
-.book-title {
-  text-align: center;
-  overflow-wrap: normal;
-}
-
-.book-author {
-  text-align: center;
+.book-image:hover {
+  -webkit-filter: brightness(70%);
 }

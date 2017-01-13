@@ -11,13 +11,18 @@ class BookList extends React.Component {
   }
 
   render() {
-    let booksSummaryIds = Object.keys(this.props.booksSummary.books);
-    let booksSummary = booksSummaryIds.map((id, idx) => {
-      return <BookListItem
-        key={idx}
-        book={this.props.booksSummary.books[id]}
-        />;
-    });
+    let booksSummary;
+    if (this.props.booksSummary.books === undefined) {
+      booksSummary = <div></div>;
+    } else {
+      let booksSummaryIds = Object.keys(this.props.booksSummary.books);
+      booksSummary = booksSummaryIds.map((id, idx) => {
+        return <BookListItem
+          key={idx}
+          book={this.props.booksSummary.books[id]}
+          />;
+      });
+    }
 
     return (
       <div className="main">
