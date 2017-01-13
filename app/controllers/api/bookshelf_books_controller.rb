@@ -6,6 +6,7 @@ class Api::BookshelfBooksController < ApplicationController
     @bookshelf_book = BookshelfBook.new(bookshelf_book_params)
     if @bookshelf_book.save
       @book = @bookshelf_book.book
+      @bookshelves = @book.bookshelves
       render 'api/books/show'
     else
       render json: @bookshelf_book.errors.full_messages, status: 422
@@ -13,10 +14,13 @@ class Api::BookshelfBooksController < ApplicationController
   end
 
   def destroy
-    @bookshelf_book = BookshelfBook.find_by_book_id_and_bookshelf_id(params[:book_id], params[:bookshelf_id])
-    book = @bookshelf_book.book
+    @bookshelf_book = BookshelfBook.where("book_id = ? AND bookshelf_id = ?", params[:book_id], params[:bookshelf_id])
+    @book = @bookshelf_book.book
     @bookshelf_book.destroy
-    render 'api/books/show', @book = book
+    @bookshelves = @book.bookshelves
+                    .where(user_id: current_user.id)
+                    .order('name ASC')
+    render 'api/books/show'
   end
 
   private

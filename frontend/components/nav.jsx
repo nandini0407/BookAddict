@@ -6,12 +6,12 @@ import { Link } from 'react-router';
 class Nav extends React.Component {
   constructor(props) {
     super(props);
-    // debugger;
+    debugger;
     this.fetchBooksSummary = this.props.fetchBooksSummary.bind(this);
   }
 
   render() {
-    // debugger;
+    debugger;
     return (
       <div className="nav">
         <div className="nav-left">

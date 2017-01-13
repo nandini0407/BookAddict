@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchBooksSummary: (bookshelfId = null) => {
-      // debugger;
+      debugger;
       dispatch(fetchBooksSummary(bookshelfId));
     }
   };

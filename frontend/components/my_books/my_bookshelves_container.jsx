@@ -14,7 +14,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllBookshelves: () => dispatch(fetchAllBookshelves()),
     fetchBooksSummary: (bookshelfId = null) => {
-      // debugger;
+      debugger;
       dispatch(fetchBooksSummary(bookshelfId));
     },
     addBookShelf: (bookshelf) => dispatch(addBookShelf(bookshelf))
