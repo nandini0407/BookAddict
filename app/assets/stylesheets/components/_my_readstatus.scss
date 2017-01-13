@@ -7,6 +7,8 @@
 .rs-text {
   text-align: center;
   font-weight: bold;
+  color: grey;
+  text-decoration: underline;
 }
 
 .rs-list {
@@ -14,6 +16,13 @@
 }
 
 .rs-list li {
-  margin: 3px;
-  padding: 4px;
+  margin: 5px;
+  padding: 5px;
+  color: darkgrey;
+  border-radius: 3px;
+}
+
+.rs-list li:hover {
+  background: #FADEA5;
+  cursor: pointer;
 }

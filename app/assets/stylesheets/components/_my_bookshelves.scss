@@ -7,6 +7,8 @@
 .bs-text {
   text-align: center;
   font-weight: bold;
+  color: grey;
+  text-decoration: underline;
 }
 
 .bs-list {
@@ -14,6 +16,36 @@
 }
 
 .bs-list li {
-  margin: 3px;
-  padding: 4px;
+  margin: 5px;
+  padding: 5px;
+  color: darkgrey;
+  border-radius: 3px;
+}
+
+.bs-list li:hover {
+  background: #FADEA5;
+}
+
+.add-shelf-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+.add-shelf-input {
+  margin: 5px;
+  width: 150px;
+  height: 24px;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.add-shelf-button {
+  margin: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  color: grey;
+  background: #A0C5F9;
+  font-size: 14px;
 }

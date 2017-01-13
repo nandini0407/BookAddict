@@ -1,7 +1,7 @@
 .my-books {
   display: flex;
   flex-direction: column;
-  margin: 5px;
+  // margin: 5px;
   width: 100%;
   align-items: center;
 }
@@ -9,4 +9,5 @@
 .my-books-text {
   text-align: center;
   font-size: 25px;
+  color: grey;
 }

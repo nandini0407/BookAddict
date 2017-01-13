@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 class Nav extends React.Component {
   constructor(props) {
     super(props);
-    this.props.fetchBooksSummary = this.props.fetchBooksSummary.bind(this);
+    this.fetchBooksSummary = this.props.fetchBooksSummary.bind(this);
   }
 
   render() {

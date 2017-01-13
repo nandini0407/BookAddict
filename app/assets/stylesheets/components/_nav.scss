@@ -1,7 +1,8 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(rgba(0, 196, 255, 0.45), rgb(184, 243, 186));
+  // background: linear-gradient(rgba(0, 196, 255, 0.45), rgb(184, 243, 186));
+  background: linear-gradient(#A0C5F9, #FBFCCF);
   align-items: center;
 }
 
@@ -27,6 +28,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 0 25px;
 }
 
 .greet-user {
@@ -36,11 +38,14 @@
 }
 
 .logout-button {
-  background: rgba(121, 85, 72, 0.57);
+  background: #A0C5F9;
   margin: 8px;
-  padding: 5px;
+  padding: 10px;
   height: 20px;
-  color: darkslategrey;
-  border: 1px solid rgba(148, 116, 103, 0.31);
+  color: grey;
   border-radius: 6px;
+}
+
+.logout-button:hover {
+  background: #6AA0C4;
 }

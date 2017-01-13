@@ -10,9 +10,10 @@ class Api::BookshelvesController < ApplicationController
 
   def create
     @bookshelf = Bookshelf.new(bookshelf_params)
+    @books = Book.all
     @bookshelf.user_id = current_user.id
     if @bookshelf.save
-      render 'api/books/index', @books = Book.all
+      render 'api/bookshelves/index'
     else
       render json: @bookshelf.errors.full_messages, status: 422
     end

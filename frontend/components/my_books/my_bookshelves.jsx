@@ -13,7 +13,8 @@ class MyBookshelves extends React.Component {
     this.props.fetchAllBookshelves();
   }
 
-  handleAddShelf() {
+  handleAddShelf(e) {
+    e.preventDefault();
     this.props.addBookShelf(this.state)
       .then(() => this.setState({ name: "" }));
   }
@@ -42,13 +43,15 @@ class MyBookshelves extends React.Component {
         <ul className="bs-list">
           { bookshelves }
         </ul>
-        <form onSubmit={ this.handleAddShelf }>
+        <form className="add-shelf-form" onSubmit={ this.handleAddShelf }>
           <input
+            className="add-shelf-input"
             type="text"
             value={ this.state.name }
             onChange={ this.update('name') }
             />
           <input
+            className="add-shelf-button"
             type="submit"
             value="Add Bookshelf"
             />
