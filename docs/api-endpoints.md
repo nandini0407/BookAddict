@@ -35,7 +35,7 @@
 
 - `POST /api/bookshelf_books`
   - accepts bookshelf_id and book_id query params and adds the book to the bookshelf of the current user
-- `DELETE /api/bookshelf_books`
+- `DELETE /api/bookshelf_books/:id`
   - acepts bookshelf_id and book_id query params and deletes book from the bookshelf of the current user
 
 ### Reviews

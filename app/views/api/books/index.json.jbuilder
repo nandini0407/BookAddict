@@ -7,4 +7,4 @@ json.books do
   end
 end
 
-json.heading "All books"
+json.heading @heading

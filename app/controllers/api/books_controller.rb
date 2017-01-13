@@ -3,12 +3,13 @@ class Api::BooksController < ApplicationController
   before_action :require_user
 
   def index
-    puts "params", params
-    if params.bookshelfId
+    if params[:bookshelfId]
       bookshelf = Bookshelf.find(params[:bookshelfId])
       @books = bookshelf.books
+      @heading = bookshelf.name
     else
       @books = Book.all
+      @heading = "All books"
     end
   end
 

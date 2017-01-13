@@ -17,16 +17,6 @@ export const fetchBookDetail = (id) => (dispatch) => {
     .then((bookDetail) => dispatch(receiveBookDetail(bookDetail)));
 };
 
-export const addBookToBookshelf = (bookId, bookshelfId) => (dispatch) => {
-  return BookAPIUtil.addBookToBookshelf(bookId, bookshelfId)
-    .then((bookshelf) => dispatch(pushBookshelf(bookshelf)));
-};
-
-export const removeBookFromBookshelf = (id, bookId, bookshelfId) => (dispatch) => {
-  return BookAPIUtil.removeBookFromBookshelf(id, bookId, bookshelfId)
-    .then((bookshelf) => dispatch(popBookshelf(bookshelf)));
-};
-
 // sync actions
 
 export const receiveBooksSummary = (booksSummary) => {
@@ -41,12 +31,4 @@ export const receiveBookDetail = (bookDetail) => {
     type: RECEIVE_BOOK_DETAIL,
     bookDetail
   };
-};
-
-export const pushBookshelf = (bookshelf) => {
-
-};
-
-export const popBookshelf = (bookshelf) => {
-
 };
