@@ -36,7 +36,8 @@
     amazon_link: 'link/to/amazon',
     kobo_link: 'link/to/kobo',
     play_link: 'link/to/play',
-    my_read_status: 'have read'
+    my_read_status: 'have read',
+    bookshelves: []
   },
   reviews: {
     1: {

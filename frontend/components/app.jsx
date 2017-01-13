@@ -3,6 +3,7 @@ import NavContainer from './nav_container';
 import Sidebar from './sidebar';
 
 const App = ({ children }) => {
+  // debugger;
   return (
     <div className="app">
       <div className="app-nav">

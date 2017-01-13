@@ -8,23 +8,24 @@
     + AuthForm
 
 **App**
-  - Nav
-    + Logo
-    + GreetingContainer
-  - Sidebar
-    + MyBooks
-      - MyReadStatusContainer
-        + MyReadStatus
-      - MyBookShelvesContainer
-        + MyBookShelves
-  - BookListContainer
-    + BookList
-      - BookListItem
-  - BookShow
-    + BookDetailContainer
-      - BookDetail
-    + ReviewsContainer
-      - Reviews
+  + NavContainer
+    - Nav
+      + Logo
+      + GreetingContainer
+    - Sidebar
+      + MyBooks
+        - MyReadStatusContainer
+          + MyReadStatus
+        - MyBookShelvesContainer
+          + MyBookShelves
+    - BookListContainer
+      + BookList
+        - BookListItem
+    - BookShow
+      + BookDetailContainer
+        - BookDetail
+      + ReviewsContainer
+        - Reviews
 
 ## Routes
 

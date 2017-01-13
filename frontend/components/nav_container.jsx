@@ -5,7 +5,10 @@ import { fetchBooksSummary } from '../actions/book_actions';
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchBooksSummary: () => dispatch(fetchBooksSummary())
+    fetchBooksSummary: () => {
+      // debugger;
+      dispatch(fetchBooksSummary());
+    }
   };
 };
 

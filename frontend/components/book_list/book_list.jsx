@@ -4,13 +4,24 @@ import BookListItem from './book_list_item';
 class BookList extends React.Component {
   constructor(props) {
     super(props);
+    // debugger;
   }
 
   componentDidMount() {
-    this.props.fetchBooksSummary();
+    // debugger;
+    if (this.props.params.bookshelfId) {
+      this.props.fetchBooksSummary(this.props.params.bookshelfId);
+    } else {
+      this.props.fetchBooksSummary();
+    }
+  }
+
+  componentWillReceiveProps () {
+    
   }
 
   render() {
+    // debugger;
     let booksSummary;
     if (this.props.booksSummary.books === undefined) {
       booksSummary = <div></div>;

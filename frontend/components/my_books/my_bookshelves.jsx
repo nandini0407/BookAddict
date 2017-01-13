@@ -21,6 +21,7 @@ class MyBookshelves extends React.Component {
 
   handleShelfClick(bookshelfId) {
     return (e) => {
+      // debugger;
       this.props.fetchBooksSummary(bookshelfId);
     };
   }

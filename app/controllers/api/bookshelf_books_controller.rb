@@ -5,7 +5,8 @@ class Api::BookshelfBooksController < ApplicationController
   def create
     @bookshelf_book = BookshelfBook.new(bookshelf_book_params)
     if @bookshelf_book.save
-      render 'api/books/show', @book = @bookshelf_book.book
+      @book = @bookshelf_book.book
+      render 'api/books/show'
     else
       render json: @bookshelf_book.errors.full_messages, status: 422
     end

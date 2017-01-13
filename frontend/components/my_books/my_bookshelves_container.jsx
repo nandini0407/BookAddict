@@ -13,7 +13,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllBookshelves: () => dispatch(fetchAllBookshelves()),
-    fetchBooksSummary: (bookshelfId = null) => dispatch(fetchBooksSummary(bookshelfId)),
+    fetchBooksSummary: (bookshelfId = null) => {
+      // debugger;
+      dispatch(fetchBooksSummary(bookshelfId));
+    },
     addBookShelf: (bookshelf) => dispatch(addBookShelf(bookshelf))
   };
 };

@@ -9,6 +9,7 @@ import BookListContainer from './book_list/book_list_container';
 import BookShow from './book_show';
 
 const Root = ({ store }) => {
+  // debugger;
 
   const _redirectIfLoggedIn = (nextState, replace) => {
     let currentUser = store.getState().session.currentUser;
