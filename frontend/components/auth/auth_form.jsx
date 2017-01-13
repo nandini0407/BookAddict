@@ -13,6 +13,8 @@ class AuthForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.redirectToAlternate = this.redirectToAlternate.bind(this);
+    this.loginGuest = this.loginGuest.bind(this);
+    this.useAsGuest = this.useAsGuest.bind(this);
   }
 
   handleSubmit(e) {
@@ -57,12 +59,22 @@ class AuthForm extends React.Component {
     }
   }
 
+  useAsGuest() {
+    return <p className="use-as-guest" onClick={ this.loginGuest }>use as guest</p>;
+  }
+
+  loginGuest() {
+    let guest = { username: 'guest', password: 'guest123' };
+    this.props.login(guest)
+      .then(() => this.props.router.push('/user'));
+  }
+
   render() {
     let submitText = (this.props.formType === "signup") ? "Sign Up" : "Login";
     let alternateAuth = (this.props.formType === "signup") ? "Login" : "Sign Up";
     return (
       <div>
-        <p className="auth-text">Please {submitText} or {this.redirectToAlternate()}</p>
+        <div className="auth-text">Please {submitText} or {this.redirectToAlternate()} or { this.useAsGuest() }</div>
         <div className="form">
           <form className="authform" onSubmit={this.handleSubmit}>
             <input

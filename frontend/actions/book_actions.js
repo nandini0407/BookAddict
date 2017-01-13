@@ -6,7 +6,7 @@ export const RECEIVE_BOOK_DETAIL = "RECEIVE_BOOK_DETAIL";
 // async actions
 
 export const fetchBooksSummary = (bookshelfId = null) => (dispatch) => {
-  return BookAPIUtil.fetchBooksSummary(bookshelfId = null)
+  return BookAPIUtil.fetchBooksSummary(bookshelfId)
     .then((booksSummary) => {
       dispatch(receiveBooksSummary(booksSummary));
     });

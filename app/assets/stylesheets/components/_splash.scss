@@ -81,6 +81,17 @@
   font-size: 13px;
 }
 
+.use-as-guest {
+  text-align: center;
+  font-size: 13px;
+  text-decoration: underline;
+  color: blue;
+}
+
+.use-as-guest:hover {
+  cursor: pointer;
+}
+
 .alternate-auth-text {
   color: blue;
   text-decoration: underline;
