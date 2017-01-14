@@ -6,7 +6,7 @@ import { fetchBooksSummary } from '../actions/book_actions';
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchBooksSummary: () => {
-      debugger;
+      // debugger;
       dispatch(fetchBooksSummary());
     }
   };

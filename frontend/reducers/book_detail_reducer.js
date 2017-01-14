@@ -1,5 +1,5 @@
 import { RECEIVE_BOOK_DETAIL } from '../actions/book_actions';
-import { PUSH_BOOKSHELF, POP_BOOKSHELF } from '../actions/bookshelf_book_actions';
+import { ADD_BOOKSHELVES_TO_DETAIL } from '../actions/bookshelf_book_actions';
 import merge from 'lodash/merge';
 
 const BookDetailReducer = (state = {}, action) => {
@@ -9,15 +9,19 @@ const BookDetailReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_BOOK_DETAIL:
       return action.bookDetail;
-    case PUSH_BOOKSHELF:
-      newState.bookshelves.push(action.bookshelf);
+    case ADD_BOOKSHELVES_TO_DETAIL:
+      delete newState.bookshelves;
+      newState['bookshelves'] = action.bookshelves;
       return newState;
-    case POP_BOOKSHELF:
-      let idx = newState.bookshelves.indexOf(action.bookshelf);
-      if (idx > -1) {
-        newState.bookshelves.splice(idx, 1);
-      }
-      return newState;
+    // case PUSH_BOOKSHELF:
+    //   newState.bookshelves.push(action.bookshelf);
+    //   return newState;
+    // case POP_BOOKSHELF:
+    //   let idx = newState.bookshelves.indexOf(action.bookshelf);
+    //   if (idx > -1) {
+    //     newState.bookshelves.splice(idx, 1);
+    //   }
+    //   return newState;
     default:
       return state;
   }

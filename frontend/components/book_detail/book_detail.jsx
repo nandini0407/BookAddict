@@ -4,6 +4,9 @@ import Select from 'react-select';
 class BookDetail extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { value: [] };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -11,8 +14,10 @@ class BookDetail extends React.Component {
     this.props.fetchAllBookshelves();
   }
 
-  handleClick(e) {
-
+  handleChange(value) {
+    this.setState({ value });
+    console.log(value);
+    this.props.changeBookshelves(this.props.bookId, value);
   }
 
   render() {
@@ -46,12 +51,13 @@ class BookDetail extends React.Component {
             <div className="book-date">
               {book.date}
             </div>
-            <div>
+            <div className="change-bookshelves">
               <Select
-                name="form-field-name"
-                value="one"
+                placeholder="Change Bookshelves"
                 options={ bookshelves }
-                multi={ true }
+                value={ this.state.value }
+                multi={true}
+                onChange={ this.handleChange }
                 />
             </div>
           </div>
