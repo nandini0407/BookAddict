@@ -23,7 +23,7 @@
       },
       ...
     },
-    heading: 'Bookshelf name'
+    heading: 'All Books/Shelf1/Read'
   },
   bookDetail: {
     id: 1,
@@ -37,7 +37,7 @@
     kobo_link: 'link/to/kobo',
     play_link: 'link/to/play',
     my_read_status: 'have read',
-    bookshelves: []
+    bookshelves: [ { id: 1, name: 'Shelf1'}, ... ]
   },
   reviews: {
     1: {
@@ -50,10 +50,10 @@
     ...
   },
   readStatus: ['have read', 'reading', 'will read'],
-  bookShelves: {
+  bookShelves: [
     { id: 1, name: 'Shelf 1' },
     { id: 2, name: 'Shelf 2' },
     ...
-  }
+  ]
 }
 ```

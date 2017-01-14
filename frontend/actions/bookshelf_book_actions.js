@@ -17,18 +17,16 @@ export const removeBookFromBookshelf = (id, bookId, bookshelfId) => (dispatch) =
 
 // sync actions
 
-export const pushBookshelf = (book, bookshelf) => {
+export const pushBookshelf = (bookshelf) => {
   return {
     type: PUSH_BOOKSHELF,
-    book,
     bookshelf
   };
 };
 
-export const popBookshelf = (book, bookshelf) => {
+export const popBookshelf = (bookshelf) => {
   return {
     type: POP_BOOKSHELF,
-    book,
     bookshelf
   };
 };

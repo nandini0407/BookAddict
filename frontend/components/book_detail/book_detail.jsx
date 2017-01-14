@@ -1,4 +1,5 @@
 import React from 'react';
+import Select from 'react-select';
 
 class BookDetail extends React.Component {
   constructor(props) {
@@ -7,10 +8,20 @@ class BookDetail extends React.Component {
 
   componentDidMount() {
     this.props.fetchBookDetail(this.props.bookId);
+    this.props.fetchAllBookshelves();
+  }
+
+  handleClick(e) {
+
   }
 
   render() {
     let book = this.props.bookDetail;
+    let bookshelves = this.props.bookshelves.map((bookshelf) => {
+      return {
+        value: bookshelf.name, label: bookshelf.name, id: bookshelf.id
+      };
+    });
     return (
       <div className="book-detail">
         <section className="book-detail-top">
@@ -34,6 +45,14 @@ class BookDetail extends React.Component {
             </div>
             <div className="book-date">
               {book.date}
+            </div>
+            <div>
+              <Select
+                name="form-field-name"
+                value="one"
+                options={ bookshelves }
+                multi={ true }
+                />
             </div>
           </div>
         </section>
