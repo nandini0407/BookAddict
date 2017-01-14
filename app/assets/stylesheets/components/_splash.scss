@@ -15,7 +15,10 @@
   position: absolute;
   top: 25%;
   left: 37%;
-  height: 300px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .splash-text {
@@ -27,7 +30,7 @@
 }
 
 .button {
-  background-color: rgba(26, 145, 191, 0.76);
+  background-color: rgb(33, 127, 162);
   padding: 13px;
   border-radius: 7px;
   font-size: 15px;
@@ -38,17 +41,16 @@
 }
 
 .button:hover {
-  background-color: rgba(58, 112, 138, 0.29);
+  background-color: #44a4c7;
   cursor: pointer;
 }
 
 .auth-buttons {
-  position: absolute;
   display: flex;
   flex-direction: column;
   width: 260px;
   align-items: center;
-  margin: 40px;
+  margin: 18px;
 }
 
 .top-auth-buttons {
@@ -62,9 +64,20 @@
   margin: 10px;
 }
 
+.auth {
+  display: flex;
+  flex-direction: column;
+  background: rgba(164, 201, 208, 0.54);
+  border-radius: 19px;
+  padding-top: 12px;
+  height: 100%;
+  width: 320px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .authform {
@@ -74,6 +87,7 @@
   flex-direction: column;
   align-items: center;
   margin: 15px 0;
+  height: 100%;
 }
 
 .auth-text {
@@ -118,11 +132,10 @@
 .errors {
   color: #f10857;
   text-align: center;
-  font-size: 17px;
-  border-radius: 6px;
-  background: rgba(215, 231, 247, 0.63);
+  font-size: 13px;
+  margin-top: 2px;
 }
 
 .errors ul li {
-  padding: 3px;
+  padding: 1px;
 }

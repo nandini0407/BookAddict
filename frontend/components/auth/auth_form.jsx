@@ -73,8 +73,9 @@ class AuthForm extends React.Component {
     let submitText = (this.props.formType === "signup") ? "Sign Up" : "Login";
     let alternateAuth = (this.props.formType === "signup") ? "Login" : "Sign Up";
     return (
-      <div>
+      <div className="auth" >
         <div className="auth-text">Please {submitText} or {this.redirectToAlternate()} or { this.useAsGuest() }</div>
+        <div className="errors">{this.renderErrors()}</div>
         <div className="form">
           <form className="authform" onSubmit={this.handleSubmit}>
             <input
@@ -94,7 +95,6 @@ class AuthForm extends React.Component {
               type="submit"
               value={submitText} />
           </form>
-          <div className="errors">{this.renderErrors()}</div>
         </div>
       </div>
     );

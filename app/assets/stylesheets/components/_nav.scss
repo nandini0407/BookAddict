@@ -1,9 +1,9 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  // background: linear-gradient(rgba(0, 196, 255, 0.45), rgb(184, 243, 186));
-  background: linear-gradient(#A0C5F9, #FBFCCF);
+  background: white;
   align-items: center;
+  border-bottom: 2px solid #d2cfcf;
 }
 
 .logo-div {
