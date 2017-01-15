@@ -36,8 +36,8 @@
     amazon_link: 'link/to/amazon',
     kobo_link: 'link/to/kobo',
     play_link: 'link/to/play',
-    bookshelves: [ { id: 1, name: 'Shelf1'}, ... ]
-    read_status: [ { id: 1, name: 'Have Read'} ],
+    bookshelves: [ { id: 1, name: 'Shelf1'}, ... ],
+    read_status: [ { id: 1, name: 'Have Read'} ]
   },
   reviews: {
     1: {
@@ -49,7 +49,7 @@
     },
     ...
   },
-  readStatus: [
+  readStatuses: [
     { id: 1, name: 'Have Read' },
     { id: 2, name: 'Reading' },
     { id: 2, name: 'Will Read' }

@@ -1,9 +1,9 @@
 
-export const changeBookshelves = (bookId, bookshelves) => {
+export const changeBookshelves = (bookId, bookshelfIds) => {
   return $.ajax({
     method: 'POST',
     url: `api/bookshelf_books`,
-    data: { book_id: bookId, bookshelves: bookshelves },
+    data: { book_id: bookId, bookshelfIds: bookshelfIds },
     dataType: 'json'
   });
 };

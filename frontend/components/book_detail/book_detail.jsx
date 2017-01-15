@@ -4,30 +4,55 @@ import Select from 'react-select';
 class BookDetail extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: [] };
+    this.state = { bookshelves: [], readStatus: {} };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleShelfChange = this.handleShelfChange.bind(this);
+    this.handleReadStatusChange = this.handleReadStatusChange.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchBookDetail(this.props.bookId)
-      .then(() => this.setNewState());
+      .then(() => {
+        this.setNewBookshelfState();
+        this.setNewReadStatus();
+      });
     this.props.fetchAllBookshelves();
   }
 
-  setNewState() {
+  setNewBookshelfState() {
     let bookshelves = this.props.bookDetail.bookshelves.map((shelf) => {
       return { id: shelf.id, label: shelf.name, value: shelf.name };
     });
-    this.setState({ value: bookshelves });
+    this.setState({ bookshelves: bookshelves });
   }
 
-  handleChange(value) {
-    this.setState({ value });
-    let bookshelfIds = Object.keys(value).map((idx) => {
-      return value[idx].id;
+  setNewReadStatus() {
+    let readStatus = this.props.bookDetail.read_status;
+    this.setState({ readStatus: { id: readStatus.id, value: readStatus.name, label: readStatus.name }});
+  }
+
+  handleShelfChange(val) {
+    console.log(typeof val);
+    this.setState({ bookshelves: val });
+    console.log(val);
+    let bookshelfIds = Object.keys(val).map((idx) => {
+      return val[idx].id;
     });
+    if (bookshelfIds.length === 0) {
+      bookshelfIds = [""];
+    }
     this.props.changeBookshelves(this.props.bookId, bookshelfIds);
+  }
+
+  handleReadStatusChange(val) {
+    this.setState({ readStatus: val });
+    let readStatusId;
+    if (val.id) {
+      readStatusId = val.id;
+    } else {
+      readStatusId = "";
+    }
+    this.props.addReadStatus(this.props.bookId, readStatusId);
   }
 
   render() {
@@ -35,6 +60,11 @@ class BookDetail extends React.Component {
     let bookshelves = this.props.bookshelves.map((bookshelf) => {
       return {
         value: bookshelf.name, label: bookshelf.name, id: bookshelf.id
+      };
+    });
+    let readStatuses = this.props.readStatuses.map((status) => {
+      return {
+        value: status.name, label: status.name, id: status.id
       };
     });
     return (
@@ -62,12 +92,22 @@ class BookDetail extends React.Component {
               {book.date}
             </div>
             <div className="change-bookshelves">
+              <div className="your-bookshelves" >Your Bookshelves</div>
               <Select
                 placeholder="Change Bookshelves"
                 options={ bookshelves }
-                value={ this.state.value }
+                value={ this.state.bookshelves }
                 multi={true}
-                onChange={ this.handleChange }
+                onChange={ this.handleShelfChange }
+                />
+            </div>
+            <div>
+              <div className="your-read-status" >Your Read Status</div>
+              <Select
+                placeholder="Choose Read Status"
+                options={ readStatuses }
+                value={ this.state.readStatus }
+                onChange={ this.handleReadStatusChange }
                 />
             </div>
           </div>

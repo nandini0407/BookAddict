@@ -22,8 +22,13 @@ class Api::BooksController < ApplicationController
     @bookshelves = @book.bookshelves
                     .where(user_id: current_user.id)
                     .order('name ASC')
-    @read_status = @book.read_statuses
-                    .where(user_id: current_user.id)
+    rs_book = @book.read_status_books
+                          .where(user_id: current_user.id)
+    if rs_book.length > 0
+      @read_status = rs_book[0].read_status
+    else
+      @read_status = ReadStatus.new({ id: "", name: "" })
+    end
   end
 
 end

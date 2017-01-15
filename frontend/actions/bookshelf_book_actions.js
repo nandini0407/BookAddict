@@ -4,8 +4,8 @@ export const ADD_BOOKSHELVES_TO_DETAIL = "ADD_BOOKSHELVES_TO_DETAIL";
 
 // async actions
 
-export const changeBookshelves = (bookId, bookshelves) => (dispatch) => {
-  return BookshelfBookAPIUtil.changeBookshelves(bookId, bookshelves)
+export const changeBookshelves = (bookId, bookshelfIds) => (dispatch) => {
+  return BookshelfBookAPIUtil.changeBookshelves(bookId, bookshelfIds)
     .then((bkshelves) => dispatch(addBookshelvesToDetail(bkshelves)));
 };
 
