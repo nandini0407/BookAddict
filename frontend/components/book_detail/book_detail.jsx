@@ -10,14 +10,24 @@ class BookDetail extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchBookDetail(this.props.bookId);
+    this.props.fetchBookDetail(this.props.bookId)
+      .then(() => this.setNewState());
     this.props.fetchAllBookshelves();
+  }
+
+  setNewState() {
+    let bookshelves = this.props.bookDetail.bookshelves.map((shelf) => {
+      return { id: shelf.id, label: shelf.name, value: shelf.name };
+    });
+    this.setState({ value: bookshelves });
   }
 
   handleChange(value) {
     this.setState({ value });
-    console.log(value);
-    this.props.changeBookshelves(this.props.bookId, value);
+    let bookshelfIds = Object.keys(value).map((idx) => {
+      return value[idx].id;
+    });
+    this.props.changeBookshelves(this.props.bookId, bookshelfIds);
   }
 
   render() {
