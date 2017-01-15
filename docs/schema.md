@@ -36,13 +36,19 @@ id              | integer   | not null, primary key
 bookshelf_id    | integer   | not null, indexed
 book_id         | integer   | not null, indexed
 
-## read_status
+## read_status_books
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 user_id         | integer   | not null, indexed
 book_id         | integer   | not null, indexed
-status          | string    | not null, indexed
+read_status_id  | string    | not null, indexed
+
+## read_status
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+name            | string    | not null, indexed
 
 ## reviews
 column name     | data type | details

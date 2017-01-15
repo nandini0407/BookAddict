@@ -36,7 +36,7 @@
 - `POST /api/bookshelf_books`
   - accepts bookshelf_id and book_id query params and adds the book to the bookshelf of the current user
 - `DELETE /api/bookshelf_books/:id`
-  - acepts bookshelf_id and book_id query params and deletes book from the bookshelf of the current user
+  - accepts bookshelf_id and book_id query params and deletes book from the bookshelf of the current user
 
 ### Reviews
 
@@ -47,6 +47,9 @@
 
 - `GET /api/read_status`
   - gets a list of statuses (have read, reading, will read)
+
+### ReadStatusBooks
+
 - `POST /api/read_status`
   - accepts book_id and status as query params and adds book to the status of the current user
 - `PATCH /api/read_status`
