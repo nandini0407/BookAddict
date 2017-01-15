@@ -62,5 +62,6 @@ Rails.application.routes.draw do
     resources :books, only: [:index, :show]
     resources :bookshelves, only: [:index, :create]
     resources :bookshelf_books, only: [:create, :destroy]
+    resources :read_statuses, only: [:index]
   end
 end

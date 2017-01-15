@@ -8,7 +8,15 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
 
   has_many :bookshelves
-  has_many :books, through: :bookshelves
+  has_many :shelved_books,
+    through: :bookshelves,
+    source: :books
+  has_many :read_status_books
+  has_many :status_books,
+    through: :read_status_books,
+    source: :book
+  has_many :read_statuses, through: :read_status_books
+
 
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)

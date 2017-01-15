@@ -45,14 +45,14 @@
 
 ### ReadStatus
 
-- `GET /api/read_status`
+- `GET /api/read_statuses`
   - gets a list of statuses (have read, reading, will read)
 
 ### ReadStatusBooks
 
-- `POST /api/read_status`
+- `POST /api/read_status_books`
   - accepts book_id and status as query params and adds book to the status of the current user
-- `PATCH /api/read_status`
+- `PATCH /api/read_status_books/:id`
   - accepts book_id and status as query params and updates book to the status of the current user
-- `DELETE /api/read_status`
+- `DELETE /api/read_status_books/:id`
   - accepts book_id as book_id as query param and deletes book from its existing status of the current user

@@ -42,9 +42,9 @@ column name     | data type | details
 id              | integer   | not null, primary key
 user_id         | integer   | not null, indexed
 book_id         | integer   | not null, indexed
-read_status_id  | string    | not null, indexed
+read_status_id  | integer   | not null, indexed
 
-## read_status
+## read_statuses
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key

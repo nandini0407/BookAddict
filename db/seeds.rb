@@ -49,6 +49,11 @@ User.create({ username: "lrichards12", password: "x4oGqjF"})
 User.create({ username: "jday13", password: "EqlFbK"})
 User.create({ username: "guest", password: "guest123"})
 
+ReadStatus.destroy_all
+ReadStatus.create(name: "Have Read")
+ReadStatus.create(name: "Reading")
+ReadStatus.create(name: "Will Read")
+
 Book.destroy_all
 Book.create({ title: "The Sleeping Beauty Killer",
   author: "Mary Higgins Clark & Alafair Burke",
