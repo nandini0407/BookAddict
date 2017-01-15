@@ -4,24 +4,44 @@ import BookListItem from './book_list_item';
 class BookList extends React.Component {
   constructor(props) {
     super(props);
-    // debugger;
+    this.state = { currentUrl: "" };
   }
 
-  componentDidMount() {
-    // debugger;
-    if (this.props.params.bookshelfId) {
-      this.props.fetchBooksSummary(this.props.params.bookshelfId);
-    } else {
-      this.props.fetchBooksSummary();
+  fetchDataIfNeeded() {
+    if (this.state.currentUrl !== this.props.location.pathname) {
+      if (this.props.params.bookshelfId) {
+        this.props.fetchBooksSummary(this.props.params.bookshelfId)
+          .then(() => this.updateState());
+      } else if (this.props.params.readStatusId) {
+        this.props.fetchBooksSummary(null, this.props.params.readStatusId)
+          .then(() => this.updateState());
+      } else {
+        this.props.fetchBooksSummary()
+          .then(() => this.updateState());
+      }
     }
   }
 
-  componentWillReceiveProps (newProps) {
-    // debugger;
+  updateState() {
+    this.state = { currentUrl: this.props.location.pathname}  ;
+  }
+
+  componentDidMount() {
+    this.fetchDataIfNeeded();
+  }
+
+  componentWillReceiveProps(newProps) {
+    this.fetchDataIfNeeded();
   }
 
   render() {
-    // debugger;
+    if (this.state.currentUrl !== this.props.location.pathname) {
+      // this is to prevent rendering data in the old redux state
+      return (
+        <div></div>
+      );
+    }
+
     let booksSummary;
     if (this.props.booksSummary.books === undefined) {
       booksSummary = <div></div>;

@@ -14,3 +14,9 @@ json.bookshelves do
     json.name bookshelf.name
   end
 end
+json.read_status do
+  json.array! @read_status do |read_status|
+    json.id read_status.id
+    json.name read_status.name
+  end
+end

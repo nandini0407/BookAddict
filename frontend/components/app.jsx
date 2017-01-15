@@ -1,13 +1,12 @@
 import React from 'react';
-import NavContainer from './nav_container';
+import Nav from './nav';
 import Sidebar from './sidebar';
 
 const App = ({ children }) => {
-  // debugger;
   return (
     <div className="app">
       <div className="app-nav">
-        <NavContainer />
+        <Nav />
       </div>
       <div className="app-main">
         <Sidebar />

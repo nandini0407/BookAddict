@@ -7,6 +7,10 @@ class Api::BooksController < ApplicationController
       bookshelf = Bookshelf.find(params[:bookshelfId])
       @books = bookshelf.books
       @heading = bookshelf.name
+    elsif params[:readStatusId]
+      read_status = ReadStatus.find(params[:readStatusId])
+      @books = read_status.books
+      @heading = read_status.name
     else
       @books = Book.all
       @heading = "All books"
@@ -18,6 +22,8 @@ class Api::BooksController < ApplicationController
     @bookshelves = @book.bookshelves
                     .where(user_id: current_user.id)
                     .order('name ASC')
+    @read_status = @book.read_statuses
+                    .where(user_id: current_user.id)
   end
 
 end

@@ -19,13 +19,6 @@ class MyBookshelves extends React.Component {
       .then(() => this.setState({ name: "" }));
   }
 
-  handleShelfClick(bookshelfId) {
-    return (e) => {
-      // debugger;
-      this.props.fetchBooksSummary(bookshelfId);
-    };
-  }
-
   update(field) {
     return (e) => {
       this.setState({[field]: e.target.value});
@@ -35,7 +28,7 @@ class MyBookshelves extends React.Component {
   render (){
     let bookshelves = this.props.bookshelves.map((bookshelf) => {
       return <li key={ bookshelf.id }>
-        <Link to={`/user/bookshelves/${bookshelf.id}`} onClick={ this.handleShelfClick(bookshelf.id) }>{ bookshelf.name }</Link>
+        <Link to={`/user/bookshelves/${bookshelf.id}`} >{ bookshelf.name }</Link>
       </li>;
     });
     return (
