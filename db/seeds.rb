@@ -7,13 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.destroy_all
-User.create({username: "mcooper0", password: "AJMRvD7bsGeC"})
-User.create({username: "clawson1", password: "qpTHu8TSQ"})
-User.create({username: "kwhite2", password: "Rz5qHXH9RvEJ"})
-User.create({username: "mkennedy3", password: "WoySQN"})
-User.create({username: "kmoore4", password: "IqVES9c0s"})
-User.create({username: "wbennett5", password: "52fAGaPjBPr"})
-User.create({username: "jhansen6", password: "dTye8S5KNy"})
+user1 = User.create({ username: "guest", password: "guest123"})
+user2 = User.create({username: "mcooper0", password: "AJMRvD7bsGeC"})
+user3 = User.create({username: "clawson1", password: "qpTHu8TSQ"})
+user4 = User.create({username: "kwhite2", password: "Rz5qHXH9RvEJ"})
+user5 = User.create({username: "mkennedy3", password: "WoySQN"})
+user6 = User.create({username: "kmoore4", password: "IqVES9c0s"})
+user7 = User.create({username: "wbennett5", password: "52fAGaPjBPr"})
+user8 = User.create({username: "jhansen6", password: "dTye8S5KNy"})
 User.create({username: "mrodriguez7", password: "76aHf23L"})
 User.create({username: "kwalker8", password: "V8DpIo0TH"})
 User.create({ username: "jdiaz9", password: "cgin7N5Ujo"})
@@ -47,15 +48,15 @@ User.create({ username: "dfranklin10", password: "3iEqU30GdU"})
 User.create({ username: "lhayes11", password: "guPBndCt"})
 User.create({ username: "lrichards12", password: "x4oGqjF"})
 User.create({ username: "jday13", password: "EqlFbK"})
-User.create({ username: "guest", password: "guest123"})
 
 ReadStatus.destroy_all
-ReadStatus.create(name: "Have Read")
-ReadStatus.create(name: "Reading")
-ReadStatus.create(name: "Will Read")
+rs1 = ReadStatus.create(name: "Have Read")
+rs2 = ReadStatus.create(name: "Reading")
+rs3 = ReadStatus.create(name: "Will Read")
 
+Review.destroy_all
 Book.destroy_all
-Book.create({ title: "The Sleeping Beauty Killer",
+book1 = Book.create({ title: "The Sleeping Beauty Killer",
   author: "Mary Higgins Clark & Alafair Burke",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484196931/the_sleeping_beauty_killer_ueryex.jpg",
   publisher: "Simon and Schuster",
@@ -65,7 +66,38 @@ Book.create({ title: "The Sleeping Beauty Killer",
   kobo_link: "https://www.kobo.com/us/en/ebook/the-sleeping-beauty-killer",
   play_link: "https://play.google.com/store/books/details/Mary_Higgins_Clark_The_Sleeping_Beauty_Killer?id=4aX0CwAAQBAJ"
 })
-Book.create({ title: "Kathy Griffin's Celebrity Run-Ins: My A-Z Index",
+
+Review.create({
+  title: "I love this series",
+  rating: 4,
+  body: "I read the first review in which the reader suspected a certain person very early in the book. That person was my first guess, too, but I wasn't sure that my guess was correct. I would buy the book anyway because of the complicated plot and because of Laurie's continuing romance, for which any incurable romantic would want a happy resolution.",
+  user_id: user1.id,
+  book_id: book1.id
+})
+Review.create({
+  title: "Disappointing!",
+  rating: 2,
+  body: "Like another person commented on this book...from the first few chapters I figured out who the actual killer was. There was no real mystery! It didn't thrill me or excite me...if anything I found this book boring and the ending...seriously!? How do you end a book like that!?!?! If I'm being completely honest this entire 3 book series has been boring.",
+  user_id: user2.id,
+  book_id: book1.id
+})
+Review.create({
+  title: "Not as good as the others",
+  rating: 3,
+  body: "This book isn't as good as the others in this series. The main character seemed overwhelmed by her project. One of the plot points was predictable. The ending was interesting and well done, but that was the last 20 pages.",
+  user_id: user3.id,
+  book_id: book1.id
+})
+Review.create({
+  title: "She Strikes Again!",
+  rating: 5,
+  body: "It has happened again. A book that I could not put down. I had to squeeze in time where ever I could to read this book, and I did between work and other commitments in a matter of 2 days. It was amazing. I love how cohesively these two are able to work together on this project of Under Suspicion novels. They have done an outstanding job.",
+  user_id: user4.id,
+  book_id: book1.id
+})
+
+
+book2 = Book.create({ title: "Kathy Griffin's Celebrity Run-Ins: My A-Z Index",
   author: "Kathy Griffin",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484196931/kathy_griffins_celebrity_runins_rviyko.jpg",
   publisher: "Macmillan",
@@ -76,7 +108,36 @@ Kathy Griffin has seen it all. Shocking and sidesplitting, Kathy Griffin’s Cel
   kobo_link: "https://www.kobo.com/us/en/ebook/kathy-griffin-s-celebrity-run-ins",
   play_link: "https://play.google.com/store/books/details/Kathy_Griffin_Kathy_Griffin_s_Celebrity_Run_Ins?id=up1MDAAAQBAJ"
 })
-Book.create({ title: "Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists",
+Review.create({
+  title: "Just like Proust but without the cookie...Kathy never forgets",
+  rating: 5,
+  body: "Funny, thoughtful, and at least 10% true (at least Megan Mullally's story) Kathy once again delivers all of the celebrity stories you crave. It's clear she's no longer on the D-List (intimate dinners with Woody Allen, Gloria Steinem, et. al.), but she still occasionally gets star-struck.",
+  user_id: user1.id,
+  book_id: book2.id
+})
+Review.create({
+  title: "I Adore Kathy Griffin!!",
+  rating: 5,
+  body: "I saw Kathy and Wendy Williams discussing a couple of Kathy's run-ins and immediately had to download the Kindle version. Kathy Griffin's tell-it-like-it-is candor in discussing her celebrity encounters has to be the funniest thing I've read and truly enjoyed in a long time.",
+  user_id: user2.id,
+  book_id: book2.id
+})
+Review.create({
+  title: "I used to love Griffin. But this book proved to me that ...",
+  rating: 2,
+  body: "I used to love Griffin. But this book proved to me that she has become tired and boring with nothing more to say that is truly comedic.",
+  user_id: user3.id,
+  book_id: book2.id
+})
+Review.create({
+  title: "more like a collection of essays",
+  rating: 4,
+  body: "This is not a book in the traditional sense, more like a collection of essays. Each chapter focuses on a specific celebrity and each stands on its own.",
+  user_id: user4.id,
+  book_id: book2.id
+})
+
+book3 = Book.create({ title: "Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists",
   author: "J.K. Rowling",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484196932/short_stories_from_hogwarts_wf93ro.jpg",
   publisher: "Pottermore",
@@ -86,7 +147,36 @@ Book.create({ title: "Short Stories from Hogwarts of Power, Politics and Pesky P
   kobo_link: "https://www.kobo.com/us/en/ebook/short-stories-from-hogwarts-of-power-politics-and-pesky-poltergeists",
   play_link: "https://play.google.com/store/books/details/J_K_Rowling_Short_Stories_from_Hogwarts_of_Power_P?id=d6nbDAAAQBAJ"
 })
-Book.create({ title: "The Alchemist",
+Review.create({
+  title: "One new story",
+  rating: 4,
+  body: "This has one story that wasn't previously on Pottermore - other than that you can read them all on Pottermore for free.",
+  user_id: user1.id,
+  book_id: book3.id
+})
+Review.create({
+  title: "Fellow HP fans will be disappointed in this",
+  rating: 1,
+  body: "Short Stories implies there will be a brief account of some kind of conflict between antagonist and protagonist. This is 2 pages at a time (at best) of some uninteresting backstory about random characters. No ruthless roots of Umbridge, unless you consider learning about her parents in two paragraphs to be a ruthless telling of her coming up",
+  user_id: user2.id,
+  book_id: book3.id
+})
+Review.create({
+  title: "Disappointing",
+  rating: 1,
+  body: "There are no short stories here. This is a list of some of the characters in the Harry Potter books, or who make up the history of the wizarding world. ",
+  user_id: user3.id,
+  book_id: book3.id
+})
+Review.create({
+  title: "Top. Notch.",
+  rating: 5,
+  body: "This was a quick read, but interesting. I loved having Rowling's own thoughts on some of the subjects! It's always nice to dive back into the world of HP and connect with characters we haven't before.",
+  user_id: user4.id,
+  book_id: book3.id
+})
+
+book4 = Book.create({ title: "The Alchemist",
   author: "Paulo Coelho",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484196926/the_alchemist_p0npew.jpg",
   publisher: "HarperCollins",
@@ -96,7 +186,36 @@ Book.create({ title: "The Alchemist",
   kobo_link: "https://www.kobo.com/us/en/ebook/the-alchemist-38",
   play_link: "https://play.google.com/store/books/details/Paulo_Coelho_The_Alchemist?id=FzVjBgAAQBAJ"
 })
-Book.create({ title: "Paris for One and Other Stories",
+Review.create({
+  title: "Flawed But Ultimately Thought-Provoking and Worthwhile",
+  rating: 4,
+  body: "Yes, much of what negative reviewers of this book have to say is true: the writing is blunt and simple, the characters lack depth and complexity, it is quite male-focused in its subject matter and language, it has a bunch of quasi-religious mumbo-jumbo, and so on. This book should not be put on the list of great literature for the ages.",
+  user_id: user1.id,
+  book_id: book4.id
+})
+Review.create({
+  title: "All the Universe can be observed in a single grain of sand",
+  rating: 5,
+  body: "I read it over the course of one day, thought nice fable & began reading another book as soon as I finished this one. But I found that the lessons contained in this simple story of a shepherd boy seeking treasure, won't be dismissed so easily. They must have taken up residence in my subconscious and kicked up some dust, because my mind keeps returning to the lessons of the story to find new and more subtle insights having formed.",
+  user_id: user2.id,
+  book_id: book4.id
+})
+Review.create({
+  title: "My favorite book of all time!",
+  rating: 5,
+  body: "The Alchemist is a gripping narrative about a young Andalusian shepherd named Santiago and his journey to find the greatest treasure in the world. This charming story follows Santiago on his journey to Egypt, after having a recurring dream of finding treasure there. Santiago travels across great distances and encounters crazy adventures in his quest for gold. Little does he know that the ultimate treasure is actually found deep within.",
+  user_id: user3.id,
+  book_id: book4.id
+})
+Review.create({
+  title: "A Grand Book",
+  rating: 5,
+  body: "The book tells a simple story containing the breadth oh humanity and the whole world. A joy to read and read again.",
+  user_id: user4.id,
+  book_id: book4.id
+})
+
+book5 = Book.create({ title: "Paris for One and Other Stories",
   author: "Jojo Moyes",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484196931/paris_for_one_lwonjl.jpg",
   publisher: "Penguin",
@@ -106,27 +225,49 @@ Book.create({ title: "Paris for One and Other Stories",
   kobo_link: "https://www.kobo.com/us/en/ebook/paris-for-one-and-other-stories",
   play_link: "https://play.google.com/store/books/details/Jojo_Moyes_Paris_for_One_and_Other_Stories?id=Q4K0CwAAQBAJ"
 })
-Book.create({ title: "No Man's Land",
+
+Review.create({
+  title: "I did like it, but....",
+  rating: 3,
+  body: "I really liked the first story, Paris for One. It's more like a novella, I guess - it's a little over 100 pages long (this is on my kindle so I'm guessing it's the same for the hard copy). I loved the story and, as usual, loved Moyes' writing style.",
+  user_id: user1.id,
+  book_id: book5.id
+})
+Review.create({
+  title: "Wonderful short stories",
+  rating: 5,
+  body: "I was so pleasantly surprised by this wonderful gem of a book. It's a book of short stories, all from the perspective of women in some type of disturbed relationship. The first one, Paris for One, was my absolute favorite.",
+  user_id: user2.id,
+  book_id: book5.id
+})
+
+book6 = Book.create({ title: "No Man's Land",
   author: "David Baldacci",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/no_mans_mand_gatl11.jpg",
   publisher: "Grand Central Publishing",
   date: "November 15, 2016",
-  description: "Two men. Thirty years.
-
-John Puller's mother, Jackie, vanished thirty years ago from Fort Monroe, Virginia, when Puller was just a boy. Paul Rogers has been in prison for ten years. But twenty years before that, he was at Fort Monroe. One night three decades ago, Puller's and Rogers' worlds collided with devastating results, and the truth has been buried ever since.
-
-Until now.
-
-Military investigators, armed with a letter from a friend of Jackie's, arrive in the hospital room of Puller's father--a legendary three-star now sinking into dementia--and reveal that Puller Sr. has been accused of murdering Jackie.
-
-Aided by his brother Robert Puller, an Air Force major, and Veronica Knox, who works for a shadowy U.S. intelligence organization, Puller begins a journey that will take him into his own past, to find the truth about his mother.
-
-Paul Rogers' time is running out. With the clock ticking, he begins his own journey, one that will take him across the country to the place where all his troubles began: a mysterious building on the grounds of Fort Monroe. There, thirty years ago, the man Rogers had once been vanished too, and was replaced with a monster. And now the monster wants revenge. And the only person standing in his way is John Puller.",
+  description: "Two men. Thirty years. John Puller's mother, Jackie, vanished thirty years ago from Fort Monroe, Virginia, when Puller was just a boy. Paul Rogers has been in prison for ten years. But twenty years before that, he was at Fort Monroe. One night three decades ago, Puller's and Rogers' worlds collided with devastating results, and the truth has been buried ever since.
+Until now. Military investigators, armed with a letter from a friend of Jackie's, arrive in the hospital room of Puller's father--a legendary three-star now sinking into dementia--and reveal that Puller Sr. has been accused of murdering Jackie. Aided by his brother Robert Puller, an Air Force major, and Veronica Knox, who works for a shadowy U.S. intelligence organization, Puller begins a journey that will take him into his own past, to find the truth about his mother. Paul Rogers' time is running out. With the clock ticking, he begins his own journey, one that will take him across the country to the place where all his troubles began: a mysterious building on the grounds of Fort Monroe. There, thirty years ago, the man Rogers had once been vanished too, and was replaced with a monster. And now the monster wants revenge. And the only person standing in his way is John Puller.",
   amazon_link: "https://www.amazon.com/dp/B01FQLZS1S/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1",
   kobo_link: "https://www.kobo.com/us/en/ebook/no-man-s-land-67",
   play_link: "https://play.google.com/store/books/details/David_Baldacci_No_Man_s_Land?id=z7MsDAAAQBAJ"
 })
-Book.create(title: "The Whistler",
+Review.create({
+  title: "starsI can say without a doubt this is the best of the series",
+  rating: 5,
+  body: "NO MAN’S LAND is David Baldacci’s fourth book in his very successful John Puller series. I can say without a doubt this is the best of the series. Two parallel stories keep the reader’s interest through the first half, merging seamlessly by the middle of the book.",
+  user_id: user3.id,
+  book_id: book5.id
+})
+Review.create({
+  title: "High-octane entertainment…Baldacci’s in top form",
+  rating: 4,
+  body: "There’s little doubt that David Baldacci’s John Puller character was devised as some kind of challenge, or homage, to Lee Childs’s Jack Reacher series. John (Jack) Puller (Reacher)… get it? Both are Army CID investigators, one retired (Reacher), one still on active duty (Puller). Both are big, tough-as-nails rule-breakers. Yada yada yada",
+  user_id: user4.id,
+  book_id: book5.id
+})
+
+book7 = Book.create(title: "The Whistler",
   author: "John Grisham",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/the_whistler_i0kmbl.jpg",
   publisher: "Doubleday",
@@ -142,7 +283,7 @@ Book.create(title: "The Whistler",
   kobo_link: "https://www.kobo.com/us/en/ebook/the-whistler-4",
   play_link: "https://play.google.com/store/books/details/John_Grisham_The_Whistler?id=CxucCwAAQBAJ"
 )
-Book.create(title: "The Murder House",
+book8 = Book.create(title: "The Murder House",
   author: "James Patterson & David Ellis",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/murder_house_qietjk.jpg",
   publisher: "Little, Brown",
@@ -156,7 +297,7 @@ Full of the twists and turns that have made James Patterson the world's #1 bests
   kobo_link: "https://www.kobo.com/us/en/ebook/the-murder-house-1",
   play_link: "https://play.google.com/store/books/details/James_Patterson_The_Murder_House?id=RiTABQAAQBAJ"
 )
-Book.create(title: "The Princess Diarist",
+book9 = Book.create(title: "The Princess Diarist",
   author: "Carrie Fisher",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/the_princess_diarist_isk46f.jpg",
   publisher: "Penguin",
@@ -168,7 +309,7 @@ With these excerpts from her handwritten notebooks, The Princess Diarist is Fish
   kobo_link: "https://www.kobo.com/us/en/ebook/the-princess-diarist",
   play_link: "https://play.google.com/store/books/details/Carrie_Fisher_The_Princess_Diarist?id=n55iCgAAQBAJ"
 )
-Book.create(title: "The Magnolia Story",
+book10 = Book.create(title: "The Magnolia Story",
   author: "Chip Gaines & Joanna Gaines",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/the_magnolia_story_ot8upe.jpg",
   publisher: "HarperCollins Christian Publishing",
@@ -184,7 +325,7 @@ They both attended Baylor University in Waco. However, their paths did not cross
   kobo_link: "https://www.kobo.com/us/en/ebook/the-magnolia-story-with-bonus-content",
   play_link: "https://play.google.com/store/books/details/Chip_Gaines_The_Magnolia_Story_with_Bonus_Content?id=kPapCwAAQBAJ"
 )
-Book.create(title: "Born a Crime: Stories from a South African Childhood",
+book11 = Book.create(title: "Born a Crime: Stories from a South African Childhood",
   author: "Trevor Noah",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/born_a_crime_vvano7.jpg",
   publisher: "Spiegel & Grau",
@@ -198,7 +339,7 @@ The stories collected here are by turns hilarious, dramatic, and deeply affectin
   kobo_link: "https://www.kobo.com/us/en/ebook/born-a-crime",
   play_link: "https://play.google.com/store/books/details/Trevor_Noah_Born_a_Crime?id=N97UCwAAQBAJ"
 )
-Book.create(title: "When Breath Becomes Air",
+book12 = Book.create(title: "When Breath Becomes Air",
   author: "Paul Kalanithi",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484273370/when_breath_becomes_air_apkaq0.jpg",
   publisher: "Random House",
@@ -212,7 +353,7 @@ Paul Kalanithi died in March 2015, while working on this book, yet his words liv
   kobo_link: "https://www.kobo.com/us/en/ebook/when-breath-becomes-air",
   play_link: "https://play.google.com/store/books/details/Paul_Kalanithi_When_Breath_Becomes_Air?id=Dg1sCQAAQBAJ"
 )
-Book.create(title: "Lab Girl",
+book13 = Book.create(title: "Lab Girl",
   author: "Hope Jahren",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/lab_girl_eoapss.jpg",
   publisher: "Knopf",
@@ -230,7 +371,7 @@ Jahren’s probing look at plants, her astonishing tenacity of spirit, and her a
   kobo_link: "https://www.kobo.com/us/en/ebook/lab-girl",
   play_link: "https://play.google.com/store/books/details/Hope_Jahren_Lab_Girl?id=16TSCQAAQBAJ"
 )
-Book.create(title: "Wyoming Brave",
+book14 = Book.create(title: "Wyoming Brave",
   author: "Diana Palmer",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484272821/wyoming_brave_jbfkue.jpg",
   publisher: "HQN Books",
@@ -242,7 +383,7 @@ The last thing Merrie wants is a devastatingly handsome man like Ren lurking aro
   kobo_link: "https://www.kobo.com/us/en/ebook/wyoming-brave",
   play_link: "https://play.google.com/store/books/details/Diana_Palmer_Wyoming_Brave?id=UAA4DAAAQBAJ"
 )
-Book.create(title: "The Nightingale",
+book15 = Book.create(title: "The Nightingale",
   author: "Kristin Hannah",
   image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/the_nightingale_graevm.jpg",
   publisher: "St. Martin's Press",
@@ -347,3 +488,82 @@ Then tragedy strikes, and Julie and her siblings have to stick together more tha
   kobo_link: "https://www.kobo.com/us/en/ebook/the-secret-letters-of-the-monk-who-sold-his-ferrari",
   play_link: "https://play.google.com/store/books/details/Abby_Bardi_The_Secret_Letters?id=0jK3BwAAQBAJ"
 )
+
+ReadStatusBook.destroy_all
+BookshelfBook.destroy_all
+Bookshelf.destroy_all
+shelf1 = Bookshelf.create(name: "Romance", user_id: user1.id)
+shelf2 = Bookshelf.create(name: "Mystery", user_id: user1.id)
+shelf3 = Bookshelf.create(name: "Horror", user_id: user1.id)
+shelf4 = Bookshelf.create(name: "Travel", user_id: user1.id)
+shelf5 = Bookshelf.create(name: "Poetry", user_id: user1.id)
+shelf6 = Bookshelf.create(name: "Comics", user_id: user1.id)
+shelf7 = Bookshelf.create(name: "Cookbooks", user_id: user1.id)
+shelf8 = Bookshelf.create(name: "Fantasy", user_id: user1.id)
+BookshelfBook.create(book_id: book1.id, bookshelf_id: shelf1.id)
+BookshelfBook.create(book_id: book2.id, bookshelf_id: shelf2.id)
+BookshelfBook.create(book_id: book3.id, bookshelf_id: shelf3.id)
+BookshelfBook.create(book_id: book4.id, bookshelf_id: shelf4.id)
+BookshelfBook.create(book_id: book5.id, bookshelf_id: shelf5.id)
+BookshelfBook.create(book_id: book6.id, bookshelf_id: shelf6.id)
+BookshelfBook.create(book_id: book7.id, bookshelf_id: shelf7.id)
+ReadStatusBook.create(user_id: user1.id, book_id: book1.id, read_status_id: rs1.id)
+ReadStatusBook.create(user_id: user1.id, book_id: book2.id, read_status_id: rs2.id)
+ReadStatusBook.create(user_id: user1.id, book_id: book3.id, read_status_id: rs3.id)
+
+
+shelf1 = Bookshelf.create(name: "History", user_id: user2.id)
+shelf2 = Bookshelf.create(name: "Math", user_id: user2.id)
+BookshelfBook.create(book_id: book1.id, bookshelf_id: shelf1.id)
+BookshelfBook.create(book_id: book2.id, bookshelf_id: shelf2.id)
+ReadStatusBook.create(user_id: user2.id, book_id: book1.id, read_status_id: rs1.id)
+ReadStatusBook.create(user_id: user2.id, book_id: book2.id, read_status_id: rs2.id)
+ReadStatusBook.create(user_id: user2.id, book_id: book3.id, read_status_id: rs3.id)
+
+shelf1 = Bookshelf.create(name: "Guide", user_id: user3.id)
+shelf2 = Bookshelf.create(name: "Health", user_id: user3.id)
+BookshelfBook.create(book_id: book1.id, bookshelf_id: shelf1.id)
+BookshelfBook.create(book_id: book2.id, bookshelf_id: shelf2.id)
+ReadStatusBook.create(user_id: user3.id, book_id: book1.id, read_status_id: rs1.id)
+ReadStatusBook.create(user_id: user3.id, book_id: book2.id, read_status_id: rs2.id)
+ReadStatusBook.create(user_id: user3.id, book_id: book3.id, read_status_id: rs3.id)
+
+shelf1 = Bookshelf.create(name: "Mystery", user_id: user4.id)
+shelf2 = Bookshelf.create(name: "Horror", user_id: user4.id)
+BookshelfBook.create(book_id: book1.id, bookshelf_id: shelf1.id)
+BookshelfBook.create(book_id: book2.id, bookshelf_id: shelf2.id)
+ReadStatusBook.create(user_id: user4.id, book_id: book1.id, read_status_id: rs1.id)
+ReadStatusBook.create(user_id: user4.id, book_id: book2.id, read_status_id: rs2.id)
+ReadStatusBook.create(user_id: user4.id, book_id: book3.id, read_status_id: rs3.id)
+
+shelf1 = Bookshelf.create(name: "Art", user_id: user5.id)
+shelf2 = Bookshelf.create(name: "Autobiographies", user_id: user5.id)
+BookshelfBook.create(book_id: book1.id, bookshelf_id: shelf1.id)
+BookshelfBook.create(book_id: book2.id, bookshelf_id: shelf2.id)
+ReadStatusBook.create(user_id: user5.id, book_id: book1.id, read_status_id: rs1.id)
+ReadStatusBook.create(user_id: user5.id, book_id: book2.id, read_status_id: rs2.id)
+ReadStatusBook.create(user_id: user5.id, book_id: book3.id, read_status_id: rs3.id)
+
+shelf1 = Bookshelf.create(name: "Cookbooks", user_id: user6.id)
+shelf2 = Bookshelf.create(name: "Diaries", user_id: user6.id)
+BookshelfBook.create(book_id: book1.id, bookshelf_id: shelf1.id)
+BookshelfBook.create(book_id: book2.id, bookshelf_id: shelf2.id)
+ReadStatusBook.create(user_id: user6.id, book_id: book1.id, read_status_id: rs1.id)
+ReadStatusBook.create(user_id: user6.id, book_id: book2.id, read_status_id: rs2.id)
+ReadStatusBook.create(user_id: user6.id, book_id: book3.id, read_status_id: rs3.id)
+
+shelf1 = Bookshelf.create(name: "Math", user_id: user7.id)
+shelf2 = Bookshelf.create(name: "Children's", user_id: user7.id)
+BookshelfBook.create(book_id: book1.id, bookshelf_id: shelf1.id)
+BookshelfBook.create(book_id: book2.id, bookshelf_id: shelf2.id)
+ReadStatusBook.create(user_id: user7.id, book_id: book1.id, read_status_id: rs1.id)
+ReadStatusBook.create(user_id: user7.id, book_id: book2.id, read_status_id: rs2.id)
+ReadStatusBook.create(user_id: user7.id, book_id: book3.id, read_status_id: rs3.id)
+
+shelf1 = Bookshelf.create(name: "Poetry", user_id: user8.id)
+shelf2 = Bookshelf.create(name: "Satire", user_id: user8.id)
+BookshelfBook.create(book_id: book1.id, bookshelf_id: shelf1.id)
+BookshelfBook.create(book_id: book2.id, bookshelf_id: shelf2.id)
+ReadStatusBook.create(user_id: user8.id, book_id: book1.id, read_status_id: rs1.id)
+ReadStatusBook.create(user_id: user8.id, book_id: book2.id, read_status_id: rs2.id)
+ReadStatusBook.create(user_id: user8.id, book_id: book3.id, read_status_id: rs3.id)

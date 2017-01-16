@@ -3,7 +3,19 @@ class Api::ReviewsController < ApplicationController
   before_action :require_user
 
   def index
-    @reviews = Review.where(params[:book_id])
+    all_reviews = Review.where(params[:book_id])
+    @reviews = []
+    all_reviews.each do |review|
+      user = User.find(review.user_id)
+      new_review = {
+        id: review.id,
+        title: review.title,
+        rating: review.rating,
+        body: review.body,
+        user: user,
+        book_id: review.book_id
+      }
+    end
   end
 
   def create

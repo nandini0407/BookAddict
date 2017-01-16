@@ -40,8 +40,25 @@ class Reviews extends React.Component {
 
     return (
       <div>
-        <form onSubmit={ this.handleSubmit }>
-
+        <form onSubmit={ this.handleSubmit } className="review-form">
+          <input
+            type="text"
+            placeholder="Title"
+            onChange={ this.update('title') }
+            value={ this.state.title }
+            className="review-title"
+            />
+          <textarea
+            placeholder="Write a review"
+            onChange={ this.update('body') }
+            value={ this.state.body }
+            className="review-body"
+            />
+          <input
+            type="submit"
+            value="Add Review"
+            className="review-submit"
+            />
         </form>
         <h3>Reviews</h3>
         <div>
