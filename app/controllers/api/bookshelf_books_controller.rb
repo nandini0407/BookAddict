@@ -24,7 +24,7 @@ class Api::BookshelfBooksController < ApplicationController
     @book = Book.find(book_id)
     @bookshelves = @book.bookshelves
     rs_book = @book.read_status_books
-                          .where(user_id: current_user.id)
+                .where(user_id: current_user.id)
     if rs_book.length > 0
       @read_status = rs_book[0].read_status
     else

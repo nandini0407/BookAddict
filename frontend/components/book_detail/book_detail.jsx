@@ -27,14 +27,16 @@ class BookDetail extends React.Component {
   }
 
   setNewReadStatus() {
-    let readStatus = this.props.bookDetail.read_status;
-    this.setState({ readStatus: { id: readStatus.id, value: readStatus.name, label: readStatus.name }});
+    let readStatus = this.props.bookDetail.readStatus;
+    if (readStatus === undefined) {
+      this.setState({ readStatus: { id: "", value: "", label: "" }});
+    } else {
+      this.setState({ readStatus: { id: readStatus.id, value: readStatus.name, label: readStatus.name }});
+    }
   }
 
   handleShelfChange(val) {
-    console.log(typeof val);
     this.setState({ bookshelves: val });
-    console.log(val);
     let bookshelfIds = Object.keys(val).map((idx) => {
       return val[idx].id;
     });
@@ -47,7 +49,7 @@ class BookDetail extends React.Component {
   handleReadStatusChange(val) {
     this.setState({ readStatus: val });
     let readStatusId;
-    if (val.id) {
+    if (val) {
       readStatusId = val.id;
     } else {
       readStatusId = "";
@@ -101,7 +103,7 @@ class BookDetail extends React.Component {
                 onChange={ this.handleShelfChange }
                 />
             </div>
-            <div>
+            <div className="choose-read-status">
               <div className="your-read-status" >Your Read Status</div>
               <Select
                 placeholder="Choose Read Status"
