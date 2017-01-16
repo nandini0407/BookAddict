@@ -24,35 +24,48 @@ class Reviews extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.addReview(this.state, this.props.bookId);
+    this.props.addReview(this.state, this.props.bookId)
+      .then(() => this.setState({
+        title: "",
+        rating: 0,
+        body: ""
+      }));
   }
 
   render() {
     let reviewIds = Object.keys(this.props.reviews);
     let reviews = reviewIds.map((id, idx) => {
-      return <li key={idx}>
-        this.props.reviews[id].user_id
-        this.props.reviews[id].title
-        this.props.reviews[id].rating
-        this.props.reviews[id].body
+      return <li key={idx} className="review-list-item">
+        <div className="review-username">
+          {this.props.reviews[id].user}
+        </div>
+        <div className="review-title">
+          {this.props.reviews[id].title}
+        </div>
+        <div className="review-rating">
+          {this.props.reviews[id].rating}
+        </div>
+        <div className="review-body">
+          {this.props.reviews[id].body}
+        </div>
       </li>;
     });
 
     return (
-      <div>
+      <div className="review-component">
         <form onSubmit={ this.handleSubmit } className="review-form">
           <input
             type="text"
             placeholder="Title"
             onChange={ this.update('title') }
             value={ this.state.title }
-            className="review-title"
+            className="review-input-title"
             />
           <textarea
             placeholder="Write a review"
             onChange={ this.update('body') }
             value={ this.state.body }
-            className="review-body"
+            className="review-input-body"
             />
           <input
             type="submit"
@@ -60,10 +73,10 @@ class Reviews extends React.Component {
             className="review-submit"
             />
         </form>
-        <h3>Reviews</h3>
-        <div>
+        <h3 className="review-text">Reviews</h3>
+        <ul className="review-list">
           { reviews }
-        </div>
+        </ul>
       </div>
     );
   }
