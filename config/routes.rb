@@ -64,5 +64,6 @@ Rails.application.routes.draw do
     resources :bookshelf_books, only: [:create]
     resources :read_statuses, only: [:index]
     resources :read_status_books, only: [:create]
+    resources :reviews, only: [:index, :create]
   end
 end
