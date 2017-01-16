@@ -6,7 +6,7 @@ class Api::BooksController < ApplicationController
     if params[:bookshelfId]
       bookshelf = Bookshelf.where("id = ? AND user_id = ?", params[:bookshelfId], current_user.id)
       @books = bookshelf[0].books
-      @heading = bookshelf.name
+      @heading = bookshelf[0].name
     elsif params[:readStatusId]
       read_status = ReadStatus.find(params[:readStatusId])
       read_status_books = ReadStatusBook.where(read_status_id: read_status.id, user_id: current_user.id)
