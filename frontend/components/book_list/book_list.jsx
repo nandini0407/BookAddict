@@ -38,7 +38,7 @@ class BookList extends React.Component {
     if (this.state.currentUrl !== this.props.location.pathname) {
       // this is to prevent rendering data in the old redux state
       return (
-        <div></div>
+        <div className="main"></div>
       );
     }
 

@@ -3,7 +3,6 @@ class Api::BooksController < ApplicationController
   before_action :require_user
 
   def index
-    # BUG: check for user_id for both bookshelves and read_status. Right now it is returning all books
     if params[:bookshelfId]
       bookshelf = Bookshelf.where("id = ? AND user_id = ?", params[:bookshelfId], current_user.id)
       @books = bookshelf[0].books

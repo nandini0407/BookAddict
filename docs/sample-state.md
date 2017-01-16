@@ -44,8 +44,9 @@
       id: 1,
       title: 'review title',
       body: 'review body',
-      user_id: 'whoever wrote this review',
-      book_id: 'the book that is being shown on the page'
+      rating: 5,
+      user_id: 1,
+      book_id: 3
     },
     ...
   },

@@ -40,8 +40,10 @@
 
 ### Reviews
 
-- `POST /api/reviews/:book_id`
-- `GET /api/reviews/:book_id`
+- `GET /api/reviews/`
+  - accepts book_id as a query param and fetches all reviews for that book
+- `POST /api/reviews/`
+  - accepts book_id as a query param and creates review for that book
 
 ### ReadStatus
 
@@ -51,8 +53,4 @@
 ### ReadStatusBooks
 
 - `POST /api/read_status_books`
-  - accepts book_id and status as query params and adds book to the status of the current user
-- `PATCH /api/read_status_books/:id`
-  - accepts book_id and status as query params and updates book to the status of the current user
-- `DELETE /api/read_status_books/:id`
-  - accepts book_id as book_id as query param and deletes book from its existing status of the current user
+  - accepts book_id and status as query params and adds book to the status of the current user, also updates the status if new status is chosen, sets status to empty if nothing is chosen

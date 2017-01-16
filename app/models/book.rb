@@ -9,5 +9,6 @@ class Book < ActiveRecord::Base
     through: :read_status_books,
     source: :user
   has_many :read_statuses, through: :read_status_books
+  has_many :reviews
 
 end

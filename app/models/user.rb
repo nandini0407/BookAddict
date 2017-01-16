@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
     through: :read_status_books,
     source: :book
   has_many :read_statuses, through: :read_status_books
+  has_many :reviews
 
 
   def self.find_by_credentials(username, password)
