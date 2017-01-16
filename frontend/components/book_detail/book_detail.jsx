@@ -71,7 +71,7 @@ class BookDetail extends React.Component {
     });
     return (
       <div className="book-detail">
-        <section className="book-detail-top">
+        <section className="book-detail-left">
           <div className="cover-shopping">
             <img className="book-cover" src={ book.image_url } />
             <div className="book-shopping">
@@ -80,49 +80,47 @@ class BookDetail extends React.Component {
               <a className="shopping-link" href={ book.play_link }>Google Play</a>
             </div>
           </div>
-          <div className="book-meta">
-            <div className="book-detail-title">
-              {book.title}
+        </section>
+        <section className="book-detail-right">
+          <div className="book-detail-title">
+            {book.title}
+          </div>
+          <div className="book-detail-right-mid">
+            <div className="book-author-pub-date">
+              <div className="book-detail-author">
+                {book.author}
+              </div>
+              <div className="book-publisher">
+                {book.publisher}
+              </div>
+              <div className="book-date">
+                {book.date}
+              </div>
             </div>
-            <div className="book-meta-bottom">
-              <div className="book-author-pub-date">
-                <div className="book-detail-author">
-                  {book.author}
-                </div>
-                <div className="book-publisher">
-                  {book.publisher}
-                </div>
-                <div className="book-date">
-                  {book.date}
-                </div>
-              </div>
-              <div className="change-bookshelves">
-                <div className="your-bookshelves" >Your Bookshelves</div>
-                <Select
-                  placeholder="Change Bookshelves"
-                  options={ bookshelves }
-                  value={ this.state.bookshelves }
-                  multi={true}
-                  onChange={ this.handleShelfChange }
-                  />
-              </div>
-              <div className="choose-read-status">
-                <div className="your-read-status" >Your Read Status</div>
-                <Select
-                  placeholder="Choose Read Status"
-                  options={ readStatuses }
-                  value={ this.state.readStatus }
-                  onChange={ this.handleReadStatusChange }
-                  />
-              </div>
+            <div className="change-bookshelves">
+              <div className="your-bookshelves" >Your Bookshelves</div>
+              <Select
+                placeholder="Change Bookshelves"
+                options={ bookshelves }
+                value={ this.state.bookshelves }
+                multi={true}
+                onChange={ this.handleShelfChange }
+                />
+            </div>
+            <div className="choose-read-status">
+              <div className="your-read-status" >Your Read Status</div>
+              <Select
+                placeholder="Choose Read Status"
+                options={ readStatuses }
+                value={ this.state.readStatus }
+                onChange={ this.handleReadStatusChange }
+                />
             </div>
           </div>
-        </section>
-        <div className="book-detail-bottom">
           <div className="book-description">
             {book.description}
           </div>
-        </div>
+        </section>
       </div>
     );
   }

@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  width: 92%;
+  margin-top: 40px;
 }
 
 .review-form {
@@ -41,37 +42,45 @@
 
 .review-text {
   font-size: 18px;
-  color: grey;
+  color: #6f5353;
 }
 
 .review-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   font-size: 13px;
   color: grey;
+  width: 100%;
 }
 
 .review-list-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10px;
+  padding: 10px;
+  background: #e4e4e4;
+  border-radius: 4px;
+  margin: 10px 0;
+  width: 100%;
 }
 
 .review-username {
   margin: 5px;
+  color: #674b4b;
 }
 
 .review-title {
   margin: 5px;
+  font-weight: bolder;
 }
 
 .review-rating {
-  margin: 5px;
+  margin: 2px 5px;
 }
 
 .review-body {
   margin: 5px;
+  font-weight: normal;
 }

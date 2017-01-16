@@ -7,26 +7,23 @@
 
 .book-detail {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 
-.book-detail-top {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+.book-detail-left {
+  width: 35%;
 }
 
 .cover-shopping {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 76px;
+  margin-left: 0px;
 }
 
 .book-cover {
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .book-shopping {
@@ -51,12 +48,11 @@
   border-right: 1px solid grey;
 }
 
-.book-meta {
+.book-detail-right {
+  width: 65%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  color: darkgrey;
-  margin: 0 70px;
+  align-items: left;
 }
 
 .book-detail-title {
@@ -66,10 +62,10 @@
   color: #6f5353;
 }
 
-.book-meta-bottom {
+.book-detail-right-mid {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
 }
 
 .book-author-pub-date {
@@ -119,13 +115,14 @@
   color: #6f5353;
 }
 
-.book-detail-bottom {
-  display: flex;
-  align-items: center;
-}
-
 .book-description {
-  width: 50%;
-  margin: 37px 65px 45px 65px;
-  color: grey;
+  width: 85%;
+  margin: 45px 0px;
+  padding: 30px;
+  color: #827a7a;
+  font-weight: normal;
+  background: #e4e4e4;
+  border-radius: 4px;
+  text-align: left;
+  text-rendering: geometricPrecision;
 }
