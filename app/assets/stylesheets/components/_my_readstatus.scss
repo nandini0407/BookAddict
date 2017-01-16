@@ -19,15 +19,15 @@
   text-align: center;
 }
 
-.rs-list li {
+.rs-list-item {
   margin: 5px;
-  padding: 2px;
+  padding: 4px 7px;
   color: #827a7a;
   border-radius: 3px;
   font-size: 13px;
 }
 
-.rs-list li:hover {
+.rs-list-item:hover {
   background: #e0e0e0;
   cursor: pointer;
 }

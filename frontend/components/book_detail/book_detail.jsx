@@ -84,33 +84,37 @@ class BookDetail extends React.Component {
             <div className="book-detail-title">
               {book.title}
             </div>
-            <div className="book-detail-author">
-              {book.author}
-            </div>
-            <div className="book-publisher">
-              {book.publisher}
-            </div>
-            <div className="book-date">
-              {book.date}
-            </div>
-            <div className="change-bookshelves">
-              <div className="your-bookshelves" >Your Bookshelves</div>
-              <Select
-                placeholder="Change Bookshelves"
-                options={ bookshelves }
-                value={ this.state.bookshelves }
-                multi={true}
-                onChange={ this.handleShelfChange }
-                />
-            </div>
-            <div className="choose-read-status">
-              <div className="your-read-status" >Your Read Status</div>
-              <Select
-                placeholder="Choose Read Status"
-                options={ readStatuses }
-                value={ this.state.readStatus }
-                onChange={ this.handleReadStatusChange }
-                />
+            <div className="book-meta-bottom">
+              <div className="book-author-pub-date">
+                <div className="book-detail-author">
+                  {book.author}
+                </div>
+                <div className="book-publisher">
+                  {book.publisher}
+                </div>
+                <div className="book-date">
+                  {book.date}
+                </div>
+              </div>
+              <div className="change-bookshelves">
+                <div className="your-bookshelves" >Your Bookshelves</div>
+                <Select
+                  placeholder="Change Bookshelves"
+                  options={ bookshelves }
+                  value={ this.state.bookshelves }
+                  multi={true}
+                  onChange={ this.handleShelfChange }
+                  />
+              </div>
+              <div className="choose-read-status">
+                <div className="your-read-status" >Your Read Status</div>
+                <Select
+                  placeholder="Choose Read Status"
+                  options={ readStatuses }
+                  value={ this.state.readStatus }
+                  onChange={ this.handleReadStatusChange }
+                  />
+              </div>
             </div>
           </div>
         </section>

@@ -257,14 +257,14 @@ Review.create({
   rating: 5,
   body: "NO MAN’S LAND is David Baldacci’s fourth book in his very successful John Puller series. I can say without a doubt this is the best of the series. Two parallel stories keep the reader’s interest through the first half, merging seamlessly by the middle of the book.",
   user_id: user3.id,
-  book_id: book5.id
+  book_id: book6.id
 })
 Review.create({
   title: "High-octane entertainment…Baldacci’s in top form",
   rating: 4,
   body: "There’s little doubt that David Baldacci’s John Puller character was devised as some kind of challenge, or homage, to Lee Childs’s Jack Reacher series. John (Jack) Puller (Reacher)… get it? Both are Army CID investigators, one retired (Reacher), one still on active duty (Puller). Both are big, tough-as-nails rule-breakers. Yada yada yada",
   user_id: user4.id,
-  book_id: book5.id
+  book_id: book6.id
 })
 
 book7 = Book.create(title: "The Whistler",

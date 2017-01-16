@@ -12,9 +12,11 @@ class MyReadStatus extends React.Component {
 
   render (){
     let readStatuses = this.props.readStatuses.map((status) => {
-      return <li key={ status.id }>
-        <Link to={`user/readstatus/${status.id}`} >{ status.name }</Link>
-      </li>;
+      return <Link to={`user/readstatus/${status.id}`} key={ status.id } >
+        <div className="rs-list-item">
+          <li>{ status.name }</li>
+        </div>
+      </Link>;
     });
     return (
       <div className="readstatus">

@@ -27,9 +27,11 @@ class MyBookshelves extends React.Component {
 
   render (){
     let bookshelves = this.props.bookshelves.map((bookshelf) => {
-      return <li key={ bookshelf.id }>
-        <Link to={`/user/bookshelves/${bookshelf.id}`} >{ bookshelf.name }</Link>
-      </li>;
+        return <Link to={`/user/bookshelves/${bookshelf.id}`} key={ bookshelf.id }>
+           <div className="bs-list-item">
+            <li>{ bookshelf.name }</li>
+          </div>
+        </Link>;
     });
     return (
       <div className="bookshelves">

@@ -1,23 +1,28 @@
 .book-detail-container {
   display: flex;
   background: #f5f5f4;
+  align-items: center;
+  width: 100%;
 }
 
 .book-detail {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .book-detail-top {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .cover-shopping {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 76px;
 }
 
 .book-cover {
@@ -49,51 +54,69 @@
 .book-meta {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   color: darkgrey;
+  margin: 0 70px;
 }
 
 .book-detail-title {
-  font-size: 33px;
-  margin: 40px 30px 30px 30px;
-  text-align: center;
+  font-size: 25px;
+  margin: 40px 30px 15px 0px;
+  text-align: left;
+  color: #6f5353;
+}
+
+.book-meta-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.book-author-pub-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .book-detail-author {
-  font-size: 20px;
-  padding: 10px;
+  font-size: 13px;
+  margin: 0 10px 3px 0px;
 }
 
 .book-publisher {
-  padding: 5px;
+  margin: 3px 0;
+  font-size: 13px;
 }
 
 .book-date {
-  padding: 5px;
+  margin: 3px 0;
+  font-size: 13px;
 }
 
 .change-bookshelves {
-  width: 300px;
+  width: 220px;
   color: grey;
   font-size: 13px;
-  margin: 10px;
+  margin: 0 15px;
 }
 
 .your-bookshelves {
-  text-align: center;
-  padding: 10px;
+  text-align: left;
+  padding: 0 10px 5px 0;
+  color: #6f5353;
 }
 
 .choose-read-status {
-  width: 300px;
-  color: grey;
+  width: 220px;
+  color: #827a7a;
   font-size: 13px;
-  margin: 10px;
+  margin: 0 15px;
 }
 
 .your-read-status {
-  text-align: center;
-  padding: 10px;
+  text-align: left;
+  padding: 0 10px 5px 0;
+  color: #6f5353;
 }
 
 .book-detail-bottom {
@@ -103,6 +126,6 @@
 
 .book-description {
   width: 50%;
-  margin: 45px 65px;
+  margin: 37px 65px 45px 65px;
   color: grey;
 }

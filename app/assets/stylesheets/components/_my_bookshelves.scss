@@ -19,15 +19,15 @@
   text-align: center;
 }
 
-.bs-list li {
+.bs-list-item {
   margin: 5px;
-  padding: 2px;
+  padding: 4px 7px;
   color: #827a7a;
   border-radius: 3px;
   font-size: 13px;
 }
 
-.bs-list li:hover {
+.bs-list-item:hover {
   background: #e0e0e0;
   cursor: pointer;
 }
@@ -45,6 +45,8 @@
   height: 13px;
   border-radius: 4px;
   padding: 5px;
+  color: #827a7a;
+  font-size: 13px;
 }
 
 .add-shelf-button {
