@@ -1,5 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
+import Rating from 'react-rating';
 
 class BookDetail extends React.Component {
   constructor(props) {
@@ -69,6 +70,10 @@ class BookDetail extends React.Component {
         value: status.name, label: status.name, id: status.id
       };
     });
+
+    const full_icon = <img className="icon" src="images/full_star.png" width="30" height="30" />;
+    const empty_icon = <img className="icon" src="images/no_star.png" width="30" height="30" />;
+
     return (
       <div className="book-detail">
         <section className="book-detail-left">

@@ -1,4 +1,5 @@
 import React from 'react';
+import Rating from 'react-rating';
 
 class Reviews extends React.Component {
   constructor(props) {
@@ -22,6 +23,12 @@ class Reviews extends React.Component {
     };
   }
 
+  updateRate() {
+    return (rate) => {
+      this.setState({ rating: rate });
+    };
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.addReview(this.state, this.props.bookId)
@@ -33,17 +40,32 @@ class Reviews extends React.Component {
   }
 
   render() {
+    const fullIconSmall = <img className="icon" src="images/full_star.png" width="10" height="10" />;
+    const emptyIconSmall = <img className="icon" src="images/no_star.png" width="10" height="10" />;
+      const fullIconBig = <img className="icon" src="images/full_star.png" width="17" height="17" />;
+      const emptyIconBig = <img className="icon" src="images/no_star.png" width="17" height="17" />;
+
     let reviewIds = Object.keys(this.props.reviews);
     let reviews = reviewIds.map((id, idx) => {
       return <li key={idx} className="review-list-item">
         <div className="review-username">
           {this.props.reviews[id].user}
         </div>
-        <div className="review-title">
-          {this.props.reviews[id].title}
+        <div>
+          { this.props.reviews[id].created_at }
         </div>
-        <div className="review-rating">
-          {this.props.reviews[id].rating}
+        <div className="review-title-rating">
+          <div className="review-rating">
+            <Rating
+              full={ fullIconSmall }
+              empty={ emptyIconSmall }
+              initialRate={ this.props.reviews[id].rating }
+              readonly={ true }
+              />
+          </div>
+          <div className="review-title">
+            {this.props.reviews[id].title}
+          </div>
         </div>
         <div className="review-body">
           {this.props.reviews[id].body}
@@ -60,6 +82,13 @@ class Reviews extends React.Component {
             onChange={ this.update('title') }
             value={ this.state.title }
             className="review-input-title"
+            />
+          <Rating
+            full={ fullIconBig }
+            empty={ emptyIconBig }
+            className="review-rating-form"
+            onChange={ this.updateRate()}
+            initialRate={ this.state.rating }
             />
           <textarea
             placeholder="Write a review"

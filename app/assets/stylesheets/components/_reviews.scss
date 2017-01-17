@@ -21,6 +21,11 @@
   font-size: 13px;
 }
 
+.review-rating-form {
+  margin: 5px;
+  padding: 2px;
+}
+
 .review-input-body {
   margin: 5px;
   padding: 5px;
@@ -71,14 +76,21 @@
   color: #674b4b;
 }
 
-.review-title {
-  margin: 5px;
-  font-weight: bolder;
+.review-title-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .review-rating {
   margin: 2px 5px;
 }
+
+.review-title {
+  margin: 5px;
+  font-weight: bolder;
+}
+
 
 .review-body {
   margin: 5px;
