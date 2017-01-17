@@ -15,21 +15,83 @@ Books are saved in a `books` table in the database, with columns for `id`, `titl
 
 ![image of book list] (screenshots/book-list.png)
 
+```javascript
+class BookList extends React.Component {
+  render() {
+    let booksSummary;
+    if (this.props.booksSummary.books === undefined) {
+      booksSummary = <div></div>;
+    } else {
+      let booksSummaryIds = Object.keys(this.props.booksSummary.books);
+      booksSummary = booksSummaryIds.map((id, idx) => {
+        return <BookListItem
+          key={idx}
+          book={this.props.booksSummary.books[id]}
+          />;
+      });
+    }
+
+    return (
+      <div className="main">
+        <h1 className="heading">{this.props.booksSummary.heading}</h1>
+        <div className="book-list-item">
+          { booksSummary }
+        </div>
+      </div>
+    );
+  }
+}
+```
+
 Upon clicking an individual book, details about that book are rendered in a `BookDetail` component, which is a child of `BookShow` component.
+
+![image of book detail] (screenshots/book-detail.png)
 
 ### Bookshelves
 
 Bookshelves are maintained in a `bookshelves` table in the backend, which has columns for `name` and `user_id`. On the frontend, the list of bookshelves owned by a user are stored in `bookshelves` key in the store. The list of bookshelves owned by a user are rendered in a `MyBookshelves` component, which is a child of `MyBooks` component, which in turn is rendered by `Sidebar` component. Upon clicking a bookshelf on the sidebar, the `BookList` component renders books which are contained in that bookshelf.
 
+```ruby
+def index
+  if params[:bookshelfId]
+    bookshelf = Bookshelf.where("id = ? AND user_id = ?", params[:bookshelfId], current_user.id)
+    @books = bookshelf[0].books
+    @heading = bookshelf[0].name
+  end
+end
+```
+
+![image of my_bookshelves] (screenshots/my-bookshelves.png)
+
 Bookshelves of the user are also visible in a multi select dropdown on the `BookDetail` component. This dropdown allows the user to include the book in many bookshelves. A join table `bookshelf_books`, with columns `id`, `book_id` and `bookshelf_id`, maintains records of the addition/removal of a book for a bookshelf.
 
-Bookshelves multi select dropdown was implemented by React-Select library.
+![image of bookshelf_dropdown] (screenshots/bookshelf-dropdown.png)
+
+Bookshelves multi-select dropdown was implemented by React-Select library.
 
 ### Read Status
 
 Read Status also has a table in the backend, having columns `id`, `name`. The list of read statuses are maintained on the frontend in a `readStatuses` key in the store. The list of read statuses are rendered in a `MyReadStatus` component, which is rendered by `MyBooks` component in the sidebar, similar to bookshelves. Clicking on a read status in the sidebar renders `BookList` component with books marked with that read status.
 
+![image of my_read_status] (screenshots/my-read-status.png)
+
 Read status for a book for the user is rendered as a dropdown in the `BookDetail` component. Users can switch from one read status to another. A join table `read_status_books`, with columns `id`, `user_id`, `book_id` and `read_status_id` records any update to the read status made by the user for a book.
+
+![image of read_status_dropdown] (screenshots/read-status-dropdown.png)
+
+```javascript
+  return (
+    <div className="choose-read-status">
+      <div className="your-read-status" >Your Read Status</div>
+        <Select
+          placeholder="Choose Read Status"
+          options={ readStatuses }
+          value={ this.state.readStatus }
+          onChange={ this.handleReadStatusChange }
+          />
+    </div>
+  );
+```
 
 Read Status dropdown was implemented by React-Select library.
 
@@ -37,8 +99,35 @@ Read Status dropdown was implemented by React-Select library.
 
 Reviews have a `reviews` table on the backend, with `id`, `title`, `rating`, `body`, `user_id` and `book_id` columns. Reviews for a book are saved in a `reviews` key in the frontend's store. Reviews for a particular book are rendered in a `Reviews` component, which is rendered inside `BookShow` component, underneath the `BookDetail` component. It shows a form to write a new review. It also lists all the reviews for that book, with the most recent one at the top.
 
+```javascript
+class BookShow extends React.Component {
+  render() {
+    return (
+      <div className="book-show">
+        <BookDetailContainer
+          className="book-detail-container"
+          bookId={this.props.params.bookId}
+          />
+        <ReviewsContainer
+          className="reviews-container"
+          bookId={this.props.params.bookId}
+          />
+      </div>
+    );
+  }
+}
+```
+
+![image of reviews] (screenshots/reviews.png)
+
 ## Future Directions for the Project
+
+In addition to the above features, the following are in the pipeline.
 
 ### Search
 
+Searching for books by title or author is a standard feature of Goodreads. Users can view a single book or a list of books depending on their search query.
+
 ### Tags
+
+To make searching easier and faster, books can be tagged with specific tags. Users are allowed to add tags.
