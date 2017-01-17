@@ -3,7 +3,7 @@ class Api::ReviewsController < ApplicationController
   before_action :require_user
 
   def index
-    all_reviews = Review.where("book_id = ?", params[:bookId]).order(created_at: :desc)
+    all_reviews = Review.where("book_id = ?", params[:bookId])
     @reviews = []
     all_reviews.each do |review|
       user = User.find(review.user_id)
@@ -13,7 +13,8 @@ class Api::ReviewsController < ApplicationController
         rating: review.rating,
         body: review.body,
         user: user.username,
-        book_id: review.book_id
+        book_id: review.book_id,
+        created_at: review.created_at
       }
       @reviews << new_review
     end

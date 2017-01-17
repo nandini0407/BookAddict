@@ -253,7 +253,7 @@ Until now. Military investigators, armed with a letter from a friend of Jackie's
   play_link: "https://play.google.com/store/books/details/David_Baldacci_No_Man_s_Land?id=z7MsDAAAQBAJ"
 })
 Review.create({
-  title: "starsI can say without a doubt this is the best of the series",
+  title: "I can say without a doubt this is the best of the series",
   rating: 5,
   body: "NO MAN’S LAND is David Baldacci’s fourth book in his very successful John Puller series. I can say without a doubt this is the best of the series. Two parallel stories keep the reader’s interest through the first half, merging seamlessly by the middle of the book.",
   user_id: user3.id,

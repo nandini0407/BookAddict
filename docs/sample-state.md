@@ -37,7 +37,8 @@
     kobo_link: 'link/to/kobo',
     play_link: 'link/to/play',
     bookshelves: [ { id: 1, name: 'Shelf1'}, ... ],
-    read_status: [ { id: 1, name: 'Have Read'} ]
+    read_status: [ { id: 1, name: 'Have Read'} ],
+    average_rating: 3
   },
   reviews: {
     1: {

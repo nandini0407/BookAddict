@@ -76,6 +76,12 @@
   color: #674b4b;
 }
 
+.review-timestamp {
+  margin: 3px 5px;
+  color: #827a7a;
+  font-size: 10px;
+}
+
 .review-title-rating {
   display: flex;
   justify-content: flex-start;
@@ -89,10 +95,12 @@
 .review-title {
   margin: 5px;
   font-weight: bolder;
+  color: #827a7a;
 }
 
 
 .review-body {
   margin: 5px;
   font-weight: normal;
+  color: #827a7a;
 }

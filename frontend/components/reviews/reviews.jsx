@@ -42,17 +42,18 @@ class Reviews extends React.Component {
   render() {
     const fullIconSmall = <img className="icon" src="images/full_star.png" width="10" height="10" />;
     const emptyIconSmall = <img className="icon" src="images/no_star.png" width="10" height="10" />;
-      const fullIconBig = <img className="icon" src="images/full_star.png" width="17" height="17" />;
-      const emptyIconBig = <img className="icon" src="images/no_star.png" width="17" height="17" />;
+    const fullIconBig = <img className="icon" src="images/full_star.png" width="17" height="17" />;
+    const emptyIconBig = <img className="icon" src="images/no_star.png" width="17" height="17" />;
 
     let reviewIds = Object.keys(this.props.reviews);
     let reviews = reviewIds.map((id, idx) => {
+      let timestamp = this.props.reviews[id].created_at;
       return <li key={idx} className="review-list-item">
         <div className="review-username">
           {this.props.reviews[id].user}
         </div>
-        <div>
-          { this.props.reviews[id].created_at }
+        <div className="review-timestamp">
+          { timestamp.slice(0, 10) }
         </div>
         <div className="review-title-rating">
           <div className="review-rating">
