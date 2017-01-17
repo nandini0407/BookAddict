@@ -13,6 +13,8 @@ BookAddict is single page app which allows users to browse books, view and creat
 
 Books are saved in a `books` table in the database, with columns for `id`, `title`, `author`, `image_url`, `publisher`, `date`, `description` and links for amazon, kobo and google play. Upon logging in, all books are rendered on the page after making an API call to the books controller. Books are held in `booksSummary` key in the store. Books are rendered in a `BookList` component, which in turn renders a `BookListItem` for each book. The UI for BookList was partly inspired by Google Play.
 
+![image of book list] (screenshots/book-list.png)
+
 Upon clicking an individual book, details about that book are rendered in a `BookDetail` component, which is a child of `BookShow` component.
 
 ### Bookshelves
