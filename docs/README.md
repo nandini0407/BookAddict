@@ -18,7 +18,7 @@ BookAddict is a web application inspired by Goodreads, built with Ruby on Rails,
 - [ ] Bookshelves - Users can create bookshelves and add books to one or more shelves
 - [ ] Read Status - Users can mark books as read, reading, will read
 - [ ] Reviews - Users can view reviews/ratings of a book and also write their own
-- [ ] Production README
+- [ ] [Production README] [production-readme]
 
 ## Design Docs
 * [View Wireframes][wireframes]
