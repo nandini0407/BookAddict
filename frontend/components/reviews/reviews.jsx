@@ -66,6 +66,7 @@ class Reviews extends React.Component {
       />;
 
     let reviewIds = Object.keys(this.props.reviews);
+    reviewIds = reviewIds.sort((a, b) => (b - a));
     let reviews = reviewIds.map((id, idx) => {
       let timestamp = this.props.reviews[id].created_at;
       return <li key={idx} className="review-list-item">
