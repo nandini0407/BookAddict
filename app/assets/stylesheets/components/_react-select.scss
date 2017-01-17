@@ -293,12 +293,12 @@
 .Select--multi .Select-value {
   background-color: #ebf5ff;
   /* Fallback color for IE 8 */
-  background-color: rgba(0, 126, 255, 0.08);
+  background-color: rgba(251, 221, 169, 0.61);
   border-radius: 2px;
-  border: 1px solid #c2e0ff;
+  border: 1px solid 1px solid rgba(111, 83, 83, 0.52);
   /* Fallback color for IE 8 */
-  border: 1px solid rgba(0, 126, 255, 0.24);
-  color: #007eff;
+  border: 1px solid rgb(249, 211, 144);
+  color: #8c7956;
   display: inline-block;
   font-size: 0.9em;
   line-height: 1.4;
@@ -329,17 +329,17 @@
   cursor: pointer;
   border-bottom-left-radius: 2px;
   border-top-left-radius: 2px;
-  border-right: 1px solid #c2e0ff;
+  border-right: 1px solid rgb(249, 211, 144);
   /* Fallback color for IE 8 */
-  border-right: 1px solid rgba(0, 126, 255, 0.24);
+  border-right: 1px solid rgb(249, 211, 144);
   padding: 1px 5px 3px;
 }
 .Select--multi .Select-value-icon:hover,
 .Select--multi .Select-value-icon:focus {
-  background-color: #d8eafd;
+  background-color: rgba(207, 158, 73, 0.58);
   /* Fallback color for IE 8 */
-  background-color: rgba(0, 113, 230, 0.08);
-  color: #0071e6;
+  background-color: rgba(207, 158, 73, 0.58);
+  color: #8c7956;
 }
 .Select--multi .Select-value-icon:active {
   background-color: #c2e0ff;

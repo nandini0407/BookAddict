@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .book-detail-left {
@@ -54,6 +55,7 @@
   display: flex;
   flex-direction: column;
   align-items: left;
+  flex-wrap: wrap;
 }
 
 .book-title-rating {
@@ -79,6 +81,7 @@
   display: flex;
   justify-content: space-between;
   width: 90%;
+  flex-wrap: wrap;
 }
 
 .book-author-pub-date {
@@ -117,7 +120,7 @@
 .choose-read-status {
   width: 220px;
   color: #827a7a;
-  font-size: 16px;
+  font-size: 15px;
   margin: 0 15px;
 }
 
