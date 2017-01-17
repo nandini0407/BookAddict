@@ -18,3 +18,4 @@ json.readStatus do
   json.id @read_status.id
   json.name @read_status.name
 end
+json.average_rating @average_rating

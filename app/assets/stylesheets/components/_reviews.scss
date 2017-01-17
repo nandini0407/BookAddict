@@ -16,9 +16,9 @@
   margin: 5px;
   padding: 5px;
   width: 150px;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid #D1D1D1;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .review-rating-form {
@@ -31,14 +31,14 @@
   padding: 5px;
   width: 270px;
   height: 100px;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid #D1D1D1;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .review-submit {
   margin: 5px;
-  font-size: 13px;
+  font-size: 16px;
   background: rgb(181, 219, 243);
   padding: 8px;
   border-radius: 4px;
@@ -46,7 +46,7 @@
 }
 
 .review-text {
-  font-size: 18px;
+  font-size: 20px;
   color: #6f5353;
 }
 
@@ -68,18 +68,20 @@
   background: #e4e4e4;
   border-radius: 4px;
   margin: 10px 0;
-  width: 100%;
+  width: 80%;
 }
 
 .review-username {
   margin: 5px;
   color: #674b4b;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .review-timestamp {
   margin: 3px 5px;
   color: #827a7a;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .review-title-rating {
@@ -96,11 +98,15 @@
   margin: 5px;
   font-weight: bolder;
   color: #827a7a;
+  font-size: 17px;
+  font-weight: normal;
 }
 
 
 .review-body {
   margin: 5px;
   font-weight: normal;
+  font-size: 17px;
+  line-height: 1.2;
   color: #827a7a;
 }

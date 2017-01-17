@@ -39,6 +39,20 @@ class Api::BooksController < ApplicationController
     else
       @read_status = ReadStatus.new({ id: "", name: "" })
     end
+
+    reviews = Review.where("book_id = ?", params[:id])
+    total_rating = 0
+    num_reviews = 0
+    reviews.each do |review|
+      total_rating += review.rating
+      num_reviews += 1
+    end
+    if num_reviews <= 0
+      @average_rating = 0
+    else
+      @average_rating = total_rating / num_reviews
+    end
+
   end
 
 end

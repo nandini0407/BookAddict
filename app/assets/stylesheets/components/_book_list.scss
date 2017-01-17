@@ -21,7 +21,7 @@
 }
 
 .book-tile {
-  margin: 15px;
+  margin: 25px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,9 +31,27 @@
 .book-image {
   height: 300px;
   width: 200px;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   box-shadow: 4px 4px 2px #888888;
   -webkit-filter: brightness(100%);
+}
+
+.book-list-title {
+  font-size: 14px;
+  font-weight: bold;
+  width: 198px;
+  margin: 2px;
+  color: #804b23;
+  text-align: center;
+}
+
+.book-list-author {
+  font-size: 12px;
+  font-weight: normal;
+  width: 198px;
+  margin: 2px;
+  color: #a26767;
+  text-align: center;
 }
 
 .book-image:hover {

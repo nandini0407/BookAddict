@@ -71,8 +71,18 @@ class BookDetail extends React.Component {
       };
     });
 
-    const full_icon = <img className="icon" src="images/full_star.png" width="30" height="30" />;
-    const empty_icon = <img className="icon" src="images/no_star.png" width="30" height="30" />;
+    const fullIcon = <img
+      className="icon"
+      src="http://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/full_star_wc2lff.png"
+      width="17"
+      height="17"
+      />;
+    const emptyIcon = <img
+      className="icon"
+      src="http://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/no_star_gukurr.png"
+      width="17"
+      height="17"
+      />;
 
     return (
       <div className="book-detail">
@@ -87,8 +97,18 @@ class BookDetail extends React.Component {
           </div>
         </section>
         <section className="book-detail-right">
-          <div className="book-detail-title">
-            {book.title}
+          <div className="book-title-rating">
+            <div className="book-detail-title">
+              {book.title}
+            </div>
+            <div className="book-average-rating">
+              <Rating
+                full={ fullIcon }
+                empty={ emptyIcon }
+                initialRate={ this.props.bookDetail.average_rating }
+                readonly={ true }
+                />
+            </div>
           </div>
           <div className="book-detail-right-mid">
             <div className="book-author-pub-date">

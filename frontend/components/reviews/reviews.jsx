@@ -40,10 +40,30 @@ class Reviews extends React.Component {
   }
 
   render() {
-    const fullIconSmall = <img className="icon" src="images/full_star.png" width="10" height="10" />;
-    const emptyIconSmall = <img className="icon" src="images/no_star.png" width="10" height="10" />;
-    const fullIconBig = <img className="icon" src="images/full_star.png" width="17" height="17" />;
-    const emptyIconBig = <img className="icon" src="images/no_star.png" width="17" height="17" />;
+    const fullIconSmall = <img
+      className="icon"
+      src="http://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/full_star_wc2lff.png"
+      width="10"
+      height="10"
+      />;
+    const emptyIconSmall = <img
+      className="icon"
+      src="http://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/no_star_gukurr.png"
+      width="10"
+      height="10"
+      />;
+    const fullIconBig = <img
+      className="icon"
+      src="http://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/full_star_wc2lff.png"
+      width="17"
+      height="17"
+      />;
+    const emptyIconBig = <img
+      className="icon"
+      src="http://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/no_star_gukurr.png"
+      width="17"
+      height="17"
+      />;
 
     let reviewIds = Object.keys(this.props.reviews);
     let reviews = reviewIds.map((id, idx) => {

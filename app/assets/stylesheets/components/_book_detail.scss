@@ -20,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   margin-left: 0px;
+  margin-top: 20px;
 }
 
 .book-cover {
@@ -55,11 +56,23 @@
   align-items: left;
 }
 
+.book-title-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
 .book-detail-title {
   font-size: 25px;
-  margin: 40px 30px 15px 0px;
+  margin: 40px 30px 5px 0px;
   text-align: left;
   color: #6f5353;
+}
+
+.book-average-rating {
+
 }
 
 .book-detail-right-mid {
@@ -121,8 +134,10 @@
   padding: 30px;
   color: #827a7a;
   font-weight: normal;
+  font-size: 17px;
   background: #e4e4e4;
   border-radius: 4px;
   text-align: left;
   text-rendering: geometricPrecision;
+  line-height: 1.4;
 }
