@@ -88,11 +88,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 32%;
 }
 
 .book-detail-author {
   font-size: 13px;
-  margin: 0 10px 3px 0px;
+  margin: 0 3px 3px 0px;
 }
 
 .book-publisher {
@@ -118,7 +119,7 @@
 }
 
 .choose-read-status {
-  width: 220px;
+  width: 120px;
   color: #827a7a;
   font-size: 15px;
   margin: 0 15px;

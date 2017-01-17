@@ -6,6 +6,24 @@
   margin-top: 40px;
 }
 
+.review-form-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.review-form-text {
+  color: #6f5353;
+  font-size: 18px;
+  padding: 8px;
+  background: rgba(207, 158, 73, 0.58);
+  border-radius: 3px;
+}
+
+.review-form-text:hover {
+  cursor: pointer;
+}
+
 .review-form {
   display: flex;
   flex-direction: column;
