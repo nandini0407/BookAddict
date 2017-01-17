@@ -27,7 +27,7 @@ class Api::ReviewsController < ApplicationController
     user = current_user.username
     @review.book_id = params[:book_id]
     if @review.save
-      render json: { id: @review.id, title: @review.title, rating: @review.rating, body: @review.body, user: user, book_id: @review.book_id }
+      render json: { id: @review.id, title: @review.title, rating: @review.rating, body: @review.body, user: user, book_id: @review.book_id, created_at: @review.created_at }
     else
       render json: @review.errors.full_messages, status: 422
     end
