@@ -2,6 +2,8 @@ import React from 'react';
 import Rating from 'react-rating';
 import merge from 'lodash/merge';
 import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
+import ModalStyle from './modal_style';
 
 class Reviews extends React.Component {
   constructor(props) {
@@ -10,12 +12,15 @@ class Reviews extends React.Component {
       title: "",
       rating: 0,
       body: "",
-      showHideForm: "hidden"
+      showHideForm: "hidden",
+      modalOpen: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toggleReviewForm = this.toggleReviewForm.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   componentDidMount() {
@@ -45,12 +50,16 @@ class Reviews extends React.Component {
     e.preventDefault();
     let review = merge({}, this.state);
     delete review['showHideForm'];
+    delete review['modalOpen'];
     this.props.addReview(review, this.props.bookId)
-      .then(() => this.setState({
-        title: "",
-        rating: 0,
-        body: ""
-      }));
+      .then(() => {
+        this.setState({
+          title: "",
+          rating: 0,
+          body: ""
+        });
+        this.closeModal();
+      });
   }
 
   handleClickOutside(event) {
@@ -58,6 +67,14 @@ class Reviews extends React.Component {
     if (!domnode || !domnode.contains(event.target)) {
       this.setState({ showHideForm: "hidden" });
     }
+  }
+
+  openModal() {
+    this.setState({ modalOpen: true });
+  }
+
+  closeModal() {
+    this.setState({ modalOpen: false });
   }
 
   toggleReviewForm() {
@@ -123,34 +140,41 @@ class Reviews extends React.Component {
     return (
       <div className="review-component">
         <div className="review-form-div" >
-          <h4 className="review-form-text" onClick={ this.toggleReviewForm } >Review this book</h4>
-          <form onSubmit={ this.handleSubmit } id='reviewForm' ref='reviewForm' className={this.state.showHideForm}>
-            <input
-              type="text"
-              placeholder="Title"
-              onChange={ this.update('title') }
-              value={ this.state.title }
-              className="review-input-title"
-              />
-            <Rating
-              full={ fullIconBig }
-              empty={ emptyIconBig }
-              className="review-rating-form"
-              onChange={ this.updateRate()}
-              initialRate={ this.state.rating }
-              />
-            <textarea
-              placeholder="Write a review"
-              onChange={ this.update('body') }
-              value={ this.state.body }
-              className="review-input-body"
-              />
-            <input
-              type="submit"
-              value="Add Review"
-              className="review-submit"
-              />
-          </form>
+          <h4 className="review-form-text" onClick={ this.openModal } >Review this book</h4>
+          <Modal
+            isOpen={ this.state.modalOpen }
+            onRequestClose={ this.closeModal }
+            contentLabel="Modal"
+            style={ModalStyle}
+            >
+            <form onSubmit={ this.handleSubmit } id='reviewForm' ref='reviewForm' className="review-form">
+              <input
+                type="text"
+                placeholder="Title"
+                onChange={ this.update('title') }
+                value={ this.state.title }
+                className="review-input-title"
+                />
+              <Rating
+                full={ fullIconBig }
+                empty={ emptyIconBig }
+                className="review-rating-form"
+                onChange={ this.updateRate()}
+                initialRate={ this.state.rating }
+                />
+              <textarea
+                placeholder="Write a review"
+                onChange={ this.update('body') }
+                value={ this.state.body }
+                className="review-input-body"
+                />
+              <input
+                type="submit"
+                value="Add Review"
+                className="review-submit"
+                />
+            </form>
+          </Modal>
         </div>
         <h3 className="review-text">Reviews</h3>
         <ul className="review-list">
