@@ -34,6 +34,7 @@ class Search extends React.Component {
             placeholder="Search for Books"
             type="text"
             onChange={ this.handleChange }
+            value={ this.state.query }
             className="search-input"
             />
         </form>
