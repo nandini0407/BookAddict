@@ -33,7 +33,6 @@ class Search extends React.Component {
           <FontAwesome
             name='search'
             className="search-icon"
-            size='2x'
             />
           <input
             placeholder="Search for Books"
