@@ -73,13 +73,13 @@ class BookDetail extends React.Component {
 
     const fullIcon = <img
       className="icon"
-      src="http://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/full_star_wc2lff.png"
+      src="https://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/full_star_wc2lff.png"
       width="17"
       height="17"
       />;
     const emptyIcon = <img
       className="icon"
-      src="http://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/no_star_gukurr.png"
+      src="https://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/no_star_gukurr.png"
       width="17"
       height="17"
       />;

@@ -8,6 +8,7 @@ class Search extends React.Component {
     this.state = { query: "" };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field, value) {
@@ -18,13 +19,17 @@ class Search extends React.Component {
     e.preventDefault();
     let value = e.target.value;
     this.update('query', value);
-    hashHistory.push(`/user/search/${this.state.query}`);
+    hashHistory.push(`/user/search/${value}`);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
   }
 
   render() {
     return (
       <div className="search-div">
-        <form className="search-form">
+        <form className="search-form" onSubmit={ this.handleSubmit }>
           <FontAwesome
             name='search'
             className="search-icon"

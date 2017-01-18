@@ -40,6 +40,7 @@ const Root = ({ store }) => {
           <Route path="/user/books/:bookId" component={ BookShow } />
           <Route path="/user/bookshelves/:bookshelfId" component={ BookListContainer } />
           <Route path="/user/readstatus/:readStatusId" component={ BookListContainer } />
+          <Route path="/user/search" component={ BookListContainer } />
           <Route path="/user/search/:query" component={ BookListContainer }/>
         </Route>
       </Router>

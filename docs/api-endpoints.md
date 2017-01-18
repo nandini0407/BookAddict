@@ -30,6 +30,8 @@
   - gets all bookshelves for current user
 - `POST /api/bookshelves`
   - creates bookshelf
+- `DELETE /api/bookshelves/:id`
+  - deletes bookshelf
 
 ### BookshelfBooks
 
