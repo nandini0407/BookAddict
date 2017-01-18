@@ -60,7 +60,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
     resources :books, only: [:index, :show]
-    resources :bookshelves, only: [:index, :create]
+    resources :bookshelves, only: [:index, :create, :destroy]
     resources :bookshelf_books, only: [:create]
     resources :read_statuses, only: [:index]
     resources :read_status_books, only: [:create]

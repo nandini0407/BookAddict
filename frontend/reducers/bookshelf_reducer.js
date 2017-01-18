@@ -11,9 +11,12 @@ const BookshelfReducer = (state = [], action) => {
       newState.push(action.bookshelf);
       return newState;
     case REMOVE_BOOKSHELF:
-      let idx = newState.bookshelf.indexOf(action.bookshelf);
-      if (idx > -1) {
-        newState.bookshelves.splice(idx, 1);
+      let idxs = Object.keys(newState);
+      for (let i = 0; i < idxs.length; i++) {
+        let idx = idxs[i];
+        if (newState[idx].name === action.bookshelf.name) {
+          delete newState[idx];
+        }
       }
       return newState;
     default:

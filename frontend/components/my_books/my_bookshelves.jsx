@@ -8,6 +8,7 @@ class MyBookshelves extends React.Component {
     this.state = { name: "" };
 
     this.handleAddShelf = this.handleAddShelf.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentDidMount() {
@@ -20,9 +21,11 @@ class MyBookshelves extends React.Component {
       .then(() => this.setState({ name: "" }));
   }
 
-  handleDelete(e, id) {
-    e.preventDefault();
-    this.props.deleteBookshelf(id);
+  handleDelete(id) {
+    return (e) => {
+      e.preventDefault();
+      this.props.deleteBookshelf(id);
+    };
   }
 
   update(field) {
@@ -31,21 +34,29 @@ class MyBookshelves extends React.Component {
     };
   }
 
+  sortByName(bookshelves, name) {
+    return bookshelves.sort((a, b) => {
+      let x = a[name];
+      let y = b[name];
+      return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+  }
+
   render (){
     let bookshelves = this.props.bookshelves.map((bookshelf) => {
-        let id = bookshelf.id;
-        return <div key={ id } className="bs-name-div">
-            <Link to={`/user/bookshelves/${id}`} className="bs-name">
-              <div className="bs-list-item">
-                <li>{ bookshelf.name }</li>
-              </div>
-            </Link>
-            <FontAwesome
-              name="trash-o"
-               className="delete-bookshelf"
-               onClick={ (e, id) => this.handleDelete(e, id) }
-               />
-          </div>;
+      let id = bookshelf.id;
+      return <div key={ id } className="bs-name-div">
+          <Link to={`/user/bookshelves/${id}`} className="bs-name">
+            <div className="bs-list-item">
+              <li>{ bookshelf.name }</li>
+            </div>
+          </Link>
+          <FontAwesome
+            name="trash-o"
+             className="delete-bookshelf"
+             onClick={ this.handleDelete(id) }
+             />
+        </div>;
     });
     return (
       <div className="bookshelves">
