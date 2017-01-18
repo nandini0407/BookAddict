@@ -1,4 +1,4 @@
-export const fetchBooksSummary = (bookshelfId = null, readStatusId = null) => {
+export const fetchBooksSummary = (bookshelfId = null, readStatusId = null, query = null) => {
   // debugger;
   if (bookshelfId) {
     return $.ajax({
@@ -9,6 +9,11 @@ export const fetchBooksSummary = (bookshelfId = null, readStatusId = null) => {
     return $.ajax({
       method: 'GET',
       url: `api/books?readStatusId=${readStatusId}`
+    });
+  } else if (query) {
+    return $.ajax({
+      method: 'GET',
+      url: `api/books?query=${query}`
     });
   } else {
     return $.ajax({

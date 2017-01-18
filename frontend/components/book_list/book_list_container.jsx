@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchBooksSummary: (bookshelfId = null, readStatusId= null) => dispatch(fetchBooksSummary(bookshelfId, readStatusId))
+    fetchBooksSummary: (bookshelfId = null, readStatusId = null, query = null) => dispatch(fetchBooksSummary(bookshelfId, readStatusId, query))
   };
 };
 

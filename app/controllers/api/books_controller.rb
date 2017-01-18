@@ -21,9 +21,12 @@ class Api::BooksController < ApplicationController
       end
 
       @heading = read_status.name
+    elsif params[:query]
+      @books = Books.where("title LIKE ? OR author LIKE ?", "%#{query}%", "%#{query}%")
+      @heading = "Search Results"
     else
       @books = Book.all
-      @heading = "All books"
+      @heading = "All Books"
     end
   end
 

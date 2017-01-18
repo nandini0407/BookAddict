@@ -5,6 +5,7 @@ class BookList extends React.Component {
   constructor(props) {
     super(props);
     this.state = { currentUrl: "" };
+    debugger;
   }
 
   fetchDataIfNeeded() {
