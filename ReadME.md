@@ -13,7 +13,7 @@ BookAddict is single page app which allows users to browse books, view and creat
 
 Books are saved in a `books` table in the database, with columns for `id`, `title`, `author`, `image_url`, `publisher`, `date`, `description` and links for amazon, kobo and google play. Upon logging in, all books are rendered on the page after making an API call to the books controller. Books are held in `booksSummary` key in the store. Books are rendered in a `BookList` component, which in turn renders a `BookListItem` for each book. The UI for BookList was partly inspired by Google Play.
 
-![image of book list] (screenshots/book-list.png)
+![image of book list] (docs/screenshots/book-list.png)
 
 ```javascript
 class BookList extends React.Component {
@@ -45,7 +45,7 @@ class BookList extends React.Component {
 
 Upon clicking an individual book, details about that book are rendered in a `BookDetail` component, which is a child of `BookShow` component.
 
-![image of book detail] (screenshots/book-detail.png)
+![image of book detail] (docs/screenshots/book-detail.png)
 
 ### Bookshelves
 
@@ -61,11 +61,11 @@ def index
 end
 ```
 
-![image of my_bookshelves] (screenshots/my-bookshelves.png)
+![image of my_bookshelves] (docs/screenshots/my-bookshelves.png)
 
 Bookshelves of the user are also visible in a multi select dropdown on the `BookDetail` component. This dropdown allows the user to include the book in many bookshelves. A join table `bookshelf_books`, with columns `id`, `book_id` and `bookshelf_id`, maintains records of the addition/removal of a book for a bookshelf.
 
-![image of bookshelf_dropdown] (screenshots/bookshelf-dropdown.png)
+![image of bookshelf_dropdown] (docs/screenshots/bookshelf-dropdown.png)
 
 Bookshelves multi-select dropdown was implemented by React-Select library.
 
@@ -73,11 +73,11 @@ Bookshelves multi-select dropdown was implemented by React-Select library.
 
 Read Status also has a table in the backend, having columns `id`, `name`. The list of read statuses are maintained on the frontend in a `readStatuses` key in the store. The list of read statuses are rendered in a `MyReadStatus` component, which is rendered by `MyBooks` component in the sidebar, similar to bookshelves. Clicking on a read status in the sidebar renders `BookList` component with books marked with that read status.
 
-![image of my_read_status] (screenshots/my-read-status.png)
+![image of my_read_status] (docs/screenshots/my-read-status.png)
 
 Read status for a book for the user is rendered as a dropdown in the `BookDetail` component. Users can switch from one read status to another. A join table `read_status_books`, with columns `id`, `user_id`, `book_id` and `read_status_id` records any update to the read status made by the user for a book.
 
-![image of read_status_dropdown] (screenshots/read-status-dropdown.png)
+![image of read_status_dropdown] (docs/screenshots/read-status-dropdown.png)
 
 ```javascript
   return (
@@ -118,7 +118,7 @@ class BookShow extends React.Component {
 }
 ```
 
-![image of reviews] (screenshots/reviews.png)
+![image of reviews] (docs/screenshots/reviews.png)
 
 ## Future Directions for the Project
 
