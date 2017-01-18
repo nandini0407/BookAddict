@@ -6,7 +6,7 @@
 
 [heroku]: https://bookaddict.herokuapp.com/
 
-[trello]: https://trello.com/b/i5NtMliG/bookbug
+[trello]: https://trello.com/b/i5NtMliG/bookaddict
 
 ## Minimum Viable Product
 
@@ -18,9 +18,9 @@ BookAddict is a web application inspired by Goodreads, built with Ruby on Rails,
 - [ ] Bookshelves - Users can create bookshelves and add books to one or more shelves
 - [ ] Read Status - Users can mark books as read, reading, will read
 - [ ] Reviews - Users can view reviews/ratings of a book and also write their own
-- [ ] [Production README] [production-readme]
+- [ ] [Production README][production-readme]
 
-[production-readme]: (https://github.com/nandini0407/BookAddict/blob/master/ReadME.md)
+[production-readme]: https://github.com/nandini0407/BookAddict/blob/master/ReadME.md
 
 ## Design Docs
 * [View Wireframes][wireframes]
