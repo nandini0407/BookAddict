@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { hashHistory } from 'react-router';
+import FontAwesome from 'react-fontawesome';
 
 class Search extends React.Component {
   constructor(props) {
@@ -9,25 +10,31 @@ class Search extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  update(field) {
-    return (e) => {
-      this.setState({ [field]: e.target.value });
-    };
+  update(field, value) {
+    this.setState({ [field]: value });
   }
 
   handleChange(e) {
     e.preventDefault();
-    this.update('query');
-    // hashHistory.push({`/users/search/${this.state.query}`});
+    let value = e.target.value;
+    this.update('query', value);
+    hashHistory.push(`/user/search/${this.state.query}`);
   }
 
   render() {
     return (
       <div className="search-div">
         <form className="search-form">
+          <FontAwesome
+            name='search'
+            className="search-icon"
+            size='2x'
+            />
           <input
+            placeholder="Search for Books"
             type="text"
             onChange={ this.handleChange }
+            className="search-input"
             />
         </form>
       </div>

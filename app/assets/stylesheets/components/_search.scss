@@ -1,0 +1,24 @@
+.search-div {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-icon {
+  color: black;
+}
+
+.search-input {
+  margin: 4px;
+  width: 200px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #e3c795;
+  padding: 5px;
+  color: #827a7a;
+  font-size: 16px;
+}

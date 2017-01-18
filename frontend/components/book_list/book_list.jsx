@@ -5,7 +5,6 @@ class BookList extends React.Component {
   constructor(props) {
     super(props);
     this.state = { currentUrl: "" };
-    debugger;
   }
 
   fetchDataIfNeeded() {
@@ -15,6 +14,9 @@ class BookList extends React.Component {
           .then(() => this.updateState());
       } else if (this.props.params.readStatusId) {
         this.props.fetchBooksSummary(null, this.props.params.readStatusId)
+          .then(() => this.updateState());
+      } else if (this.props.params.query) {
+        this.props.fetchBooksSummary(null, null, this.props.params.query)
           .then(() => this.updateState());
       } else {
         this.props.fetchBooksSummary()

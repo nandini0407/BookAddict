@@ -21,8 +21,8 @@ class Api::BooksController < ApplicationController
       end
 
       @heading = read_status.name
-    elsif params[:query]
-      @books = Books.where("title LIKE ? OR author LIKE ?", "%#{query}%", "%#{query}%")
+    elsif query
+      @books = Book.where("title LIKE ? OR author LIKE ?", "%#{query}%", "%#{query}%")
       @heading = "Search Results"
     else
       @books = Book.all
@@ -56,6 +56,12 @@ class Api::BooksController < ApplicationController
       @average_rating = total_rating / num_reviews
     end
 
+  end
+
+  private
+
+  def query
+    params[:query]
   end
 
 end
