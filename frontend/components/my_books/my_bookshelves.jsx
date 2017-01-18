@@ -39,19 +39,22 @@ class MyBookshelves extends React.Component {
         <ul className="bs-list">
           { bookshelves }
         </ul>
-        <form className="add-shelf-form" onSubmit={ this.handleAddShelf }>
-          <input
-            className="add-shelf-input"
-            type="text"
-            value={ this.state.name }
-            onChange={ this.update('name') }
-            />
-          <input
-            className="add-shelf-button"
-            type="submit"
-            value="Add Bookshelf"
-            />
-        </form>
+        <div className="add-bookshelf-form">
+          <h4 className="add-bookshelf-text">Add a Bookshelf</h4>
+          <form className="add-shelf-form" onSubmit={ this.handleAddShelf }>
+            <input
+              className="add-shelf-input"
+              type="text"
+              value={ this.state.name }
+              onChange={ this.update('name') }
+              />
+            <input
+              className="add-shelf-button"
+              type="submit"
+              value="Add Bookshelf"
+              />
+          </form>
+        </div>
       </div>
     );
   }

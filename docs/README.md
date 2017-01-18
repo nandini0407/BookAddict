@@ -20,7 +20,7 @@ BookAddict is a web application inspired by Goodreads, built with Ruby on Rails,
 - [ ] Reviews - Users can view reviews/ratings of a book and also write their own
 - [ ] [Production README] [production-readme]
 
-[production-readme]: production-readme.md
+[production-readme]: 
 
 ## Design Docs
 * [View Wireframes][wireframes]
