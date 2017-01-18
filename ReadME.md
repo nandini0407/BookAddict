@@ -122,7 +122,7 @@ class BookShow extends React.Component {
 
 ### Search
 
-On the backend, search is handled by the `GET /api/books` API endpoint, which filters based on the search query. Books are filtered by both title and author. On the frontend, search results are rendered in `BookList` component.
+On the backend, search is handled by `GET /api/books` API endpoint, which filters based on the search query. Books are filtered by both title and author. On the frontend, search results are rendered in `BookList` component.
 
 ```ruby
 def index

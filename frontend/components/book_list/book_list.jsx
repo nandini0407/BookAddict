@@ -1,5 +1,6 @@
 import React from 'react';
 import BookListItem from './book_list_item';
+// import Infinity from 'react-infinity';
 
 class BookList extends React.Component {
   constructor(props) {
@@ -69,4 +70,14 @@ class BookList extends React.Component {
   }
 }
 
+// let booksSummaryArray = booksSummaryIds.map((id) => {
+//   return this.props.booksSummary.books[id];
+// });
+// Infinity({
+//   data: booksSummaryArray,
+//   elementWidth: 300,
+//   elementHeight: 357,
+//   margin: 15,
+//   childComponent: BookListItem
+// })
 export default BookList;
