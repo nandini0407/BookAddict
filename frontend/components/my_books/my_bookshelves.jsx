@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import FontAwesome from 'react-fontawesome';
 
 class MyBookshelves extends React.Component {
   constructor(props) {
@@ -19,6 +20,11 @@ class MyBookshelves extends React.Component {
       .then(() => this.setState({ name: "" }));
   }
 
+  handleDelete(e, id) {
+    e.preventDefault();
+    this.props.deleteBookshelf(id);
+  }
+
   update(field) {
     return (e) => {
       this.setState({[field]: e.target.value});
@@ -27,11 +33,19 @@ class MyBookshelves extends React.Component {
 
   render (){
     let bookshelves = this.props.bookshelves.map((bookshelf) => {
-        return <Link to={`/user/bookshelves/${bookshelf.id}`} key={ bookshelf.id }>
-           <div className="bs-list-item">
-            <li>{ bookshelf.name }</li>
-          </div>
-        </Link>;
+        let id = bookshelf.id;
+        return <div key={ id } className="bs-name-div">
+            <Link to={`/user/bookshelves/${id}`} className="bs-name">
+              <div className="bs-list-item">
+                <li>{ bookshelf.name }</li>
+              </div>
+            </Link>
+            <FontAwesome
+              name="trash-o"
+               className="delete-bookshelf"
+               onClick={ (e, id) => this.handleDelete(e, id) }
+               />
+          </div>;
     });
     return (
       <div className="bookshelves">

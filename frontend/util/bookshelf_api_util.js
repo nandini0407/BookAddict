@@ -12,3 +12,10 @@ export const addBookShelf = (bookshelf) => {
     data: { bookshelf }
   });
 };
+
+export const deleteBookshelf = (id) => {
+  return $.ajax({
+    method: 'DELETE',
+    url: `api/bookshelves/${id}`
+  });
+};

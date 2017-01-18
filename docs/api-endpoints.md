@@ -36,9 +36,7 @@
 ### BookshelfBooks
 
 - `POST /api/bookshelf_books`
-  - accepts bookshelf_id and book_id query params and adds the book to the bookshelf of the current user
-- `DELETE /api/bookshelf_books/:id`
-  - accepts bookshelf_id and book_id query params and deletes book from the bookshelf of the current user
+  - accepts bookshelf_id and book_id query params and adds the book to the bookshelf of the current user, or removes book from that bookshelf
 
 ### Reviews
 

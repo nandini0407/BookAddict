@@ -19,6 +19,16 @@
   text-align: center;
 }
 
+.bs-name-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bs-name {
+
+}
+
 .bs-list-item {
   margin: 5px;
   padding: 4px 7px;
@@ -29,6 +39,14 @@
 
 .bs-list-item:hover {
   background: #e0e0e0;
+  cursor: pointer;
+}
+
+.delete-bookshelf {
+  color: #827a7a;
+}
+
+.delete-bookshelf:hover {
   cursor: pointer;
 }
 

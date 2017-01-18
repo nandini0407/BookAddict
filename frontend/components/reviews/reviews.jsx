@@ -68,25 +68,24 @@ class Reviews extends React.Component {
   render() {
     const fullIconSmall = <img
       className="icon"
-      src="https://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/full_star_wc2lff.png"
-      width="10"
-      height="10"
+      src="https://res.cloudinary.com/dt72mzjpx/image/upload/v1484724953/full_heart_hqrbof.png"
+      width="12"
+      height="12"
       />;
     const emptyIconSmall = <img
       className="icon"
-      src="https://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/no_star_gukurr.png"
-      width="10"
-      height="10"
+      src="https://res.cloudinary.com/dt72mzjpx/image/upload/v1484724953/empty_heart_rmxig8.png"
+      width="12"
+      height="12"
       />;
     const fullIconBig = <img
       className="icon"
-      src="https://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/full_star_wc2lff.png"
-      width="17"
+      src="https://res.cloudinary.com/dt72mzjpx/image/upload/v1484724953/full_heart_hqrbof.png"
       height="17"
       />;
     const emptyIconBig = <img
       className="icon"
-      src="https://res.cloudinary.com/dt72mzjpx/image/upload/v1484622880/no_star_gukurr.png"
+      src="https://res.cloudinary.com/dt72mzjpx/image/upload/v1484724953/empty_heart_rmxig8.png"
       width="17"
       height="17"
       />;
