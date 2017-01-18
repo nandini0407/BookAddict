@@ -14,6 +14,7 @@
 
 .book-detail-left {
   width: 35%;
+  min-width: 300px;
 }
 
 .cover-shopping {
@@ -56,6 +57,7 @@
   flex-direction: column;
   align-items: left;
   flex-wrap: wrap;
+  min-width: 300px;
 }
 
 .book-title-rating {
