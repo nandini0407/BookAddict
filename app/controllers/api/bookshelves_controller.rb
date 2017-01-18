@@ -16,7 +16,7 @@ class Api::BookshelvesController < ApplicationController
       @bookshelves = Bookshelf
                       .where("user_id = #{current_user.id}")
                       .order('name ASC')
-      render json: { id: @bookshelf.id, name: @bookshelf.name }
+      render 'api/bookshelves/index'
     else
       render json: @bookshelf.errors.full_messages, status: 422
     end

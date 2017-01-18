@@ -21,7 +21,7 @@
 }
 
 .splash-text {
-  font-size: 40px;
+  font-size: 50px;
   color: white;
   background: transparent;
   text-align: center;
@@ -32,7 +32,7 @@
   background-color: rgb(33, 127, 162);
   padding: 13px;
   border-radius: 7px;
-  font-size: 15px;
+  font-size: 19px;
   color: white;
   width: 70px;
   text-align: center;
@@ -91,13 +91,13 @@
 
 .auth-text {
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
   color: #5f5656;
 }
 
 .use-as-guest {
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
   text-decoration: underline;
   color: blue;
 }
@@ -109,6 +109,7 @@
 .alternate-auth-text {
   color: blue;
   text-decoration: underline;
+  font-size: 16px;
 }
 
 .username {

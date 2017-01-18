@@ -120,13 +120,26 @@ class BookShow extends React.Component {
 
 ![image of reviews] (docs/screenshots/reviews.png)
 
+### Search
+
+On the backend, search is handled by the `GET /api/books` API endpoint, which filters based on the search query. Books are filtered by both title and author. On the frontend, search results are rendered in `BookList` component.
+
+```ruby
+def index
+  if query
+    @books = Book.where("title ILIKE ? OR author ILIKE ?", "%#{query}%", "%#{query}%")
+    @heading = "Search Results"
+  end
+end
+```
+
 ## Future Directions for the Project
 
 In addition to the above features, the following are in the pipeline.
 
-### Search
+### Infinite scrolling
 
-Searching for books by title or author is a standard feature of Goodreads. Users can view a single book or a list of books depending on their search query.
+To make loading more efficient for `BookList` component, only a few books will be rendered at a time, with more books being added with scrolling.
 
 ### Tags
 

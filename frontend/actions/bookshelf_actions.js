@@ -13,7 +13,7 @@ export const fetchAllBookshelves = () => (dispatch) => {
 
 export const addBookShelf = (bookshelf) => (dispatch) => {
   return BookshelfAPIUtil.addBookShelf(bookshelf)
-    .then((bkshelf) => dispatch(receiveBookshelf(bkshelf)));
+    .then((bookshelves) => dispatch(receiveAllBookshelves(bookshelves)));
 };
 
 export const deleteBookshelf = (id) => (dispatch) => {
