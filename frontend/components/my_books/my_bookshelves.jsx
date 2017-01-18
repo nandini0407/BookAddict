@@ -35,14 +35,14 @@ class MyBookshelves extends React.Component {
   }
 
   sortByName(bookshelves, name) {
-    return bookshelves.sort((a, b) => {
-      let x = a[name];
-      let y = b[name];
-      return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    return bookshelves.sort((shelf1, shelf2) => {
+      let name1 = shelf1[name];
+      let name2 = shelf2[name];
+      return ((name1 < name2) ? -1 : ((name1 > name2) ? 1 : 0));
     });
   }
 
-  render (){
+  render () {
     let bookshelves = this.props.bookshelves.map((bookshelf) => {
       let id = bookshelf.id;
       return <div key={ id } className="bs-name-div">
