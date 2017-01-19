@@ -1,13 +1,12 @@
 import React from 'react';
 import BookListItem from './book_list_item';
-import Infinite from 'react-infinite';
+// import InfiniteGrid from 'react-infinite-grid';
 
 class BookList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentUrl: "",
-      infiniteLoad: false
+      currentUrl: ""
      };
   }
 
@@ -41,13 +40,6 @@ class BookList extends React.Component {
     this.fetchDataIfNeeded();
   }
 
-  buildBookListItems(start, end) {
-    let bookListItems = [];
-    for (let i = start; i < end; i++ ) {
-
-    }
-  }
-
   render() {
     if (this.state.currentUrl !== this.props.location.pathname) {
       // this is to prevent rendering data in the old redux state
@@ -58,7 +50,7 @@ class BookList extends React.Component {
 
     let booksSummary;
     if (this.props.booksSummary.books === undefined) {
-      booksSummary = <div></div>;
+      booksSummary = [<div></div>];
     } else {
       let booksSummaryIds = Object.keys(this.props.booksSummary.books);
       booksSummary = booksSummaryIds.map((id, idx) => {

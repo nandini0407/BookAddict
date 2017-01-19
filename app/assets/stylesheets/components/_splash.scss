@@ -2,12 +2,14 @@
   position: relative;
   width: 100%;
   height: 800px;
-  background: url("https://res.cloudinary.com/dt72mzjpx/image/upload/v1484196951/splash_image_qfqzoa.jpg");
+  background: url("http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_333,w_500/v1484196951/splash_image_qfqzoa.jpg");
   background-size: cover;
 }
 
 .logo-image {
-  height: 70px;
+  height: 34px;
+  width: 142px;
+  padding: 15px;
 }
 
 .splash-items {
