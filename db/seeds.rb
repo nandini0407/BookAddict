@@ -58,7 +58,7 @@ Review.destroy_all
 Book.destroy_all
 book1 = Book.create({ title: "The Sleeping Beauty Killer",
   author: "Mary Higgins Clark & Alafair Burke",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484196931/the_sleeping_beauty_killer_ueryex.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484196931/the_sleeping_beauty_killer_ueryex.jpg",
   publisher: "Simon and Schuster",
   date: "November 15, 2016",
   description: "Casey Carter was convicted of murdering her fiancé—famed philanthropist Hunter Raleigh III—fifteen years ago. And Casey claims—has always claimed—she’s innocent. Although she was charged and served out her sentence in prison, she is still living “under suspicion.” She hears whispers at the grocery store. She can’t get a job. Even her own mother treats her like she’s guilty. Her story attracts the attention of Laurie Moran and the Under Suspicion news team—it’s Casey’s last chance to finally clear her name, and Laurie pledges to exonerate her.",
@@ -99,7 +99,7 @@ Review.create({
 
 book2 = Book.create({ title: "Kathy Griffin's Celebrity Run-Ins: My A-Z Index",
   author: "Kathy Griffin",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484196931/kathy_griffins_celebrity_runins_rviyko.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484196931/kathy_griffins_celebrity_runins_rviyko.jpg",
   publisher: "Macmillan",
   date: "November 22, 2016",
   description: "Kathy Griffin’s Celebrity Run-Ins is Kathy’s funny, juicy index of all of the celebrities she has met during her many years in show business, bursting with never-before-told stories. Starting with Woody Allen and ending with Warren Zevon, Kathy Griffin’s Celebrity Run-Ins is a who’s who of pop culture: Leonardo DiCaprio, Nick Jonas, Kendall Jenner, Anna Kendrick, Lily Tomlin, Suge Knight, Barbra Streisand, Ashton Kutcher, Queen Latifah, Maria Shriver, Jared Leto, Selena Gomez, Meghan Trainor, Macklemore, Bruno Mars, Aaron Paul, Pink, Pitbull, Sia, Britney Spears, Taylor Swift, Christina Aguilera, and many more. Who would imagine that Kathy was an extra in a Michael Jackson commercial (guess which one)? That she and Salman Rushdie trade celebrity stories? That Donald Trump once drove Kathy and Liza Minelli around on a golf cart? That Sidney Poitier has a wicked sense of humor? That Demi Lovato has none? That David Letterman is still scared of Cher? That Channing Tatum is as polite as they come, and Tom Hanks might have the best perspective on fame of anyone? Kathy, that’s who. Kathy has met everyone, and after reading this book, you will feel as if you have, too.
@@ -139,7 +139,7 @@ Review.create({
 
 book3 = Book.create({ title: "Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists",
   author: "J.K. Rowling",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484196932/short_stories_from_hogwarts_wf93ro.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484196932/short_stories_from_hogwarts_wf93ro.jpg",
   publisher: "Pottermore",
   date: "September 6, 2016",
   description: "Pottermore Presents is a collection of J.K. Rowling’s writing from the Pottermore archives: short reads originally featured on pottermore.com with some exclusive new additions. These eBooks, with writing curated by Pottermore, will take you beyond the Harry Potter stories as J.K. Rowling reveals her inspiration, intricate details of characters’ lives and surprises from the wizarding world.",
@@ -178,7 +178,7 @@ Review.create({
 
 book4 = Book.create({ title: "The Alchemist",
   author: "Paulo Coelho",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484196926/the_alchemist_p0npew.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484196926/the_alchemist_p0npew.jpg",
   publisher: "HarperCollins",
   date: "February 24, 2015",
   description: "Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined. Santiago's journey teaches us about the essential wisdom of listening to our hearts, of recognizing opportunity and learning to read the omens strewn along life's path, and, most importantly, to follow our dreams.",
@@ -217,7 +217,7 @@ Review.create({
 
 book5 = Book.create({ title: "Paris for One and Other Stories",
   author: "Jojo Moyes",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484196931/paris_for_one_lwonjl.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484196931/paris_for_one_lwonjl.jpg",
   publisher: "Penguin",
   date: "October 18, 2016",
   description: "Nell is twenty-six and has never been to Paris. She's never even been on a romantic weekend away—to anywhere—before. Traveling abroad isn't really her thing. But when Nell's boyfriend fails to show up for their mini-vacation, she has the opportunity to prove everyone—including herself—wrong.  Alone in Paris, Nell finds a version of herself she never knew existed: independent and intrepid. Could this turn out to be the most adventurous weekend of her life? Funny, charming, and irresistible, Paris for One is quintessential Jojo Moyes—as are the other stories that round out the collection.",
@@ -243,7 +243,7 @@ Review.create({
 
 book6 = Book.create({ title: "No Man's Land",
   author: "David Baldacci",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/no_mans_mand_gatl11.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272820/no_mans_mand_gatl11.jpg",
   publisher: "Grand Central Publishing",
   date: "November 15, 2016",
   description: "Two men. Thirty years. John Puller's mother, Jackie, vanished thirty years ago from Fort Monroe, Virginia, when Puller was just a boy. Paul Rogers has been in prison for ten years. But twenty years before that, he was at Fort Monroe. One night three decades ago, Puller's and Rogers' worlds collided with devastating results, and the truth has been buried ever since.
@@ -269,7 +269,7 @@ Review.create({
 
 book7 = Book.create(title: "The Whistler",
   author: "John Grisham",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/the_whistler_i0kmbl.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272820/the_whistler_i0kmbl.jpg",
   publisher: "Doubleday",
   date: "October 25, 2016",
   description: "We expect our judges to be honest and wise. Their integrity and impartiality are the bedrock of the entire judicial system. We trust them to ensure fair trials, to protect the rights of all litigants, to punish those who do wrong, and to oversee the orderly and efficient flow of justice.
@@ -285,7 +285,7 @@ book7 = Book.create(title: "The Whistler",
 )
 book8 = Book.create(title: "The Murder House",
   author: "James Patterson & David Ellis",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/murder_house_qietjk.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272820/murder_house_qietjk.jpg",
   publisher: "Little, Brown",
   date: "September 28, 2015",
   description: "No. 7 Ocean Drive is a gorgeous, multi-million-dollar beachfront estate in the Hamptons, where money and privilege know no bounds. But its beautiful gothic exterior hides a horrific past: it was the scene of a series of depraved killings that have never been solved. Neglected, empty, and rumored to be cursed, it's known as the Murder House, and locals keep their distance.
@@ -299,7 +299,7 @@ Full of the twists and turns that have made James Patterson the world's #1 bests
 )
 book9 = Book.create(title: "The Princess Diarist",
   author: "Carrie Fisher",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/the_princess_diarist_isk46f.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272820/the_princess_diarist_isk46f.jpg",
   publisher: "Penguin",
   date: "November 22, 2016",
   description: "When Carrie Fisher recently discovered the journals she kept during the filming of the first Star Wars movie, she was astonished to see what they had preserved—plaintive love poems, unbridled musings with youthful naiveté, and a vulnerability that she barely recognized. Today, her fame as an author, actress, and pop-culture icon is indisputable, but in 1977, Carrie Fisher was just a teenager with an all-consuming crush on her costar, Harrison Ford.
@@ -311,7 +311,7 @@ With these excerpts from her handwritten notebooks, The Princess Diarist is Fish
 )
 book10 = Book.create(title: "The Magnolia Story",
   author: "Chip Gaines & Joanna Gaines",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/the_magnolia_story_ot8upe.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272820/the_magnolia_story_ot8upe.jpg",
   publisher: "HarperCollins Christian Publishing",
   date: "October 18, 2016",
   description: "Are you ready to see your fixer upper?
@@ -327,7 +327,7 @@ They both attended Baylor University in Waco. However, their paths did not cross
 )
 book11 = Book.create(title: "Born a Crime: Stories from a South African Childhood",
   author: "Trevor Noah",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/born_a_crime_vvano7.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272820/born_a_crime_vvano7.jpg",
   publisher: "Spiegel & Grau",
   date: "November 15, 2016",
   description: "Trevor Noah’s unlikely path from apartheid South Africa to the desk of The Daily Show began with a criminal act: his birth. Trevor was born to a white Swiss father and a black Xhosa mother at a time when such a union was punishable by five years in prison. Living proof of his parents’ indiscretion, Trevor was kept mostly indoors for the earliest years of his life, bound by the extreme and often absurd measures his mother took to hide him from a government that could, at any moment, steal him away. Finally liberated by the end of South Africa’s tyrannical white rule, Trevor and his mother set forth on a grand adventure, living openly and freely and embracing the opportunities won by a centuries-long struggle.
@@ -341,7 +341,7 @@ The stories collected here are by turns hilarious, dramatic, and deeply affectin
 )
 book12 = Book.create(title: "When Breath Becomes Air",
   author: "Paul Kalanithi",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484273370/when_breath_becomes_air_apkaq0.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484273370/when_breath_becomes_air_apkaq0.jpg",
   publisher: "Random House",
   date: "January 12, 2016",
   description: "At the age of thirty-six, on the verge of completing a decade’s worth of training as a neurosurgeon, Paul Kalanithi was diagnosed with stage IV lung cancer. One day he was a doctor treating the dying, and the next he was a patient struggling to live. And just like that, the future he and his wife had imagined evaporated. When Breath Becomes Air chronicles Kalanithi’s transformation from a naïve medical student “possessed,” as he wrote, “by the question of what, given that all organisms die, makes a virtuous and meaningful life” into a neurosurgeon at Stanford working in the brain, the most critical place for human identity, and finally into a patient and new father confronting his own mortality.
@@ -355,7 +355,7 @@ Paul Kalanithi died in March 2015, while working on this book, yet his words liv
 )
 book13 = Book.create(title: "Lab Girl",
   author: "Hope Jahren",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/lab_girl_eoapss.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272820/lab_girl_eoapss.jpg",
   publisher: "Knopf",
   date: "April 5, 2016",
   description: "An illuminating debut memoir of a woman in science; a moving portrait of a longtime friendship; and a stunningly fresh look at plants that will forever change how you see the natural world
@@ -373,7 +373,7 @@ Jahren’s probing look at plants, her astonishing tenacity of spirit, and her a
 )
 book14 = Book.create(title: "Wyoming Brave",
   author: "Diana Palmer",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272821/wyoming_brave_jbfkue.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272821/wyoming_brave_jbfkue.jpg",
   publisher: "HQN Books",
   date: "January 1, 2017",
   description: "Ren Colter may own an enormous ranch in Wyoming, but he scorns his wealth. He's closed himself off since his fiancée left him months ago, so he's shocked when he allows Meredith Grayling to stay with him. He tells himself it's only to protect the blonde beauty from a stalker, but Ren's alpha instincts soon kick in.
@@ -385,7 +385,7 @@ The last thing Merrie wants is a devastatingly handsome man like Ren lurking aro
 )
 book15 = Book.create(title: "The Nightingale",
   author: "Kristin Hannah",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/the_nightingale_graevm.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272820/the_nightingale_graevm.jpg",
   publisher: "St. Martin's Press",
   date: "February 3, 2015",
   description: "In love we find out who we want to be.
@@ -404,7 +404,7 @@ With courage, grace and powerful insight, bestselling author Kristin Hannah capt
 )
 Book.create(title: "Truly Madly Guilty",
   author: "Liane Moriarty",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272821/truly_madly_guilty_hhhl2a.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272821/truly_madly_guilty_hhhl2a.jpg",
   publisher: "HMacmillan",
   date: "July 26, 2016",
   description: "Six responsible adults. Three cute kids. One small dog. It’s just a normal weekend. What could possibly go wrong?
@@ -424,7 +424,7 @@ In Truly Madly Guilty, Liane Moriarty takes on the foundations of our lives: mar
 )
 Book.create(title: "What She Knew: A Novel",
   author: "Gilly Macmillan",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272821/what_she_knew_bvdnt2.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272821/what_she_knew_bvdnt2.jpg",
   publisher: "HarperCollins",
   date: "December 1, 2015",
   description: "THE NEW YORK TIMES BESTSELLER
@@ -445,7 +445,7 @@ Where is Ben? The clock is ticking...",
 )
 Book.create(title: "The Plum Tree",
   author: "Ellen Marie Wiseman",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272820/the_plum_tree_ocppye.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272820/the_plum_tree_ocppye.jpg",
   publisher: "Kensington Books",
   date: "December 24, 2012",
   description: "A deeply moving and masterfully written story of human resilience and enduring love, The Plum Tree follows a young German woman through the chaos of World War II and its aftermath.
@@ -461,7 +461,7 @@ Set against the backdrop of the German homefront, this is an unforgettable novel
 )
 Book.create(title: "Wishful Drinking",
   author: "Carrie Fisher",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272821/wishful_drinking_iwfvfw.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272821/wishful_drinking_iwfvfw.jpg",
   publisher: "Simon and Schuster",
   date: "December 2, 2008",
   description: "The bestselling author of Postcards from the Edge comes clean (well, sort of) in her first-ever memoir, adapted from her one-woman Broadway hit show. Fisher reveals what it was really like to grow up a product of “Hollywood in-breeding,” come of age on the set of a little movie called Star Wars, and become a cultural icon and bestselling action figure at the age of nineteen.
@@ -475,7 +475,7 @@ Wishful Drinking, the show, has been a runaway success. Entertainment Weekly dec
 )
 Book.create(title: "The Secret Letters",
   author: "Abby Bardi",
-  image_url: "https://res.cloudinary.com/dt72mzjpx/image/upload/v1484272821/the_secret_letters_mtcqfu.jpg",
+  image_url: "http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_290,w_195/v1484272821/the_secret_letters_mtcqfu.jpg",
   publisher: "HarperCollins Australia",
   date: "July 1, 2015",
   description: "Inspiration has struck Julie - all it took was her mother's secret. A moving family story for fans of Liane Moriarty and Anne Tyler.
