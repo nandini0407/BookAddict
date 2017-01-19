@@ -1,11 +1,14 @@
 import React from 'react';
 import BookListItem from './book_list_item';
-// import Infinity from 'react-infinity';
+import Infinite from 'react-infinite';
 
 class BookList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { currentUrl: "" };
+    this.state = {
+      currentUrl: "",
+      infiniteLoad: false
+     };
   }
 
   fetchDataIfNeeded() {
@@ -36,6 +39,13 @@ class BookList extends React.Component {
 
   componentWillReceiveProps(newProps) {
     this.fetchDataIfNeeded();
+  }
+
+  buildBookListItems(start, end) {
+    let bookListItems = [];
+    for (let i = start; i < end; i++ ) {
+
+    }
   }
 
   render() {
@@ -70,14 +80,4 @@ class BookList extends React.Component {
   }
 }
 
-// let booksSummaryArray = booksSummaryIds.map((id) => {
-//   return this.props.booksSummary.books[id];
-// });
-// Infinity({
-//   data: booksSummaryArray,
-//   elementWidth: 300,
-//   elementHeight: 357,
-//   margin: 15,
-//   childComponent: BookListItem
-// })
 export default BookList;

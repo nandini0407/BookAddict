@@ -90,7 +90,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 32%;
+  width: 25%;
+  margin: 18px 0 15px 10px;
 }
 
 .book-detail-author {
@@ -111,26 +112,28 @@
 .change-bookshelves {
   width: 220px;
   font-size: 16px;
-  margin: 0 15px;
+  margin: 10px 10px;
 }
 
 .your-bookshelves {
   text-align: left;
   padding: 0 10px 5px 0;
   color: #6f5353;
+  margin: 5px 0;
 }
 
 .choose-read-status {
   width: 120px;
   color: #827a7a;
   font-size: 15px;
-  margin: 0 15px;
+  margin: 10px 10px;
 }
 
 .your-read-status {
   text-align: left;
   padding: 0 10px 5px 0;
   color: #6f5353;
+  margin: 5px 0;
 }
 
 .book-description {
