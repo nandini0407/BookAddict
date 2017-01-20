@@ -17,11 +17,17 @@ const BookListItem = ({ book }) => {
     height="12"
     />;
 
+  let title = book.title;
+  if (book.title.length > 29) {
+    title = book.title.substring(0, 26);
+    title = title.concat("...");
+  }
+
   return (
     <div className="book-tile">
       <Link to={`/user/books/${book.id}`} className="book-list-link">
         <img className="book-image" src={ book.image_url } />
-        <div className="book-list-title">{ book.title }</div>
+        <div className="book-list-title">{ title }</div>
         <div className="book-list-author">{ book.author }</div>
         <div className="book-list-rating">
           <Rating

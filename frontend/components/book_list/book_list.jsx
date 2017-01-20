@@ -1,13 +1,15 @@
 import React from 'react';
 import BookListItem from './book_list_item';
-// import InfiniteGrid from 'react-infinite-grid';
+import InfiniteScroll from 'react-infinite-scroller';
 
 class BookList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentUrl: ""
-     };
+      currentUrl: "",
+      booksSummaryIds: [],
+      hasMoreItems: true
+    };
   }
 
   fetchDataIfNeeded() {
@@ -29,7 +31,12 @@ class BookList extends React.Component {
   }
 
   updateState() {
-    this.state = { currentUrl: this.props.location.pathname}  ;
+    this.state = {
+      currentUrl: this.props.location.pathname,
+      booksSummaryIds: [],
+      hasMoreItems: true
+    };
+    this.loadMore();
   }
 
   componentDidMount() {
@@ -38,6 +45,30 @@ class BookList extends React.Component {
 
   componentWillReceiveProps(newProps) {
     this.fetchDataIfNeeded();
+  }
+
+  loadMore() {
+    let newBooksSummaryIds = [];
+    let hasMoreItems = true;
+    if (this.props.booksSummary.books === undefined) {
+      newBooksSummaryIds = [];
+      hasMoreItems = false;
+    } else {
+      let allBookSummaryIds = Object.keys(this.props.booksSummary.books).sort();
+      for (let i = 0; i < 7; i++) {
+        if (this.state.booksSummaryIds.length + i + 1 > allBookSummaryIds.length ) {
+          hasMoreItems = false;
+          break;
+        }
+        newBooksSummaryIds.push(allBookSummaryIds[this.state.booksSummaryIds.length + i]);
+      }
+    }
+    newBooksSummaryIds = this.state.booksSummaryIds.concat(newBooksSummaryIds);
+    this.setState({
+      currentUrl: this.props.location.pathname,
+      booksSummaryIds: newBooksSummaryIds,
+      hasMoreItems: hasMoreItems
+    });
   }
 
   render() {
@@ -52,8 +83,7 @@ class BookList extends React.Component {
     if (this.props.booksSummary.books === undefined) {
       booksSummary = [<div key={0}></div>];
     } else {
-      let booksSummaryIds = Object.keys(this.props.booksSummary.books);
-      booksSummary = booksSummaryIds.map((id, idx) => {
+      booksSummary = this.state.booksSummaryIds.map((id, idx) => {
         return <BookListItem
           key={idx}
           book={this.props.booksSummary.books[id]}
@@ -65,7 +95,14 @@ class BookList extends React.Component {
       <div className="main">
         <h1 className="heading">{this.props.booksSummary.heading}</h1>
         <div className="book-list-item">
-          { booksSummary }
+          <InfiniteScroll
+            className="infinite-grid"
+            pageStart={0}
+            loadMore={this.loadMore.bind(this)}
+            hasMore={this.state.hasMoreItems}
+            >
+            { booksSummary }
+          </InfiniteScroll>
         </div>
       </div>
     );
