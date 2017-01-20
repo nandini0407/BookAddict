@@ -18,8 +18,8 @@ const BookListItem = ({ book }) => {
     />;
 
   let title = book.title;
-  if (book.title.length > 29) {
-    title = book.title.substring(0, 26);
+  if (title.length > 29) {
+    title = title.substring(0, 26);
     title = title.concat("...");
   }
 

@@ -55,7 +55,7 @@ class BookList extends React.Component {
       hasMoreItems = false;
     } else {
       let allBookSummaryIds = Object.keys(this.props.booksSummary.books).sort();
-      for (let i = 0; i < 7; i++) {
+      for (let i = 0; i < 6; i++) {
         if (this.state.booksSummaryIds.length + i + 1 > allBookSummaryIds.length ) {
           hasMoreItems = false;
           break;
@@ -100,6 +100,7 @@ class BookList extends React.Component {
             pageStart={0}
             loadMore={this.loadMore.bind(this)}
             hasMore={this.state.hasMoreItems}
+            loader={<div className="loader">Loading ...</div>}
             >
             { booksSummary }
           </InfiniteScroll>
