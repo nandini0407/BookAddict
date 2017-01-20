@@ -93,7 +93,7 @@ Read status for a book for the user is rendered as a dropdown in the `BookDetail
   );
 ```
 
-Read Status dropdown was implemented by React-Select library.
+Read Status dropdown was implemented by `react-select` library.
 
 ### Reviews
 
@@ -120,6 +120,8 @@ class BookShow extends React.Component {
 
 ![image of reviews] (docs/screenshots/reviews.png)
 
+React rating was implemented by `react-rating` library.
+
 ### Search
 
 On the backend, search is handled by `GET /api/books` API endpoint, which filters based on the search query. Books are filtered by both title and author. On the frontend, search results are rendered in `BookList` component.
@@ -133,13 +135,17 @@ def index
 end
 ```
 
+### Infinite Scrolling
+
+To make loading more efficient for `BookList` component, infinite scrolling was implemented using `react-infinite-scroller` library.
+
 ## Future Directions for the Project
 
 In addition to the above features, the following are in the pipeline.
 
-### Infinite scrolling
+### Allow users to add books
 
-To make loading more efficient for `BookList` component, only a few books will be rendered at a time, with more books being added with scrolling.
+Users will be provided with a form to add books to the BookAddict database. Image uploading will be handled by Cloudinary.
 
 ### Tags
 
