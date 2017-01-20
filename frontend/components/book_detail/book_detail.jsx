@@ -65,7 +65,7 @@ class BookDetail extends React.Component {
   }
 
   render() {
-    if (this.book === null) {
+    if (!this.book) {
       return (
         <div className="book-detail"></div>
       );

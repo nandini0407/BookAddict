@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import Rating from 'react-rating';
 
 const BookListItem = ({ book }) => {
-  if (book === null) {
+  if (!book) {
     return (<div className="book-tile"></div>);
   }
 
