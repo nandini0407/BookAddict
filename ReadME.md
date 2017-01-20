@@ -67,7 +67,7 @@ Bookshelves of the user are also visible in a multi select dropdown on the `Book
 
 ![image of bookshelf_dropdown] (docs/screenshots/bookshelf-dropdown.png)
 
-Bookshelves multi-select dropdown was implemented by React-Select library.
+Bookshelves multi-select dropdown was implemented by `react-select` library.
 
 ### Read Status
 
@@ -120,7 +120,7 @@ class BookShow extends React.Component {
 
 ![image of reviews] (docs/screenshots/reviews.png)
 
-React rating was implemented by `react-rating` library.
+Review form was implemented using `react-modal` library and rating was implemented by `react-rating` library.
 
 ### Search
 
