@@ -145,7 +145,7 @@ In addition to the above features, the following are in the pipeline.
 
 ### Allow users to add books
 
-Users will be provided with a form to add books to the BookAddict database. Image uploading will be handled by Cloudinary.
+Users will be able to add books to the BookAddict database. Image uploading will be handled by Cloudinary.
 
 ### Tags
 
