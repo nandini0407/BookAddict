@@ -3,6 +3,9 @@ import { Link } from 'react-router';
 import Rating from 'react-rating';
 
 const BookListItem = ({ book }) => {
+  if (book === null) {
+    return (<div className="book-tile"></div>);
+  }
 
   const fullIconSmall = <img
     className="icon"
