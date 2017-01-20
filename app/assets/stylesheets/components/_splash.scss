@@ -21,11 +21,25 @@
 .splash-items {
   position: absolute;
   top: 25%;
-  left: 37%;
+  left: 35%;
   height: 350px;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+@media all and (max-width: 1000px) {
+  .splash-items {
+    position: absolute;
+    left: 25%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .splash-items {
+    position: absolute;
+    left: 12%;
+  }
 }
 
 .splash-text {
