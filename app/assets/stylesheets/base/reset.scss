@@ -19,7 +19,8 @@ span, article, footer, time, small {
 }
 
 html {
-  min-height: 800px;
+  // min-height: 800px;
+  
 }
 
 body {
@@ -27,7 +28,7 @@ body {
   font-weight: bold;
   background: transparent;
   width: 100%;
-  height: 100%;
+
   display: block;
 }
 
@@ -65,5 +66,5 @@ input[type="submit"] {
 
 #root {
   width: 100%;
-  height: 100%;
+
 }
