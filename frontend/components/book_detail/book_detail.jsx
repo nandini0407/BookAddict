@@ -6,6 +6,7 @@ class BookDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = { bookshelves: [], readStatus: {} };
+    this.book = null;
 
     this.handleShelfChange = this.handleShelfChange.bind(this);
     this.handleReadStatusChange = this.handleReadStatusChange.bind(this);
@@ -16,8 +17,13 @@ class BookDetail extends React.Component {
       .then(() => {
         this.setNewBookshelfState();
         this.setNewReadStatus();
+        this.book = this.props.bookDetail;
       });
     this.props.fetchAllBookshelves();
+  }
+
+  componentWillUnmount() {
+    this.book = null;
   }
 
   setNewBookshelfState() {
@@ -59,7 +65,12 @@ class BookDetail extends React.Component {
   }
 
   render() {
-    let book = this.props.bookDetail;
+    if (this.book === null) {
+      return (
+        <div className="book-detail"></div>
+      );
+    }
+    let book = this.book;
     let bookshelves = this.props.bookshelves.map((bookshelf) => {
       return {
         value: bookshelf.name, label: bookshelf.name, id: bookshelf.id
