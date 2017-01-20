@@ -6,13 +6,13 @@ const BookListItem = ({ book }) => {
 
   const fullIconSmall = <img
     className="icon"
-    src="http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_40,w_40/v1484724953/full_heart_hqrbof.png"
+    src="https://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_40,w_40/v1484724953/full_heart_hqrbof.png"
     width="12"
     height="12"
     />;
   const emptyIconSmall = <img
     className="icon"
-    src="http://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_40,w_40/v1484724953/empty_heart_rmxig8.png"
+    src="https://res.cloudinary.com/dt72mzjpx/image/upload/c_scale,h_40,w_40/v1484724953/empty_heart_rmxig8.png"
     width="12"
     height="12"
     />;
