@@ -84,11 +84,19 @@ class BookDetail extends React.Component {
       height="17"
       />;
 
+    let imageUrl = book.image_url;
+    if (imageUrl !== undefined) {
+      let idx = imageUrl.indexOf('upload');
+      let lastPartIdx = imageUrl.indexOf('book');
+      let lastPart = imageUrl.substring(lastPartIdx);
+      imageUrl = imageUrl.substring(0, (idx + 7)) + 'c_scale,h_499,w_322/' + lastPart;
+    }
+
     return (
       <div className="book-detail">
         <section className="book-detail-left">
           <div className="cover-shopping">
-            <img className="book-cover" src={ book.image_url } />
+            <img className="book-cover" src={ imageUrl } />
             <div className="book-shopping">
               <a className="shopping-link" href={ book.amazon_link }>Amazon</a>
               <a className="shopping-link kobo" href={ book.kobo_link }>Kobo</a>
