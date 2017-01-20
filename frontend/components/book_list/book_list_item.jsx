@@ -23,10 +23,18 @@ const BookListItem = ({ book }) => {
     title = title.concat("...");
   }
 
+  let imageUrl = book.image_url;
+  if (imageUrl !== undefined) {
+    let idx = imageUrl.indexOf('upload');
+    let lastPartIdx = imageUrl.indexOf('book');
+    let lastPart = imageUrl.substring(lastPartIdx);
+    imageUrl = imageUrl.substring(0, (idx + 7)) + 'c_scale,h_195,w_290/' + lastPart;
+  }
+
   return (
     <div className="book-tile">
       <Link to={`/user/books/${book.id}`} className="book-list-link">
-        <img className="book-image" src={ book.image_url } />
+        <img className="book-image" src={ imageUrl } />
         <div className="book-list-title">{ title }</div>
         <div className="book-list-author">{ book.author }</div>
         <div className="book-list-rating">
