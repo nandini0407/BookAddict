@@ -12,27 +12,17 @@ class Reviews extends React.Component {
       title: "",
       rating: 0,
       body: "",
-      showHideForm: "hidden",
       modalOpen: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.toggleReviewForm = this.toggleReviewForm.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchAllReviews(this.props.bookId);
-    // document.addEventListener('click',
-    // this.handleClickOutside);
   }
-
-  // componentWillUnmount() {
-  //   document.removeEventListener('click',
-  //   this.handleClickOutside);
-  // }
 
   update(field) {
     return (e) => {
@@ -49,7 +39,6 @@ class Reviews extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let review = merge({}, this.state);
-    delete review['showHideForm'];
     delete review['modalOpen'];
     this.props.addReview(review, this.props.bookId)
       .then(() => {
@@ -62,24 +51,12 @@ class Reviews extends React.Component {
       });
   }
 
-  handleClickOutside(event) {
-    const domnode = ReactDOM.findDOMNode(this.refs.reviewForm);
-    if (!domnode || !domnode.contains(event.target)) {
-      this.setState({ showHideForm: "hidden" });
-    }
-  }
-
   openModal() {
     this.setState({ modalOpen: true });
   }
 
   closeModal() {
     this.setState({ modalOpen: false });
-  }
-
-  toggleReviewForm() {
-    let style = (this.state.showHideForm === "hidden") ? "show review-form" : "hidden";
-    this.setState({ showHideForm: style });
   }
 
   render() {
@@ -147,7 +124,7 @@ class Reviews extends React.Component {
             contentLabel="Modal"
             style={ModalStyle}
             >
-            <form onSubmit={ this.handleSubmit } id='reviewForm' ref='reviewForm' className="review-form">
+            <form onSubmit={ this.handleSubmit } className="review-form">
               <input
                 type="text"
                 placeholder="Title"

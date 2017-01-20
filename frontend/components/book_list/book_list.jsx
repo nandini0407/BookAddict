@@ -50,7 +50,7 @@ class BookList extends React.Component {
 
     let booksSummary;
     if (this.props.booksSummary.books === undefined) {
-      booksSummary = [<div></div>];
+      booksSummary = [<div key={0}></div>];
     } else {
       let booksSummaryIds = Object.keys(this.props.booksSummary.books);
       booksSummary = booksSummaryIds.map((id, idx) => {

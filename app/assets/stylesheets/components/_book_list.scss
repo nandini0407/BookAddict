@@ -40,12 +40,22 @@
   width: 300px;
 }
 
+.book-list-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 17px 10px 17px;
+  border-radius: 7px;
+  background: rgba(218, 214, 208, 0.45);
+  -webkit-filter: brightness(100%);
+  box-shadow: 2px 2px 1px rgba(136, 136, 136, 0.39);
+  height: 350px;
+}
+
 .book-image {
   height: 300px;
   width: 200px;
   margin-bottom: 5px;
-  box-shadow: 4px 4px 2px #888888;
-  -webkit-filter: brightness(100%);
 }
 
 .book-list-title {
@@ -66,7 +76,11 @@
   text-align: center;
 }
 
-.book-image:hover {
+.book-list-rating {
+
+}
+
+.book-list-link:hover {
   -webkit-filter: brightness(70%);
 }
 
