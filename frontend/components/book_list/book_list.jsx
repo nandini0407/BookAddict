@@ -100,7 +100,6 @@ class BookList extends React.Component {
             pageStart={0}
             loadMore={this.loadMore.bind(this)}
             hasMore={this.state.hasMoreItems}
-            loader={<div className="loader">Loading ...</div>}
             >
             { booksSummary }
           </InfiniteScroll>
