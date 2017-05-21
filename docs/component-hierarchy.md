@@ -11,6 +11,7 @@
   - Nav
     + Logo
     + GreetingContainer
+      - Greeting
   - Sidebar
     + MyBooks
       - MyReadStatusContainer
