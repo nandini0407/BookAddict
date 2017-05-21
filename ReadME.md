@@ -1,6 +1,7 @@
 # BookAddict
 
 [BookAddict live] [heroku]
+
 [heroku]: https://bookaddict.herokuapp.com
 
 BookAddict is a full-stack web application inspired by Goodreads. It is built on Ruby on Rails on the backend, PostgreSQL database, and React.js with a Redux architectural framework on the frontend.
