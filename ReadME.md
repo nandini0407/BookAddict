@@ -1,6 +1,6 @@
 # BookAddict
 
-[BookAddict live] [heroku]
+[BookAddict live][heroku]
 
 [heroku]: https://bookaddict.herokuapp.com
 
