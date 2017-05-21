@@ -10,7 +10,9 @@ class Nav extends React.Component {
     return (
       <div className="nav">
         <div className="nav-left">
-          <Logo />
+          <Link
+            to='/user/books'
+            ><Logo /></Link>
           <Link
             to='/user/books'
             className="nav-all-books"

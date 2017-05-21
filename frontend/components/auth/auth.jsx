@@ -19,6 +19,7 @@ class Auth extends React.Component {
   loginGuest() {
     let guest = { username: 'guest', password: 'guest123' };
     this.props.login(guest)
+      // .then(() => hashHistory.push('/user'));
       .then(() => this.props.router.push('/user'));
   }
 
