@@ -45,9 +45,9 @@ class MyBookshelves extends React.Component {
           </Link>
           <FontAwesome
             name="trash-o"
-             className="delete-bookshelf"
-             onClick={ this.handleDelete(id) }
-             />
+            className="delete-bookshelf"
+            onClick={ this.handleDelete(id) }
+            />
         </div>;
     });
     return (
