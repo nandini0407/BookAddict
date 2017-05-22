@@ -10,7 +10,6 @@ class Api::BookshelvesController < ApplicationController
 
   def create
     @bookshelf = Bookshelf.new(bookshelf_params)
-    @books = Book.all
     @bookshelf.user_id = current_user.id
     if @bookshelf.save
       @bookshelves = Bookshelf
