@@ -13,7 +13,6 @@ const BookDetailReducer = (state = {}, action) => {
       // delete newState.bookshelves;
       // newState['bookshelves'] = action.bookshelves;
       // return newState;
-      console.log(action.bookDetail);
       return action.bookDetail;
     default:
       return state;
