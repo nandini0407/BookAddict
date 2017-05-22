@@ -17,7 +17,7 @@ class BookDetail extends React.Component {
         this.setNewBookshelfState();
         this.setNewReadStatus();
       });
-    this.props.fetchAllBookshelves();
+    // this.props.fetchAllBookshelves();
   }
 
   setNewBookshelfState() {

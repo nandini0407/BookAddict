@@ -10,9 +10,11 @@ const BookDetailReducer = (state = {}, action) => {
     case RECEIVE_BOOK_DETAIL:
       return action.bookDetail;
     case ADD_BOOKSHELVES_TO_DETAIL:
-      delete newState.bookshelves;
-      newState['bookshelves'] = action.bookshelves;
-      return newState;
+      // delete newState.bookshelves;
+      // newState['bookshelves'] = action.bookshelves;
+      // return newState;
+      console.log(action.bookDetail);
+      return action.bookDetail;
     default:
       return state;
   }

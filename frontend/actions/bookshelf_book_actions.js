@@ -6,14 +6,16 @@ export const ADD_BOOKSHELVES_TO_DETAIL = "ADD_BOOKSHELVES_TO_DETAIL";
 
 export const changeBookshelves = (bookId, bookshelfIds) => (dispatch) => {
   return BookshelfBookAPIUtil.changeBookshelves(bookId, bookshelfIds)
-    .then((bkshelves) => dispatch(addBookshelvesToDetail(bkshelves)));
+    .then((bookDetail) => {
+      dispatch(addBookshelvesToDetail(bookDetail));
+    });
 };
 
 // sync actions
 
-export const addBookshelvesToDetail = (bookshelves) => {
+export const addBookshelvesToDetail = (bookDetail) => {
   return {
     type: ADD_BOOKSHELVES_TO_DETAIL,
-    bookshelves
+    bookDetail
   };
 };
