@@ -1,4 +1,5 @@
 import * as ReadStatusBooksAPIUtil from '../util/read_status_books_api_util';
+import { receiveBookDetail } from './book_actions';
 
 export const RECEIVE_READ_STATUS = "RECEIVE_READ_STATUS";
 
@@ -6,14 +7,16 @@ export const RECEIVE_READ_STATUS = "RECEIVE_READ_STATUS";
 
 export const addReadStatus = (bookId, readStatusId) => (dispatch) => {
   return ReadStatusBooksAPIUtil.addReadStatus(bookId, readStatusId)
-    .then((readStatus) => dispatch(receiveReadStatus(readStatus)));
+    .then((bookDetail) => {
+      dispatch(receiveBookDetail(bookDetail));
+    });
 };
 
 // sync actions
 
-export const receiveReadStatus = (readStatus) => {
-  return {
-    type: RECEIVE_READ_STATUS,
-    readStatus
-  };
-};
+// export const receiveReadStatus = (readStatus) => {
+//   return {
+//     type: RECEIVE_READ_STATUS,
+//     readStatus
+//   };
+// };
