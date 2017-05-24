@@ -3,6 +3,7 @@ class Api::BooksController < ApplicationController
   before_action :require_user
 
   def index
+    puts params
     if params[:bookshelfId]
       bookshelf = Bookshelf.where("id = ? AND user_id = ?", params[:bookshelfId], current_user.id)
       books = bookshelf.first.books

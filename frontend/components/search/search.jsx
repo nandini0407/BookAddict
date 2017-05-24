@@ -1,5 +1,5 @@
 import React from 'react';
-import { hashHistory } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 
 class Search extends React.Component {
@@ -20,6 +20,7 @@ class Search extends React.Component {
     let value = e.target.value;
     this.update('query', value);
     hashHistory.push(`/user/search/${value}`);
+    // this.props.fetchBooksSummary(null, null, value);
   }
 
   handleSubmit(e) {
@@ -41,6 +42,7 @@ class Search extends React.Component {
             value={ this.state.query }
             className="search-input"
             />
+
         </form>
       </div>
     );

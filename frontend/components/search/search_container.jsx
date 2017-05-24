@@ -5,7 +5,7 @@ import Search from './search';
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchBooksSummary: (bookshelfId= null, readStatusId = null, query) => dispatch(fetchBooksSummary(query))
+    fetchBooksSummary: (bookshelfId= null, readStatusId = null, query) => dispatch(fetchBooksSummary(bookshelfId, readStatusId, query))
   };
 };
 
