@@ -7,6 +7,7 @@ const BookshelfReducer = (state = [], action) => {
   switch (action.type) {
     case RECEIVE_ALL_BOOKSHELVES:
       return action.bookshelves;
+    // unused action type
     case RECEIVE_BOOKSHELF:
       newState.push(action.bookshelf);
       return newState;

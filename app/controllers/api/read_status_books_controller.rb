@@ -11,6 +11,8 @@ class Api::ReadStatusBooksController < ApplicationController
 
     read_status_id = read_status_books_params[:read_status_id]
 
+    # if the user deletes the existing read status and chooses not to set any
+    # other status, then an empty string is sent
     unless read_status_id == ""
       new_read_status_book = ReadStatusBook.new(book_id: book_id, read_status_id: read_status_id, user_id: current_user.id)
       unless new_read_status_book.save

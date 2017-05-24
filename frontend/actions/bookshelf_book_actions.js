@@ -1,7 +1,7 @@
 import * as BookshelfBookAPIUtil from '../util/bookshelf_books_api_util';
 import { receiveBookDetail } from './book_actions';
 
-export const ADD_BOOKSHELVES_TO_DETAIL = "ADD_BOOKSHELVES_TO_DETAIL";
+// export const ADD_BOOKSHELVES_TO_DETAIL = "ADD_BOOKSHELVES_TO_DETAIL";
 
 // async actions
 

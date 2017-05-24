@@ -53,6 +53,8 @@ class BookDetail extends React.Component {
     if (val) {
       readStatusId = val.id;
     } else {
+      // if the user deletes the existing read status and chooses not to
+      // set any other status, then an empty string is sent
       readStatusId = "";
     }
     this.props.addReadStatus(this.props.bookId, readStatusId);

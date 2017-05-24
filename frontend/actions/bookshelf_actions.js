@@ -30,6 +30,7 @@ export const receiveAllBookshelves = (bookshelves) => {
   };
 };
 
+// unused action creator
 export const receiveBookshelf = (bookshelf) => {
   return {
     type: RECEIVE_BOOKSHELF,
