@@ -57,6 +57,10 @@ class Api::BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    # grab all bookshelves to which this book belongs, for the current user
+    # this is what is displayed in 'Your bookshelves' on the show page
+    # the dropdown with all bookshelves for the current user is grabbed from
+    # the 'bookshelves' slice of the state instead of 'bookDetail' slice
     @bookshelves = @book.bookshelves
                     .where(user_id: current_user.id)
                     .order('name ASC')
