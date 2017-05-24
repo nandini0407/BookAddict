@@ -85,6 +85,7 @@ class Reviews extends React.Component {
       />;
 
     let reviewIds = Object.keys(this.props.reviews);
+    // sorts reviews to display the most recent one at the top
     reviewIds = reviewIds.sort((a, b) => (b - a));
     let reviews = reviewIds.map((id, idx) => {
       let timestamp = this.props.reviews[id].created_at;
