@@ -5,11 +5,6 @@ import { signup, login, logout } from './actions/session_actions';
 import configureStore from './store/store';
 import Modal from 'react-modal';
 
-// TODO just for testing
-window.signup = signup;
-window.login = login;
-window.logout = logout;
-
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
@@ -18,8 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  // TODO just for testing
-  window.store = store;
+
   Modal.setAppElement(document.body);
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store } />, root);
