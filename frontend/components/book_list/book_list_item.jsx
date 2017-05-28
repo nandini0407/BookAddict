@@ -37,7 +37,7 @@ const BookListItem = ({ book }) => {
   return (
     <div className="book-tile">
       <Link to={`/user/books/${book.id}`} className="book-list-link">
-        <img className="book-image" src={ imageUrl } />
+        <img className="book-image" src={ imageUrl } title={ book.title } />
         <div className="book-list-title">{ title }</div>
         <div className="book-list-author">{ book.author }</div>
         <div className="book-list-rating">
