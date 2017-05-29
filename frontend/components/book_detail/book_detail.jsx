@@ -60,6 +60,9 @@ class BookDetail extends React.Component {
   }
 
   render() {
+    if (!this.props.bookDetail || (this.props.bookDetail && this.props.bookDetail.id !== parseInt(this.props.bookId))) {
+      return (<div></div>);
+    }
     let book = this.props.bookDetail;
     let bookshelves = this.props.bookshelves.map((bookshelf) => {
       return {
