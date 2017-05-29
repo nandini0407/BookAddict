@@ -20,7 +20,6 @@ class Search extends React.Component {
     let value = e.target.value;
     this.update('query', value);
     hashHistory.push(`/user/search/${value}`);
-    // this.props.fetchBooksSummary(null, null, value);
   }
 
   handleSubmit(e) {
