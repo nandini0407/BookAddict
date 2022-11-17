@@ -2,6 +2,8 @@ import React from 'react';
 import Select from 'react-select';
 import Rating from 'react-rating';
 
+// test comment
+
 class BookDetail extends React.Component {
   constructor(props) {
     super(props);
